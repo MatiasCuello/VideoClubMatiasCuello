@@ -1,0 +1,11 @@
+C:\Users\Matias\Desktop\VideoClub\VideoClub.Servicios\bin\Debug\VideoClub.Servicios.dll
+C:\Users\Matias\Desktop\VideoClub\VideoClub.Servicios\bin\Debug\VideoClub.Servicios.pdb
+C:\Users\Matias\Desktop\VideoClub\VideoClub.Servicios\bin\Debug\VideoClub.Datos.dll
+C:\Users\Matias\Desktop\VideoClub\VideoClub.Servicios\bin\Debug\VideoClubEntidades.dll
+C:\Users\Matias\Desktop\VideoClub\VideoClub.Servicios\bin\Debug\VideoClub.Datos.pdb
+C:\Users\Matias\Desktop\VideoClub\VideoClub.Servicios\bin\Debug\VideoClubEntidades.pdb
+C:\Users\Matias\Desktop\VideoClub\VideoClub.Servicios\obj\Debug\VideoClub.Servicios.csprojAssemblyReference.cache
+C:\Users\Matias\Desktop\VideoClub\VideoClub.Servicios\obj\Debug\VideoClub.Servicios.csproj.CoreCompileInputs.cache
+C:\Users\Matias\Desktop\VideoClub\VideoClub.Servicios\obj\Debug\VideoClub.Servicios.csproj.CopyComplete
+C:\Users\Matias\Desktop\VideoClub\VideoClub.Servicios\obj\Debug\VideoClub.Servicios.dll
+C:\Users\Matias\Desktop\VideoClub\VideoClub.Servicios\obj\Debug\VideoClub.Servicios.pdb

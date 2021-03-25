@@ -39,15 +39,17 @@ namespace VideoClub.Windows
             FrmEstados frm = new FrmEstados();
             frm.ShowDialog(this);
         }
-        private void GenerosButton_Click(object sender, EventArgs e)
-        {
-            FrmGeneros frm = new FrmGeneros();
-            frm.ShowDialog(this);
-        }
+       
 
         private void CalificacionesButton_Click(object sender, EventArgs e)
         {
             FrmCalificacion frm = new FrmCalificacion();
+            frm.ShowDialog(this);
+        }
+
+        private void GenerosButton_Click_1(object sender, EventArgs e)
+        {
+            FrmGeneros frm = new FrmGeneros();
             frm.ShowDialog(this);
         }
     }

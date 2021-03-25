@@ -33,8 +33,8 @@ namespace VideoClub.Windows
             this.SalirButton = new System.Windows.Forms.Button();
             this.SoportesButton = new System.Windows.Forms.Button();
             this.EstadosButton = new System.Windows.Forms.Button();
-            this.GenerosButton = new System.Windows.Forms.Button();
             this.CalificacionesButton = new System.Windows.Forms.Button();
+            this.GenerosButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // ProvinciasButton
@@ -77,16 +77,6 @@ namespace VideoClub.Windows
             this.EstadosButton.UseVisualStyleBackColor = true;
             this.EstadosButton.Click += new System.EventHandler(this.EstadosButton_Click);
             // 
-            // GenerosButton
-            // 
-            this.GenerosButton.Location = new System.Drawing.Point(12, 99);
-            this.GenerosButton.Name = "GenerosButton";
-            this.GenerosButton.Size = new System.Drawing.Size(97, 23);
-            this.GenerosButton.TabIndex = 3;
-            this.GenerosButton.Text = "Generos";
-            this.GenerosButton.UseVisualStyleBackColor = true;
-            this.GenerosButton.Click += new System.EventHandler(this.EstadosButton_Click);
-            // 
             // CalificacionesButton
             // 
             this.CalificacionesButton.Location = new System.Drawing.Point(13, 129);
@@ -97,14 +87,24 @@ namespace VideoClub.Windows
             this.CalificacionesButton.UseVisualStyleBackColor = true;
             this.CalificacionesButton.Click += new System.EventHandler(this.CalificacionesButton_Click);
             // 
+            // GenerosButton
+            // 
+            this.GenerosButton.Location = new System.Drawing.Point(12, 100);
+            this.GenerosButton.Name = "GenerosButton";
+            this.GenerosButton.Size = new System.Drawing.Size(97, 23);
+            this.GenerosButton.TabIndex = 5;
+            this.GenerosButton.Text = "Generos";
+            this.GenerosButton.UseVisualStyleBackColor = true;
+            this.GenerosButton.Click += new System.EventHandler(this.GenerosButton_Click_1);
+            // 
             // FrmMenuPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(738, 337);
             this.ControlBox = false;
-            this.Controls.Add(this.CalificacionesButton);
             this.Controls.Add(this.GenerosButton);
+            this.Controls.Add(this.CalificacionesButton);
             this.Controls.Add(this.EstadosButton);
             this.Controls.Add(this.SoportesButton);
             this.Controls.Add(this.ProvinciasButton);
@@ -121,8 +121,8 @@ namespace VideoClub.Windows
         private System.Windows.Forms.Button ProvinciasButton;
         private System.Windows.Forms.Button SoportesButton;
         private System.Windows.Forms.Button EstadosButton;
-        private System.Windows.Forms.Button GenerosButton;
         private System.Windows.Forms.Button CalificacionesButton;
+        private System.Windows.Forms.Button GenerosButton;
     }
 }
 

@@ -31,17 +31,17 @@ namespace VideoClub.Windows
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.dgvDatos = new System.Windows.Forms.DataGridView();
+            this.cmnGenero = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tspProvincias = new System.Windows.Forms.ToolStrip();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.tsbNuevo = new System.Windows.Forms.ToolStripButton();
             this.tsbEditar = new System.Windows.Forms.ToolStripButton();
             this.tsbBorrar = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.tsbBuscar = new System.Windows.Forms.ToolStripButton();
             this.tsbActualizar = new System.Windows.Forms.ToolStripButton();
             this.tsbImprimir = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.tsbCerrar = new System.Windows.Forms.ToolStripButton();
-            this.cmnGenero = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDatos)).BeginInit();
             this.tspProvincias.SuspendLayout();
@@ -73,6 +73,13 @@ namespace VideoClub.Windows
             this.dgvDatos.Size = new System.Drawing.Size(800, 396);
             this.dgvDatos.TabIndex = 0;
             // 
+            // cmnGenero
+            // 
+            this.cmnGenero.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.cmnGenero.HeaderText = "Genero";
+            this.cmnGenero.Name = "cmnGenero";
+            this.cmnGenero.ReadOnly = true;
+            // 
             // tspProvincias
             // 
             this.tspProvincias.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -90,16 +97,6 @@ namespace VideoClub.Windows
             this.tspProvincias.Size = new System.Drawing.Size(800, 54);
             this.tspProvincias.TabIndex = 6;
             this.tspProvincias.Text = "toolStrip1";
-            // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 54);
-            // 
-            // toolStripSeparator2
-            // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 54);
             // 
             // tsbNuevo
             // 
@@ -131,6 +128,11 @@ namespace VideoClub.Windows
             this.tsbBorrar.Text = "Borrar";
             this.tsbBorrar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 54);
+            // 
             // tsbBuscar
             // 
             this.tsbBuscar.Image = global::VideoClub.Windows.Properties.Resources.Buscar;
@@ -161,6 +163,11 @@ namespace VideoClub.Windows
             this.tsbImprimir.Text = "Imprimir";
             this.tsbImprimir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 54);
+            // 
             // tsbCerrar
             // 
             this.tsbCerrar.Image = global::VideoClub.Windows.Properties.Resources.Salir;
@@ -172,13 +179,6 @@ namespace VideoClub.Windows
             this.tsbCerrar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.tsbCerrar.Click += new System.EventHandler(this.tsbCerrar_Click);
             // 
-            // cmnGenero
-            // 
-            this.cmnGenero.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.cmnGenero.HeaderText = "Genero";
-            this.cmnGenero.Name = "cmnGenero";
-            this.cmnGenero.ReadOnly = true;
-            // 
             // FrmGeneros
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -188,6 +188,7 @@ namespace VideoClub.Windows
             this.Controls.Add(this.tspProvincias);
             this.Name = "FrmGeneros";
             this.Text = "Generos";
+            this.Load += new System.EventHandler(this.FrmGeneros_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDatos)).EndInit();
             this.tspProvincias.ResumeLayout(false);

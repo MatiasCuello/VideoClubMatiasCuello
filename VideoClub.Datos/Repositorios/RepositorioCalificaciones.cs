@@ -61,7 +61,7 @@ namespace VideoClub.Datos.Repositorios
                 {
                     string cadenaComando = "INSERT INTO Calificaciones VALUES(@descripcion)";
                     SqlCommand comando = new SqlCommand(cadenaComando, conexion);
-                    comando.Parameters.AddWithValue("@descripcion", calificacion.Descripcion );
+                    comando.Parameters.AddWithValue("@descripcion", calificacion.Descripcion);
 
                     comando.ExecuteNonQuery();
                     cadenaComando = "SELECT @@IDENTITY";

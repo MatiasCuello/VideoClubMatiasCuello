@@ -64,6 +64,12 @@
     <Compile Include="FrmEstados.Designer.cs">
       <DependentUpon>FrmEstados.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmEstadosAE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmEstadosAE.Designer.cs">
+      <DependentUpon>FrmEstadosAE.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmGeneros.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -98,6 +104,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmEstados.resx">
       <DependentUpon>FrmEstados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmEstadosAE.resx">
+      <DependentUpon>FrmEstadosAE.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmGeneros.resx">
       <DependentUpon>FrmGeneros.cs</DependentUpon>

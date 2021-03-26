@@ -38,12 +38,35 @@ namespace VideoClub.Servicios.Servicios
         }
         public void Borrar(int id)
         {
-            throw new NotImplementedException();
+            try
+            {
+                conexion = new ConexionBD();
+                repositorio = new RepositorioEstados(conexion.AbrirConexion());
+                repositorio.Borrar(id);
+                conexion.CerrarConexion();
+
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message);
+            }
         }
 
         public bool Existe(Estado estado)
         {
-            throw new NotImplementedException();
+            try
+            {
+                conexion = new ConexionBD();
+                repositorio = new RepositorioEstados(conexion.AbrirConexion());
+                var existe = repositorio.Existe(estado);
+                conexion.CerrarConexion();
+                return existe;
+            }
+            catch (Exception e)
+            {
+
+                throw new Exception(e.Message);
+            }
         }
 
         public Estado GetEstadoPorId(int id)
@@ -53,7 +76,19 @@ namespace VideoClub.Servicios.Servicios
 
         public void Guardar(Estado estado)
         {
-            throw new NotImplementedException();
+            try
+            {
+                conexion = new ConexionBD();
+                repositorio = new RepositorioEstados(conexion.AbrirConexion());
+                repositorio.Guardar(estado);
+                conexion.CerrarConexion();
+
+            }
+            catch (Exception e)
+            {
+
+                throw new Exception(e.Message);
+            }
         }
     }
 }

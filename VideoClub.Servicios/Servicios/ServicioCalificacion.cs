@@ -38,12 +38,35 @@ namespace VideoClub.Servicios.Servicios
         }
         public void Borrar(int id)
         {
-            throw new NotImplementedException();
+            try
+            {
+                conexion = new ConexionBD();
+                repositorio = new RepositorioCalificaciones(conexion.AbrirConexion());
+                repositorio.Borrar(id);
+                conexion.CerrarConexion();
+
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message);
+            }
         }
 
         public bool Existe(Calificacion calificacion)
         {
-            throw new NotImplementedException();
+            try
+            {
+                conexion = new ConexionBD();
+                repositorio = new RepositorioCalificaciones(conexion.AbrirConexion());
+                var existe = repositorio.Existe(calificacion);
+                conexion.CerrarConexion();
+                return existe;
+            }
+            catch (Exception e)
+            {
+
+                throw new Exception(e.Message);
+            }
         }
         public Calificacion GetCalificacionPorId(int id)
         {
@@ -52,7 +75,19 @@ namespace VideoClub.Servicios.Servicios
 
         public void Guardar(Calificacion calificacion)
         {
-            throw new NotImplementedException();
+            try
+            {
+                conexion = new ConexionBD();
+                repositorio = new RepositorioCalificaciones(conexion.AbrirConexion());
+                repositorio.Guardar(calificacion);
+                conexion.CerrarConexion();
+
+            }
+            catch (Exception e)
+            {
+
+                throw new Exception(e.Message);
+            }
         }
     }
 }

@@ -4,3 +4,9 @@ C:\Users\Matias\Desktop\VideoClub\VideoClubEntidades\obj\Debug\VideoClub.Entidad
 C:\Users\Matias\Desktop\VideoClub\VideoClubEntidades\obj\Debug\VideoClub.Entidades.csproj.CoreCompileInputs.cache
 C:\Users\Matias\Desktop\VideoClub\VideoClubEntidades\obj\Debug\VideoClubEntidades.dll
 C:\Users\Matias\Desktop\VideoClub\VideoClubEntidades\obj\Debug\VideoClubEntidades.pdb
+C:\Users\Matias\Desktop\VideoClubMatiasCuello\VideoClubMatiasCuello\VideoClubEntidades\bin\Debug\VideoClubEntidades.dll
+C:\Users\Matias\Desktop\VideoClubMatiasCuello\VideoClubMatiasCuello\VideoClubEntidades\bin\Debug\VideoClubEntidades.pdb
+C:\Users\Matias\Desktop\VideoClubMatiasCuello\VideoClubMatiasCuello\VideoClubEntidades\obj\Debug\VideoClub.Entidades.csprojAssemblyReference.cache
+C:\Users\Matias\Desktop\VideoClubMatiasCuello\VideoClubMatiasCuello\VideoClubEntidades\obj\Debug\VideoClub.Entidades.csproj.CoreCompileInputs.cache
+C:\Users\Matias\Desktop\VideoClubMatiasCuello\VideoClubMatiasCuello\VideoClubEntidades\obj\Debug\VideoClubEntidades.dll
+C:\Users\Matias\Desktop\VideoClubMatiasCuello\VideoClubMatiasCuello\VideoClubEntidades\obj\Debug\VideoClubEntidades.pdb

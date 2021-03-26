@@ -31,17 +31,17 @@ namespace VideoClub.Windows
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.dgvDatos = new System.Windows.Forms.DataGridView();
+            this.cmnCalificacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.tsbNuevo = new System.Windows.Forms.ToolStripButton();
             this.tsbEditar = new System.Windows.Forms.ToolStripButton();
             this.tsbBorrar = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.tsbBuscar = new System.Windows.Forms.ToolStripButton();
             this.tsbActualizar = new System.Windows.Forms.ToolStripButton();
             this.tsbImprimir = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.tsbCerrar = new System.Windows.Forms.ToolStripButton();
-            this.cmnCalificacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDatos)).BeginInit();
             this.toolStrip1.SuspendLayout();
@@ -73,6 +73,13 @@ namespace VideoClub.Windows
             this.dgvDatos.Size = new System.Drawing.Size(800, 396);
             this.dgvDatos.TabIndex = 0;
             // 
+            // cmnCalificacion
+            // 
+            this.cmnCalificacion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.cmnCalificacion.HeaderText = "Calificaciones";
+            this.cmnCalificacion.Name = "cmnCalificacion";
+            this.cmnCalificacion.ReadOnly = true;
+            // 
             // toolStrip1
             // 
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -91,16 +98,6 @@ namespace VideoClub.Windows
             this.toolStrip1.TabIndex = 6;
             this.toolStrip1.Text = "toolStrip1";
             // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 54);
-            // 
-            // toolStripSeparator2
-            // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 54);
-            // 
             // tsbNuevo
             // 
             this.tsbNuevo.Image = global::VideoClub.Windows.Properties.Resources.Nuevo;
@@ -110,6 +107,7 @@ namespace VideoClub.Windows
             this.tsbNuevo.Size = new System.Drawing.Size(46, 51);
             this.tsbNuevo.Text = "Nuevo";
             this.tsbNuevo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.tsbNuevo.Click += new System.EventHandler(this.tsbNuevo_Click);
             // 
             // tsbEditar
             // 
@@ -120,6 +118,7 @@ namespace VideoClub.Windows
             this.tsbEditar.Size = new System.Drawing.Size(41, 51);
             this.tsbEditar.Text = "Editar";
             this.tsbEditar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.tsbEditar.Click += new System.EventHandler(this.tsbEditar_Click);
             // 
             // tsbBorrar
             // 
@@ -130,6 +129,12 @@ namespace VideoClub.Windows
             this.tsbBorrar.Size = new System.Drawing.Size(43, 51);
             this.tsbBorrar.Text = "Borrar";
             this.tsbBorrar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.tsbBorrar.Click += new System.EventHandler(this.tsbBorrar_Click);
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 54);
             // 
             // tsbBuscar
             // 
@@ -161,6 +166,11 @@ namespace VideoClub.Windows
             this.tsbImprimir.Text = "Imprimir";
             this.tsbImprimir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 54);
+            // 
             // tsbCerrar
             // 
             this.tsbCerrar.Image = global::VideoClub.Windows.Properties.Resources.Salir;
@@ -171,13 +181,6 @@ namespace VideoClub.Windows
             this.tsbCerrar.Text = "Cerrar";
             this.tsbCerrar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.tsbCerrar.Click += new System.EventHandler(this.tsbCerrar_Click);
-            // 
-            // cmnCalificacion
-            // 
-            this.cmnCalificacion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.cmnCalificacion.HeaderText = "Calificaciones";
-            this.cmnCalificacion.Name = "cmnCalificacion";
-            this.cmnCalificacion.ReadOnly = true;
             // 
             // FrmCalificacion
             // 

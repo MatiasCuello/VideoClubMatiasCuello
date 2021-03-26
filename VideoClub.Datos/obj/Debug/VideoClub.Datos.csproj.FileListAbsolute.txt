@@ -7,3 +7,12 @@ C:\Users\Matias\Desktop\VideoClub\VideoClub.Datos\obj\Debug\VideoClub.Datos.cspr
 C:\Users\Matias\Desktop\VideoClub\VideoClub.Datos\obj\Debug\VideoClub.Datos.csproj.CopyComplete
 C:\Users\Matias\Desktop\VideoClub\VideoClub.Datos\obj\Debug\VideoClub.Datos.dll
 C:\Users\Matias\Desktop\VideoClub\VideoClub.Datos\obj\Debug\VideoClub.Datos.pdb
+C:\Users\Matias\Desktop\VideoClubMatiasCuello\VideoClubMatiasCuello\VideoClub.Datos\obj\Debug\VideoClub.Datos.csprojAssemblyReference.cache
+C:\Users\Matias\Desktop\VideoClubMatiasCuello\VideoClubMatiasCuello\VideoClub.Datos\obj\Debug\VideoClub.Datos.csproj.CoreCompileInputs.cache
+C:\Users\Matias\Desktop\VideoClubMatiasCuello\VideoClubMatiasCuello\VideoClub.Datos\obj\Debug\VideoClub.Datos.dll
+C:\Users\Matias\Desktop\VideoClubMatiasCuello\VideoClubMatiasCuello\VideoClub.Datos\obj\Debug\VideoClub.Datos.pdb
+C:\Users\Matias\Desktop\VideoClubMatiasCuello\VideoClubMatiasCuello\VideoClub.Datos\bin\Debug\VideoClub.Datos.dll
+C:\Users\Matias\Desktop\VideoClubMatiasCuello\VideoClubMatiasCuello\VideoClub.Datos\bin\Debug\VideoClub.Datos.pdb
+C:\Users\Matias\Desktop\VideoClubMatiasCuello\VideoClubMatiasCuello\VideoClub.Datos\bin\Debug\VideoClubEntidades.dll
+C:\Users\Matias\Desktop\VideoClubMatiasCuello\VideoClubMatiasCuello\VideoClub.Datos\bin\Debug\VideoClubEntidades.pdb
+C:\Users\Matias\Desktop\VideoClubMatiasCuello\VideoClubMatiasCuello\VideoClub.Datos\obj\Debug\VideoClub.Datos.csproj.CopyComplete

@@ -33,6 +33,7 @@ namespace VideoClub.Windows
             this.dgvDatos = new System.Windows.Forms.DataGridView();
             this.cmnProvincia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tspProvincias = new System.Windows.Forms.ToolStrip();
+            this.tsbNuevo = new System.Windows.Forms.ToolStripButton();
             this.tsbEditar = new System.Windows.Forms.ToolStripButton();
             this.tsbBorrar = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
@@ -40,7 +41,6 @@ namespace VideoClub.Windows
             this.tsbActualizar = new System.Windows.Forms.ToolStripButton();
             this.tsbImprimir = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.tsbNuevo = new System.Windows.Forms.ToolStripButton();
             this.tsbCerrar = new System.Windows.Forms.ToolStripButton();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDatos)).BeginInit();
@@ -97,6 +97,16 @@ namespace VideoClub.Windows
             this.tspProvincias.Size = new System.Drawing.Size(800, 54);
             this.tspProvincias.TabIndex = 2;
             this.tspProvincias.Text = "toolStrip1";
+            // 
+            // tsbNuevo
+            // 
+            this.tsbNuevo.Image = global::VideoClub.Windows.Properties.Resources.Nuevo;
+            this.tsbNuevo.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.tsbNuevo.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbNuevo.Name = "tsbNuevo";
+            this.tsbNuevo.Size = new System.Drawing.Size(46, 51);
+            this.tsbNuevo.Text = "Nuevo";
+            this.tsbNuevo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             // 
             // tsbEditar
             // 
@@ -158,16 +168,6 @@ namespace VideoClub.Windows
             this.toolStripSeparator2.Name = "toolStripSeparator2";
             this.toolStripSeparator2.Size = new System.Drawing.Size(6, 54);
             // 
-            // tsbNuevo
-            // 
-            this.tsbNuevo.Image = global::VideoClub.Windows.Properties.Resources.Nuevo;
-            this.tsbNuevo.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.tsbNuevo.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsbNuevo.Name = "tsbNuevo";
-            this.tsbNuevo.Size = new System.Drawing.Size(46, 51);
-            this.tsbNuevo.Text = "Nuevo";
-            this.tsbNuevo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            // 
             // tsbCerrar
             // 
             this.tsbCerrar.Image = global::VideoClub.Windows.Properties.Resources.Salir;
@@ -184,6 +184,7 @@ namespace VideoClub.Windows
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ControlBox = false;
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.tspProvincias);
             this.Name = "FrmProvincias";

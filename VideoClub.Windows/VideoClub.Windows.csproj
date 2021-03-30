@@ -76,6 +76,12 @@
     <Compile Include="FrmGeneros.Designer.cs">
       <DependentUpon>FrmGeneros.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmGenerosAE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmGenerosAE.Designer.cs">
+      <DependentUpon>FrmGenerosAE.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmMenuPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -110,6 +116,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmGeneros.resx">
       <DependentUpon>FrmGeneros.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmGenerosAE.resx">
+      <DependentUpon>FrmGenerosAE.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmMenuPrincipal.resx">
       <DependentUpon>FrmMenuPrincipal.cs</DependentUpon>

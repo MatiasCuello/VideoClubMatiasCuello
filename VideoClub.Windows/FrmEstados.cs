@@ -162,7 +162,7 @@ namespace VideoClub.Windows
                     {
                         servicio.Borrar(estado.EstadoId);
                         dgvDatos.Rows.Remove(r);
-                        MessageBox.Show("Registro Borrado", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Registro eliminado", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                     catch (Exception exception)
                     {

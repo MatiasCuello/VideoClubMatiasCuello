@@ -6,9 +6,14 @@ using System.Threading.Tasks;
 
 namespace VideoClubEntidades.Entidades
 {
-    public class Genero
+    public class Genero:ICloneable
     {
         public int GeneroId { get; set; }
         public string Descripcion { get; set; }
+
+        public object Clone()
+        {
+            return this.MemberwiseClone();
+        }
     }
 }

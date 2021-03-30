@@ -37,13 +37,37 @@ namespace VideoClub.Servicios.Servicios
         }
         public void Borrar(int id)
         {
-            throw new NotImplementedException();
+            try
+            {
+                conexion = new ConexionBD();
+                repositorio = new RepositorioGeneros(conexion.AbrirConexion());
+                repositorio.Borrar(id);
+                conexion.CerrarConexion();
+
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message);
+            }
         }
 
         public bool Existe(Genero genero)
         {
-            throw new NotImplementedException();
+            try
+            {
+                conexion = new ConexionBD();
+                repositorio = new RepositorioGeneros(conexion.AbrirConexion());
+                var existe = repositorio.Existe(genero);
+                conexion.CerrarConexion();
+                return existe;
+            }
+            catch (Exception e)
+            {
+
+                throw new Exception(e.Message);
+            }
         }
+    
 
         public Genero GetGeneroPorId(int id)
         {
@@ -52,7 +76,19 @@ namespace VideoClub.Servicios.Servicios
 
         public void Guardar(Genero genero)
         {
-            throw new NotImplementedException();
+            try
+            {
+                conexion = new ConexionBD();
+                repositorio = new RepositorioGeneros(conexion.AbrirConexion());
+                repositorio.Guardar(genero);
+                conexion.CerrarConexion();
+
+            }
+            catch (Exception e)
+            {
+
+                throw new Exception(e.Message);
+            }
         }
     }
 }

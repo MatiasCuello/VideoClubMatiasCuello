@@ -114,7 +114,7 @@ namespace VideoClub.Windows
                 Genero generoAux = (Genero)genero.Clone();
                 FrmGenerosAE frm = new FrmGenerosAE();
                 frm.Text = "Editar Genero";
-                frm.SetEstado(genero);
+                frm.SetGenero(genero);
                 DialogResult dr = frm.ShowDialog(this);
                 if (dr == DialogResult.OK)
                 {

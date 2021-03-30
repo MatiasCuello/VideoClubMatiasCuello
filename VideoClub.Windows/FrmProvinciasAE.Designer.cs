@@ -1,7 +1,7 @@
 ﻿
 namespace VideoClub.Windows
 {
-    partial class FrmGenerosAE
+    partial class FrmProvinciasAE
     {
         /// <summary>
         /// Required designer variable.
@@ -32,8 +32,8 @@ namespace VideoClub.Windows
             this.components = new System.ComponentModel.Container();
             this.CancelButton = new System.Windows.Forms.Button();
             this.OkButton = new System.Windows.Forms.Button();
-            this.GeneroTextBox = new System.Windows.Forms.TextBox();
-            this.lblGeneros = new System.Windows.Forms.Label();
+            this.ProvinciaTextBox = new System.Windows.Forms.TextBox();
+            this.lblProvincia = new System.Windows.Forms.Label();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
@@ -44,7 +44,7 @@ namespace VideoClub.Windows
             this.CancelButton.Location = new System.Drawing.Point(322, 158);
             this.CancelButton.Name = "CancelButton";
             this.CancelButton.Size = new System.Drawing.Size(94, 64);
-            this.CancelButton.TabIndex = 30;
+            this.CancelButton.TabIndex = 34;
             this.CancelButton.Text = "Cancelar";
             this.CancelButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.CancelButton.UseVisualStyleBackColor = true;
@@ -56,44 +56,44 @@ namespace VideoClub.Windows
             this.OkButton.Location = new System.Drawing.Point(69, 158);
             this.OkButton.Name = "OkButton";
             this.OkButton.Size = new System.Drawing.Size(94, 64);
-            this.OkButton.TabIndex = 29;
+            this.OkButton.TabIndex = 33;
             this.OkButton.Text = "OK";
             this.OkButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.OkButton.UseVisualStyleBackColor = true;
             this.OkButton.Click += new System.EventHandler(this.OkButton_Click);
             // 
-            // GeneroTextBox
+            // ProvinciaTextBox
             // 
-            this.GeneroTextBox.Location = new System.Drawing.Point(136, 38);
-            this.GeneroTextBox.MaxLength = 100;
-            this.GeneroTextBox.Name = "GeneroTextBox";
-            this.GeneroTextBox.Size = new System.Drawing.Size(280, 20);
-            this.GeneroTextBox.TabIndex = 28;
+            this.ProvinciaTextBox.Location = new System.Drawing.Point(136, 38);
+            this.ProvinciaTextBox.MaxLength = 100;
+            this.ProvinciaTextBox.Name = "ProvinciaTextBox";
+            this.ProvinciaTextBox.Size = new System.Drawing.Size(280, 20);
+            this.ProvinciaTextBox.TabIndex = 32;
             // 
-            // lblGeneros
+            // lblProvincia
             // 
-            this.lblGeneros.AutoSize = true;
-            this.lblGeneros.Location = new System.Drawing.Point(87, 41);
-            this.lblGeneros.Name = "lblGeneros";
-            this.lblGeneros.Size = new System.Drawing.Size(45, 13);
-            this.lblGeneros.TabIndex = 31;
-            this.lblGeneros.Text = "Genero:";
+            this.lblProvincia.AutoSize = true;
+            this.lblProvincia.Location = new System.Drawing.Point(80, 41);
+            this.lblProvincia.Name = "lblProvincia";
+            this.lblProvincia.Size = new System.Drawing.Size(54, 13);
+            this.lblProvincia.TabIndex = 35;
+            this.lblProvincia.Text = "Provincia:";
             // 
             // errorProvider1
             // 
             this.errorProvider1.ContainerControl = this;
             // 
-            // FrmGenerosAE
+            // FrmProvinciasAE
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(484, 261);
             this.Controls.Add(this.CancelButton);
             this.Controls.Add(this.OkButton);
-            this.Controls.Add(this.GeneroTextBox);
-            this.Controls.Add(this.lblGeneros);
-            this.Name = "FrmGenerosAE";
-            this.Text = "FrmGenerosAE";
+            this.Controls.Add(this.ProvinciaTextBox);
+            this.Controls.Add(this.lblProvincia);
+            this.Name = "FrmProvinciasAE";
+            this.Text = "FrmProvinciasAE";
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -104,8 +104,8 @@ namespace VideoClub.Windows
 
         private System.Windows.Forms.Button CancelButton;
         private System.Windows.Forms.Button OkButton;
-        private System.Windows.Forms.TextBox GeneroTextBox;
-        private System.Windows.Forms.Label lblGeneros;
+        private System.Windows.Forms.TextBox ProvinciaTextBox;
+        private System.Windows.Forms.Label lblProvincia;
         private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

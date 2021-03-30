@@ -38,12 +38,35 @@ namespace VideoClub.Servicios.Servicios
         }
         public void Borrar(int id)
         {
-            throw new NotImplementedException();
+            try
+            {
+                conexion = new ConexionBD();
+                repositorio = new RepositorioProvincias(conexion.AbrirConexion());
+                repositorio.Borrar(id);
+                conexion.CerrarConexion();
+
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message);
+            }
         }
 
         public bool Existe(Provincia provincia)
         {
-            throw new NotImplementedException();
+            try
+            {
+                conexion = new ConexionBD();
+                repositorio = new RepositorioProvincias(conexion.AbrirConexion());
+                var existe = repositorio.Existe(provincia);
+                conexion.CerrarConexion();
+                return existe;
+            }
+            catch (Exception e)
+            {
+
+                throw new Exception(e.Message);
+            }
         }
 
         public Provincia GetProvinciaPorId(int id)
@@ -53,7 +76,19 @@ namespace VideoClub.Servicios.Servicios
 
         public void Guardar(Provincia provincia)
         {
-            throw new NotImplementedException();
+            try
+            {
+                conexion = new ConexionBD();
+                repositorio = new RepositorioProvincias(conexion.AbrirConexion());
+                repositorio.Guardar(provincia);
+                conexion.CerrarConexion();
+
+            }
+            catch (Exception e)
+            {
+
+                throw new Exception(e.Message);
+            }
         }
     }
 }

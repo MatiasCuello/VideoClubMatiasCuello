@@ -11,39 +11,40 @@ using VideoClubEntidades.Entidades;
 
 namespace VideoClub.Windows
 {
-    public partial class FrmGenerosAE : Form
+    public partial class FrmProvinciasAE : Form
     {
-        public FrmGenerosAE()
+        public FrmProvinciasAE()
         {
             InitializeComponent();
         }
-
-        Genero genero;
-
+        Provincia provincia;
         protected override void OnLoad(EventArgs e)
         {
             base.OnLoad(e);
-            if (genero != null)
+            if (provincia != null)
             {
-                GeneroTextBox.Text = genero.Descripcion;
+                ProvinciaTextBox.Text = provincia.NombreProvincia;
             }
         }
-
-        internal Genero GetGenero()
+        private void CancelButton_Click(object sender, EventArgs e)
         {
-            return genero;
+            DialogResult = DialogResult.Cancel;
+        }
+        internal Provincia GetProvincia()
+        {
+            return provincia;
         }
 
         private void OkButton_Click(object sender, EventArgs e)
         {
             if (ValidarDatos())
             {
-                if (genero == null)
+                if (provincia == null)
                 {
-                    genero = new Genero();
+                    provincia = new Provincia();
                 }
 
-                genero.Descripcion = GeneroTextBox.Text.Trim();
+                provincia.NombreProvincia = ProvinciaTextBox.Text.Trim();
                 DialogResult = DialogResult.OK;
             }
         }
@@ -51,24 +52,18 @@ namespace VideoClub.Windows
         private bool ValidarDatos()
         {
             bool valido = true;
-            if (string.IsNullOrEmpty(GeneroTextBox.Text.Trim()))
+            if (string.IsNullOrEmpty(ProvinciaTextBox.Text.Trim()))
             {
                 valido = false;
-                errorProvider1.SetError(GeneroTextBox, "Debe ingresar un genero");
+                errorProvider1.SetError(ProvinciaTextBox, "Debe ingresar una provincia");
             }
 
             return valido;
         }
 
-        internal void SetGenero(Genero genero)
+        internal void SetProvincia(Provincia provincia)
         {
-            this.genero = genero;
-        }
-
-        private void CancelButton_Click(object sender, EventArgs e)
-        {
-            DialogResult = DialogResult.Cancel;
+            this.provincia = provincia;
         }
     }
 }
-

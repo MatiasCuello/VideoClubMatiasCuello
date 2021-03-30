@@ -68,6 +68,107 @@ namespace VideoClub.Windows
             dgvDatos.Rows.Add(r);
         }
 
-        
+        private void tsbNuevo_Click(object sender, EventArgs e)
+        {
+            FrmProvinciasAE frm = new FrmProvinciasAE();
+            frm.Text = "Agregar Provincia";
+            DialogResult dr = frm.ShowDialog(this);
+            if (dr == DialogResult.OK)
+            {
+                try
+                {
+                    Provincia provincia = frm.GetProvincia();
+                    if (!servicio.Existe(provincia))
+                    {
+                        servicio.Guardar(provincia);
+                        var r = ConstruirFila();
+                        SetearFila(r, provincia);
+                        AgregarFila(r);
+                        MessageBox.Show("Registro agregado", "Mensaje",
+                            MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("Registro duplicado... Alta denegada", "Error",
+                            MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                    }
+
+                }
+                catch (Exception exception)
+                {
+
+                    MessageBox.Show(exception.Message, "Error",
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
+        private void tsbEditar_Click(object sender, EventArgs e)
+        {
+             if (dgvDatos.SelectedRows.Count > 0)
+            {
+                DataGridViewRow r = dgvDatos.SelectedRows[0];
+                Provincia provincia = (Provincia)r.Tag;
+                Provincia provinciaAux = (Provincia)provincia.Clone();
+                FrmProvinciasAE frm = new FrmProvinciasAE();
+                frm.Text = "Editar Provincia";
+                frm.SetProvincia(provincia);
+                DialogResult dr = frm.ShowDialog(this);
+                if (dr == DialogResult.OK)
+                {
+                    try
+                    {
+                        provincia = frm.GetProvincia();
+
+                        if (!servicio.Existe(provincia))
+                        {
+                            servicio.Guardar(provincia);
+                            SetearFila(r, provincia);
+                            MessageBox.Show("Registro modificado", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                        }
+                        else
+                        {
+                            SetearFila(r, provinciaAux);
+                            MessageBox.Show("Registro ya existente", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                        }
+                    }
+                    catch (Exception exception)
+                    {
+                        SetearFila(r, provinciaAux);
+                        MessageBox.Show(exception.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
+        }
+
+        private void tsbBorrar_Click(object sender, EventArgs e)
+        {
+            if (dgvDatos.SelectedRows.Count > 0)
+            {
+                DataGridViewRow r = dgvDatos.SelectedRows[0];
+                Provincia provincia = (Provincia)r.Tag;
+
+                DialogResult dr = MessageBox.Show($"¿Desea eliminar el registro seleccionado: {provincia.NombreProvincia}?",
+                    "Confirmar Baja", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+
+                if (dr == DialogResult.Yes)
+                {
+                    try
+                    {
+                        servicio.Borrar(provincia.ProvinciaId);
+                        dgvDatos.Rows.Remove(r);
+                        MessageBox.Show("Registro eliminado", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    catch (Exception exception)
+                    {
+                        MessageBox.Show(exception.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
+        }
     }
 }

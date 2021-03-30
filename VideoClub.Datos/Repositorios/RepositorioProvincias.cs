@@ -47,12 +47,44 @@ namespace VideoClub.Datos.Repositorios
 
         public void Borrar(int id)
         {
-            throw new System.NotImplementedException();
+            try
+            {
+                string cadenaComando = "DELETE FROM Provincias  WHERE ProvinciaId=@id";
+                SqlCommand comando = new SqlCommand(cadenaComando, conexion);
+                comando.Parameters.AddWithValue("@id", id);
+                comando.ExecuteNonQuery();
+
+            }
+            catch (Exception e)
+            {
+                if (e.Message.Contains("REFERENCE"))
+                {
+                    throw new Exception("Registro con datos asociados... Baja denegada");
+                }
+                throw new Exception(e.Message);
+            }
         }
 
         public bool Existe(Provincia provincia)
         {
-            throw new System.NotImplementedException();
+            if (provincia.ProvinciaId == 0)
+            {
+                string cadenaComando = "SELECT ProvinciaId, NombreProvincia FROM Provincias WHERE NombreProvincia=@nombreProvincia";
+                SqlCommand comando = new SqlCommand(cadenaComando, conexion);
+                comando.Parameters.AddWithValue("@nombreProvincia", provincia.NombreProvincia);
+                SqlDataReader reader = comando.ExecuteReader();
+                return reader.HasRows;
+            }
+            else
+            {
+                string cadenaComando = "SELECT ProvinciaId, NombreProvincia FROM Provincias WHERE NombreProvincia=@nombreProvincia" +
+                    " AND ProvinciaId<>@id";
+                SqlCommand comando = new SqlCommand(cadenaComando, conexion);
+                comando.Parameters.AddWithValue("@nombreProvincia", provincia.NombreProvincia);
+                comando.Parameters.AddWithValue("@id", provincia.ProvinciaId);
+                SqlDataReader reader = comando.ExecuteReader();
+                return reader.HasRows;
+            }
         }
 
         public Provincia GetProvinciaPorId(int id)
@@ -62,7 +94,43 @@ namespace VideoClub.Datos.Repositorios
 
         public void Guardar(Provincia provincia)
         {
-            throw new System.NotImplementedException();
+            if (provincia.ProvinciaId == 0)
+            {
+                try
+                {
+                    string cadenaComando = "INSERT INTO Provincias VALUES(@nombreProvincia)";
+                    SqlCommand comando = new SqlCommand(cadenaComando, conexion);
+                    comando.Parameters.AddWithValue("@nombreProvincia", provincia.NombreProvincia);
+
+                    comando.ExecuteNonQuery();
+                    cadenaComando = "SELECT @@IDENTITY";
+                    comando = new SqlCommand(cadenaComando, conexion);
+                    provincia.ProvinciaId = (int)(decimal)comando.ExecuteScalar();
+
+                }
+                catch (Exception e)
+                {
+                    throw new Exception("Error al intentar guardar el registro");
+                }
+
+            }
+            else
+            {
+                try
+                {
+                    string cadenaComando = "UPDATE Provincias SET NombreProvincia=@nombreProvincia WHERE ProvinciaId=@id";
+                    SqlCommand comando = new SqlCommand(cadenaComando, conexion);
+                    comando.Parameters.AddWithValue("@nombreProvincia", provincia.NombreProvincia);
+                    comando.Parameters.AddWithValue("@id", provincia.ProvinciaId);
+                    comando.ExecuteNonQuery();
+
+                }
+                catch (Exception e)
+                {
+                    throw new Exception("Error al intentar modificar el registro");
+                }
+
+            }
         }
     }
 }

@@ -45,3 +45,4 @@ C:\Users\Matias\Desktop\VideoClubMatiasCuello\VideoClubMatiasCuello\VideoClub.Wi
 C:\Users\Matias\Desktop\VideoClubMatiasCuello\VideoClubMatiasCuello\VideoClub.Windows\obj\Debug\VideoClub.Windows.FrmCalificacionAE.resources
 C:\Users\Matias\Desktop\VideoClubMatiasCuello\VideoClubMatiasCuello\VideoClub.Windows\obj\Debug\VideoClub.Windows.FrmEstadosAE.resources
 C:\Users\Matias\Desktop\VideoClubMatiasCuello\VideoClubMatiasCuello\VideoClub.Windows\obj\Debug\VideoClub.Windows.FrmGenerosAE.resources
+C:\Users\Matias\Desktop\VideoClubMatiasCuello\VideoClubMatiasCuello\VideoClub.Windows\obj\Debug\VideoClub.Windows.FrmProvinciasAE.resources

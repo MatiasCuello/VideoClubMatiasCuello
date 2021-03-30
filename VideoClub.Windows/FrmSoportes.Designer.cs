@@ -64,6 +64,7 @@ namespace VideoClub.Windows
             this.dgvDatos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.cmnSoporte});
             this.dgvDatos.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvDatos.Enabled = false;
             this.dgvDatos.Location = new System.Drawing.Point(0, 0);
             this.dgvDatos.MultiSelect = false;
             this.dgvDatos.Name = "dgvDatos";
@@ -107,6 +108,7 @@ namespace VideoClub.Windows
             this.tsbNuevo.Size = new System.Drawing.Size(46, 51);
             this.tsbNuevo.Text = "Nuevo";
             this.tsbNuevo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.tsbNuevo.Click += new System.EventHandler(this.tsbNuevo_Click);
             // 
             // tsbEditar
             // 
@@ -117,6 +119,7 @@ namespace VideoClub.Windows
             this.tsbEditar.Size = new System.Drawing.Size(41, 51);
             this.tsbEditar.Text = "Editar";
             this.tsbEditar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.tsbEditar.Click += new System.EventHandler(this.tsbEditar_Click);
             // 
             // tsbBorrar
             // 
@@ -127,6 +130,7 @@ namespace VideoClub.Windows
             this.tsbBorrar.Size = new System.Drawing.Size(43, 51);
             this.tsbBorrar.Text = "Borrar";
             this.tsbBorrar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.tsbBorrar.Click += new System.EventHandler(this.tsbBorrar_Click);
             // 
             // toolStripSeparator1
             // 

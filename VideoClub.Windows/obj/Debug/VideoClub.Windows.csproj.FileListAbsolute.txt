@@ -30,7 +30,6 @@ C:\Users\Matias\Desktop\VideoClubMatiasCuello\VideoClubMatiasCuello\VideoClub.Wi
 C:\Users\Matias\Desktop\VideoClubMatiasCuello\VideoClubMatiasCuello\VideoClub.Windows\bin\Debug\VideoClubEntidades.pdb
 C:\Users\Matias\Desktop\VideoClubMatiasCuello\VideoClubMatiasCuello\VideoClub.Windows\bin\Debug\VideoClub.Datos.pdb
 C:\Users\Matias\Desktop\VideoClubMatiasCuello\VideoClubMatiasCuello\VideoClub.Windows\obj\Debug\VideoClub.Windows.csprojAssemblyReference.cache
-C:\Users\Matias\Desktop\VideoClubMatiasCuello\VideoClubMatiasCuello\VideoClub.Windows\obj\Debug\VideoClub.Windows.FrmCalificacion.resources
 C:\Users\Matias\Desktop\VideoClubMatiasCuello\VideoClubMatiasCuello\VideoClub.Windows\obj\Debug\VideoClub.Windows.FrmEstados.resources
 C:\Users\Matias\Desktop\VideoClubMatiasCuello\VideoClubMatiasCuello\VideoClub.Windows\obj\Debug\VideoClub.Windows.FrmGeneros.resources
 C:\Users\Matias\Desktop\VideoClubMatiasCuello\VideoClubMatiasCuello\VideoClub.Windows\obj\Debug\VideoClub.Windows.FrmMenuPrincipal.resources
@@ -42,7 +41,9 @@ C:\Users\Matias\Desktop\VideoClubMatiasCuello\VideoClubMatiasCuello\VideoClub.Wi
 C:\Users\Matias\Desktop\VideoClubMatiasCuello\VideoClubMatiasCuello\VideoClub.Windows\obj\Debug\VideoClub.Windows.csproj.CopyComplete
 C:\Users\Matias\Desktop\VideoClubMatiasCuello\VideoClubMatiasCuello\VideoClub.Windows\obj\Debug\VideoClub.Windows.exe
 C:\Users\Matias\Desktop\VideoClubMatiasCuello\VideoClubMatiasCuello\VideoClub.Windows\obj\Debug\VideoClub.Windows.pdb
-C:\Users\Matias\Desktop\VideoClubMatiasCuello\VideoClubMatiasCuello\VideoClub.Windows\obj\Debug\VideoClub.Windows.FrmCalificacionAE.resources
 C:\Users\Matias\Desktop\VideoClubMatiasCuello\VideoClubMatiasCuello\VideoClub.Windows\obj\Debug\VideoClub.Windows.FrmEstadosAE.resources
 C:\Users\Matias\Desktop\VideoClubMatiasCuello\VideoClubMatiasCuello\VideoClub.Windows\obj\Debug\VideoClub.Windows.FrmGenerosAE.resources
 C:\Users\Matias\Desktop\VideoClubMatiasCuello\VideoClubMatiasCuello\VideoClub.Windows\obj\Debug\VideoClub.Windows.FrmProvinciasAE.resources
+C:\Users\Matias\Desktop\VideoClubMatiasCuello\VideoClubMatiasCuello\VideoClub.Windows\obj\Debug\VideoClub.Windows.FrmCalificaciones.resources
+C:\Users\Matias\Desktop\VideoClubMatiasCuello\VideoClubMatiasCuello\VideoClub.Windows\obj\Debug\VideoClub.Windows.FrmCalificacionesAE.resources
+C:\Users\Matias\Desktop\VideoClubMatiasCuello\VideoClubMatiasCuello\VideoClub.Windows\obj\Debug\VideoClub.Windows.FrmSoportesAE.resources

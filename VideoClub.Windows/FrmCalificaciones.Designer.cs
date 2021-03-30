@@ -1,7 +1,7 @@
 ﻿
 namespace VideoClub.Windows
 {
-    partial class FrmCalificacion
+    partial class FrmCalificaciones
     {
         /// <summary>
         /// Required designer variable.
@@ -64,6 +64,7 @@ namespace VideoClub.Windows
             this.dgvDatos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.cmnCalificacion});
             this.dgvDatos.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvDatos.Enabled = false;
             this.dgvDatos.Location = new System.Drawing.Point(0, 0);
             this.dgvDatos.MultiSelect = false;
             this.dgvDatos.Name = "dgvDatos";
@@ -182,7 +183,7 @@ namespace VideoClub.Windows
             this.tsbCerrar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.tsbCerrar.Click += new System.EventHandler(this.tsbCerrar_Click);
             // 
-            // FrmCalificacion
+            // FrmCalificaciones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -190,7 +191,7 @@ namespace VideoClub.Windows
             this.ControlBox = false;
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.toolStrip1);
-            this.Name = "FrmCalificacion";
+            this.Name = "FrmCalificaciones";
             this.Text = "Calificacion";
             this.Load += new System.EventHandler(this.FrmCalificacion_Load);
             this.panel1.ResumeLayout(false);

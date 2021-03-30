@@ -1,7 +1,7 @@
 ﻿
 namespace VideoClub.Windows
 {
-    partial class FrmProvinciasAE
+    partial class FrmCalificacionesAE
     {
         /// <summary>
         /// Required designer variable.
@@ -30,18 +30,36 @@ namespace VideoClub.Windows
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            this.CalificacionTextBox = new System.Windows.Forms.TextBox();
+            this.lblCalificacion = new System.Windows.Forms.Label();
             this.CancelButton = new System.Windows.Forms.Button();
             this.OkButton = new System.Windows.Forms.Button();
-            this.ProvinciaTextBox = new System.Windows.Forms.TextBox();
-            this.lblProvincia = new System.Windows.Forms.Label();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
+            // CalificacionTextBox
+            // 
+            this.CalificacionTextBox.Location = new System.Drawing.Point(136, 41);
+            this.CalificacionTextBox.MaxLength = 30;
+            this.CalificacionTextBox.Name = "CalificacionTextBox";
+            this.CalificacionTextBox.Size = new System.Drawing.Size(280, 20);
+            this.CalificacionTextBox.TabIndex = 0;
+            // 
+            // lblCalificacion
+            // 
+            this.lblCalificacion.AutoSize = true;
+            this.lblCalificacion.Location = new System.Drawing.Point(66, 44);
+            this.lblCalificacion.Name = "lblCalificacion";
+            this.lblCalificacion.Size = new System.Drawing.Size(64, 13);
+            this.lblCalificacion.TabIndex = 23;
+            this.lblCalificacion.Text = "Calificacion:";
+            this.lblCalificacion.Click += new System.EventHandler(this.lblCalificacion_Click);
+            // 
             // CancelButton
             // 
             this.CancelButton.Image = global::VideoClub.Windows.Properties.Resources.Cancelar;
-            this.CancelButton.Location = new System.Drawing.Point(322, 158);
+            this.CancelButton.Location = new System.Drawing.Point(324, 162);
             this.CancelButton.Name = "CancelButton";
             this.CancelButton.Size = new System.Drawing.Size(94, 64);
             this.CancelButton.TabIndex = 2;
@@ -53,7 +71,7 @@ namespace VideoClub.Windows
             // OkButton
             // 
             this.OkButton.Image = global::VideoClub.Windows.Properties.Resources.OK;
-            this.OkButton.Location = new System.Drawing.Point(69, 158);
+            this.OkButton.Location = new System.Drawing.Point(69, 162);
             this.OkButton.Name = "OkButton";
             this.OkButton.Size = new System.Drawing.Size(94, 64);
             this.OkButton.TabIndex = 1;
@@ -62,40 +80,24 @@ namespace VideoClub.Windows
             this.OkButton.UseVisualStyleBackColor = true;
             this.OkButton.Click += new System.EventHandler(this.OkButton_Click);
             // 
-            // ProvinciaTextBox
-            // 
-            this.ProvinciaTextBox.Location = new System.Drawing.Point(136, 38);
-            this.ProvinciaTextBox.MaxLength = 100;
-            this.ProvinciaTextBox.Name = "ProvinciaTextBox";
-            this.ProvinciaTextBox.Size = new System.Drawing.Size(280, 20);
-            this.ProvinciaTextBox.TabIndex = 0;
-            // 
-            // lblProvincia
-            // 
-            this.lblProvincia.AutoSize = true;
-            this.lblProvincia.Location = new System.Drawing.Point(80, 41);
-            this.lblProvincia.Name = "lblProvincia";
-            this.lblProvincia.Size = new System.Drawing.Size(54, 13);
-            this.lblProvincia.TabIndex = 35;
-            this.lblProvincia.Text = "Provincia:";
-            // 
             // errorProvider1
             // 
             this.errorProvider1.ContainerControl = this;
             // 
-            // FrmProvinciasAE
+            // FrmCalificacionAE
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(484, 261);
+            this.ControlBox = false;
             this.Controls.Add(this.CancelButton);
             this.Controls.Add(this.OkButton);
-            this.Controls.Add(this.ProvinciaTextBox);
-            this.Controls.Add(this.lblProvincia);
+            this.Controls.Add(this.CalificacionTextBox);
+            this.Controls.Add(this.lblCalificacion);
             this.MaximumSize = new System.Drawing.Size(500, 300);
             this.MinimumSize = new System.Drawing.Size(500, 300);
-            this.Name = "FrmProvinciasAE";
-            this.Text = "FrmProvinciasAE";
+            this.Name = "FrmCalificacionAE";
+            this.Text = "FrmCalificacionAE";
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -106,8 +108,8 @@ namespace VideoClub.Windows
 
         private System.Windows.Forms.Button CancelButton;
         private System.Windows.Forms.Button OkButton;
-        private System.Windows.Forms.TextBox ProvinciaTextBox;
-        private System.Windows.Forms.Label lblProvincia;
+        private System.Windows.Forms.TextBox CalificacionTextBox;
+        private System.Windows.Forms.Label lblCalificacion;
         private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

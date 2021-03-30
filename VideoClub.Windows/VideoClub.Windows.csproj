@@ -46,17 +46,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FrmCalificacion.cs">
+    <Compile Include="FrmCalificaciones.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmCalificacion.Designer.cs">
-      <DependentUpon>FrmCalificacion.cs</DependentUpon>
+    <Compile Include="FrmCalificaciones.Designer.cs">
+      <DependentUpon>FrmCalificaciones.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmCalificacionAE.cs">
+    <Compile Include="FrmCalificacionesAE.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmCalificacionAE.Designer.cs">
-      <DependentUpon>FrmCalificacionAE.cs</DependentUpon>
+    <Compile Include="FrmCalificacionesAE.Designer.cs">
+      <DependentUpon>FrmCalificacionesAE.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmEstados.cs">
       <SubType>Form</SubType>
@@ -106,13 +106,19 @@
     <Compile Include="FrmSoportes.Designer.cs">
       <DependentUpon>FrmSoportes.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmSoportesAE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmSoportesAE.Designer.cs">
+      <DependentUpon>FrmSoportesAE.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="FrmCalificacion.resx">
-      <DependentUpon>FrmCalificacion.cs</DependentUpon>
+    <EmbeddedResource Include="FrmCalificaciones.resx">
+      <DependentUpon>FrmCalificaciones.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmCalificacionAE.resx">
-      <DependentUpon>FrmCalificacionAE.cs</DependentUpon>
+    <EmbeddedResource Include="FrmCalificacionesAE.resx">
+      <DependentUpon>FrmCalificacionesAE.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmEstados.resx">
       <DependentUpon>FrmEstados.cs</DependentUpon>
@@ -137,6 +143,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmSoportes.resx">
       <DependentUpon>FrmSoportes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmSoportesAE.resx">
+      <DependentUpon>FrmSoportesAE.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

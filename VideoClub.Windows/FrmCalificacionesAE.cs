@@ -11,9 +11,9 @@ using VideoClubEntidades.Entidades;
 
 namespace VideoClub.Windows
 {
-    public partial class FrmCalificacionAE : Form
+    public partial class FrmCalificacionesAE : Form
     {
-        public FrmCalificacionAE()
+        public FrmCalificacionesAE()
         {
             InitializeComponent();
         }

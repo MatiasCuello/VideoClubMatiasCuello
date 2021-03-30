@@ -43,7 +43,7 @@ namespace VideoClub.Windows
 
         private void CalificacionesButton_Click(object sender, EventArgs e)
         {
-            FrmCalificacion frm = new FrmCalificacion();
+            FrmCalificaciones frm = new FrmCalificaciones();
             frm.ShowDialog(this);
         }
 

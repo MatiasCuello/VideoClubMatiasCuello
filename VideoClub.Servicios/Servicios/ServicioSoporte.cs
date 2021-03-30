@@ -39,12 +39,35 @@ namespace VideoClub.Servicios.Servicios
         }
         public void Borrar(int id)
         {
-            throw new NotImplementedException();
+            try
+            {
+                conexion = new ConexionBD();
+                repositorio = new RepositorioSoportes(conexion.AbrirConexion());
+                repositorio.Borrar(id);
+                conexion.CerrarConexion();
+
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message);
+            }
         }
 
         public bool Existe(Soporte soporte)
         {
-            throw new NotImplementedException();
+            try
+            {
+                conexion = new ConexionBD();
+                repositorio = new RepositorioSoportes(conexion.AbrirConexion());
+                var existe = repositorio.Existe(soporte);
+                conexion.CerrarConexion();
+                return existe;
+            }
+            catch (Exception e)
+            {
+
+                throw new Exception(e.Message);
+            }
         }
 
         public Soporte GetSoportePorId(int id)
@@ -54,7 +77,19 @@ namespace VideoClub.Servicios.Servicios
 
         public void Guardar(Soporte soporte)
         {
-            throw new NotImplementedException();
+            try
+            {
+                conexion = new ConexionBD();
+                repositorio = new RepositorioSoportes(conexion.AbrirConexion());
+                repositorio.Guardar(soporte);
+                conexion.CerrarConexion();
+
+            }
+            catch (Exception e)
+            {
+
+                throw new Exception(e.Message);
+            }
         }
     }
 }

@@ -126,7 +126,7 @@ namespace VideoClub.Windows
                         {
                             servicio.Guardar(provincia);
                             SetearFila(r, provincia);
-                            MessageBox.Show("Registro modificado", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            MessageBox.Show("Registro editado", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                         }
                         else

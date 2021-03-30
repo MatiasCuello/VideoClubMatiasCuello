@@ -50,7 +50,7 @@ namespace VideoClub.Windows
             // SalirButton
             // 
             this.SalirButton.Image = global::VideoClub.Windows.Properties.Resources.Salir;
-            this.SalirButton.Location = new System.Drawing.Point(686, 284);
+            this.SalirButton.Location = new System.Drawing.Point(632, 308);
             this.SalirButton.Name = "SalirButton";
             this.SalirButton.Size = new System.Drawing.Size(40, 41);
             this.SalirButton.TabIndex = 0;
@@ -101,7 +101,7 @@ namespace VideoClub.Windows
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(738, 337);
+            this.ClientSize = new System.Drawing.Size(684, 361);
             this.ControlBox = false;
             this.Controls.Add(this.GenerosButton);
             this.Controls.Add(this.CalificacionesButton);
@@ -109,6 +109,8 @@ namespace VideoClub.Windows
             this.Controls.Add(this.SoportesButton);
             this.Controls.Add(this.ProvinciasButton);
             this.Controls.Add(this.SalirButton);
+            this.MaximumSize = new System.Drawing.Size(700, 400);
+            this.MinimumSize = new System.Drawing.Size(700, 400);
             this.Name = "FrmMenuPrincipal";
             this.Text = "Menu Principal";
             this.ResumeLayout(false);

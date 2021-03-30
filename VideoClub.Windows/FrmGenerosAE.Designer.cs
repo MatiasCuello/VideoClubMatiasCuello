@@ -44,7 +44,7 @@ namespace VideoClub.Windows
             this.CancelButton.Location = new System.Drawing.Point(322, 158);
             this.CancelButton.Name = "CancelButton";
             this.CancelButton.Size = new System.Drawing.Size(94, 64);
-            this.CancelButton.TabIndex = 30;
+            this.CancelButton.TabIndex = 2;
             this.CancelButton.Text = "Cancelar";
             this.CancelButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.CancelButton.UseVisualStyleBackColor = true;
@@ -56,7 +56,7 @@ namespace VideoClub.Windows
             this.OkButton.Location = new System.Drawing.Point(69, 158);
             this.OkButton.Name = "OkButton";
             this.OkButton.Size = new System.Drawing.Size(94, 64);
-            this.OkButton.TabIndex = 29;
+            this.OkButton.TabIndex = 1;
             this.OkButton.Text = "OK";
             this.OkButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.OkButton.UseVisualStyleBackColor = true;
@@ -68,7 +68,7 @@ namespace VideoClub.Windows
             this.GeneroTextBox.MaxLength = 100;
             this.GeneroTextBox.Name = "GeneroTextBox";
             this.GeneroTextBox.Size = new System.Drawing.Size(280, 20);
-            this.GeneroTextBox.TabIndex = 28;
+            this.GeneroTextBox.TabIndex = 0;
             // 
             // lblGeneros
             // 
@@ -92,6 +92,8 @@ namespace VideoClub.Windows
             this.Controls.Add(this.OkButton);
             this.Controls.Add(this.GeneroTextBox);
             this.Controls.Add(this.lblGeneros);
+            this.MaximumSize = new System.Drawing.Size(500, 300);
+            this.MinimumSize = new System.Drawing.Size(500, 300);
             this.Name = "FrmGenerosAE";
             this.Text = "FrmGenerosAE";
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();

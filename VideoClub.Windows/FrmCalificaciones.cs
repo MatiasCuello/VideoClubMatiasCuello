@@ -13,9 +13,9 @@ using VideoClubEntidades.Entidades;
 
 namespace VideoClub.Windows
 {
-    public partial class FrmCalificacion : Form
+    public partial class FrmCalificaciones : Form
     {
-        public FrmCalificacion()
+        public FrmCalificaciones()
         {
             InitializeComponent();
         }
@@ -71,7 +71,7 @@ namespace VideoClub.Windows
 
         private void tsbNuevo_Click(object sender, EventArgs e)
         {
-            FrmCalificacionAE frm = new FrmCalificacionAE();
+            FrmCalificacionesAE frm = new FrmCalificacionesAE();
             frm.Text = "Agregar Calificacion";
             DialogResult dr = frm.ShowDialog(this);
             if (dr == DialogResult.OK)
@@ -114,7 +114,7 @@ namespace VideoClub.Windows
                 DataGridViewRow r = dgvDatos.SelectedRows[0];
                 Calificacion calificacion = (Calificacion)r.Tag;
                 Calificacion calificacionAux = (Calificacion)calificacion.Clone();
-                FrmCalificacionAE frm = new FrmCalificacionAE();
+                FrmCalificacionesAE frm = new FrmCalificacionesAE();
                 frm.Text = "Editar Calificacion";
                 frm.SetCalificacion(calificacion);
                 DialogResult dr = frm.ShowDialog(this);
@@ -128,7 +128,7 @@ namespace VideoClub.Windows
                         {
                             servicio.Guardar(calificacion);
                             SetearFila(r, calificacion);
-                            MessageBox.Show("Registro agregado", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            MessageBox.Show("Registro editado", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                         }
                         else
@@ -163,7 +163,7 @@ namespace VideoClub.Windows
                     {
                         servicio.Borrar(calificacion.CalificacionId);
                         dgvDatos.Rows.Remove(r);
-                        MessageBox.Show("Registro Borrado", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Registro eliminado", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                     catch (Exception exception)
                     {

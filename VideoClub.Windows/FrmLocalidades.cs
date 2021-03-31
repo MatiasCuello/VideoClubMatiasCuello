@@ -167,7 +167,7 @@ namespace VideoClub.Windows
                         NombreProvincia = localidad.Provincia.NombreProvincia
                     };
                     SetearFila(r, localidadDto);
-                    MessageBox.Show("Registro agregado", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Registro editado", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
                 {

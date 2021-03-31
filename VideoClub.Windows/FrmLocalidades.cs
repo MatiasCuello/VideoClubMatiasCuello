@@ -148,7 +148,6 @@ namespace VideoClub.Windows
             Localidad localidad = servicio.GetLocalidadPorId(localidadDto.LocalidadId);
             frm.Text = "Editar Localidad";
             frm.SetLocalidad(localidad);
-
             DialogResult dr = frm.ShowDialog(this);
             if (dr == DialogResult.Cancel)
             {
@@ -175,7 +174,6 @@ namespace VideoClub.Windows
                     MessageBox.Show("Registro duplicado... Alta denegada", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
-
             catch (Exception exception)
             {
                 SetearFila(r, localidadListDtoAux);

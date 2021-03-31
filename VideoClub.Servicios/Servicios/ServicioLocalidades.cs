@@ -16,6 +16,7 @@ namespace VideoClub.Servicios.Servicios
     {
         private ConexionBD conexionBD;
         private IRepositorioLocalidades repositorio;
+        private IRepositorioProvincias _repositorioProvincias;
      
         public ServicioLocalidades()
         {
@@ -92,6 +93,22 @@ namespace VideoClub.Servicios.Servicios
             }
         }
 
-       
+        public Localidad GetLocalidadPorId(int id)
+        {
+            try
+            {
+                conexionBD = new ConexionBD();
+                _repositorioProvincias = new RepositorioProvincias(conexionBD.AbrirConexion());
+                repositorio = new RepositorioLocalidades(conexionBD.AbrirConexion(),_repositorioProvincias);
+                Localidad localidad = repositorio.GetLocalidadporId(id);
+                conexionBD.CerrarConexion();
+                return localidad;
+            }
+            catch (Exception e)
+            {
+
+                throw new Exception(e.Message);
+            }
+        }
     }
 }

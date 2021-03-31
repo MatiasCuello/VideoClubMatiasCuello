@@ -108,7 +108,7 @@ namespace VideoClub.Windows
                 }
             }
         }
-   
+
         private void tsbBorrar_Click(object sender, EventArgs e)
         {
             if (dgvDatos.SelectedRows.Count == 0)
@@ -116,16 +116,16 @@ namespace VideoClub.Windows
                 return;
             }
             DataGridViewRow r = dgvDatos.SelectedRows[0];
-            LocalidadListDto localidadDto = (LocalidadListDto) r.Tag;
+            LocalidadListDto localidadDto = (LocalidadListDto)r.Tag;
             DialogResult dr = MessageBox.Show($"¿Desea borrar el registro seleccionado: {localidadDto.NombreLocalidad}?",
-                        "Confirmar Baja", MessageBoxButtons.YesNo, MessageBoxIcon.Question,MessageBoxDefaultButton.Button2);
+                        "Confirmar Baja", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
             if (dr == DialogResult.No)
             {
                 return;
             }
             try
             {
-               servicio.Borrar(localidadDto.LocalidadId);
+                servicio.Borrar(localidadDto.LocalidadId);
                 dgvDatos.Rows.Remove(r);
                 MessageBox.Show("Registro eliminado", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
@@ -135,7 +135,54 @@ namespace VideoClub.Windows
             }
         }
 
-        
+        private void tsbEditar_Click(object sender, EventArgs e)
+        {
+            if (dgvDatos.SelectedRows.Count == 0)
+            {
+                return;
+            }
+            DataGridViewRow r = dgvDatos.SelectedRows[0];
+            LocalidadListDto localidadDto = (LocalidadListDto)r.Tag;
+            LocalidadListDto localidadListDtoAux = (LocalidadListDto)localidadDto.Clone();
+            FrmLocalidadesAE frm = new FrmLocalidadesAE();
+            Localidad localidad = servicio.GetLocalidadPorId(localidadDto.LocalidadId);
+            frm.Text = "Editar Localidad";
+            frm.SetLocalidad(localidad);
+
+            DialogResult dr = frm.ShowDialog(this);
+            if (dr == DialogResult.Cancel)
+            {
+                return;
+            }
+            try
+            {
+                localidad = frm.GetLocalidad();
+                if (!servicio.Existe(localidad))
+                {
+                    servicio.Guardar(localidad);
+                    localidadDto = new LocalidadListDto
+                    {
+                        LocalidadId = localidad.LocalidadId,
+                        NombreLocalidad = localidad.NombreLocalidad,
+                        NombreProvincia = localidad.Provincia.NombreProvincia
+                    };
+                    SetearFila(r, localidadDto);
+                    MessageBox.Show("Registro agregado", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    SetearFila(r, localidadListDtoAux);
+                    MessageBox.Show("Registro duplicado... Alta denegada", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+
+            catch (Exception exception)
+            {
+                SetearFila(r, localidadListDtoAux);
+                MessageBox.Show(exception.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }
+
 

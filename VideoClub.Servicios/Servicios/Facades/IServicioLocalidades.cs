@@ -14,6 +14,6 @@ namespace VideoClub.Servicios.Servicios.Facades
         void Guardar(Localidad localidad);
         bool Existe(Localidad localidad);
         void Borrar(int localidadDto);
-        
+        Localidad GetLocalidadPorId(int id);
     }
 }

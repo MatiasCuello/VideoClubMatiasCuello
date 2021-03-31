@@ -23,6 +23,11 @@ namespace VideoClub.Windows
         {
             base.OnLoad(e);
             CargarComboProvincias();
+            if (localidad!=null)
+            {
+                LocalidadTextBox.Text = localidad.NombreLocalidad;
+                ProvinciasComboBox.SelectedValue = localidad.Provincia.ProvinciaId;
+            }
         }
 
         private void CargarComboProvincias()

@@ -13,6 +13,12 @@ namespace VideoClub.Datos.Repositorios
     public class RepositorioLocalidades : IRepositorioLocalidades
     {
         private readonly SqlConnection sqlConnection;
+        private readonly IRepositorioProvincias _repositorioProvincias;
+        public RepositorioLocalidades(SqlConnection conexion, IRepositorioProvincias repositorioProvincias)
+        {
+            sqlConnection = conexion;
+            _repositorioProvincias = repositorioProvincias;
+        }
 
         private SqlConnection sqlConnection1;
 
@@ -155,6 +161,37 @@ namespace VideoClub.Datos.Repositorios
             }
         }
 
+        public Localidad GetLocalidadporId(int id)
+        {
+            Localidad localidad = null;
+            try
+            {
+                string cadenaComado = "SELECT LocalidadId,NombreLocalidad,ProvinciaId FROM Localidades WHERE LocalidadId=@id";
+                SqlCommand comando = new SqlCommand(cadenaComado, sqlConnection);
+                comando.Parameters.AddWithValue("@id", id);
+                SqlDataReader reader = comando.ExecuteReader();
+                if (reader.HasRows)
+                {
+                    reader.Read();
+                    localidad = ConstruirLocalidad(reader);
+                }
+                reader.Close();
+                return localidad;
+            }
+            catch (Exception e)
+            {
 
+                throw new Exception(e.Message);
+            }
+        }
+
+        private Localidad ConstruirLocalidad(SqlDataReader reader)
+        {
+            Localidad localidad = new Localidad();
+            localidad.LocalidadId = reader.GetInt32(0);
+            localidad.NombreLocalidad = reader.GetString(1);
+            localidad.Provincia = _repositorioProvincias.GetProvinciaPorId(reader.GetInt32(2));
+            return localidad;
+        }
     }
 }

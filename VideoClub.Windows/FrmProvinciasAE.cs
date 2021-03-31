@@ -17,7 +17,7 @@ namespace VideoClub.Windows
         {
             InitializeComponent();
         }
-        Provincia provincia;
+        private Provincia provincia;
         protected override void OnLoad(EventArgs e)
         {
             base.OnLoad(e);

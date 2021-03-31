@@ -89,7 +89,25 @@ namespace VideoClub.Datos.Repositorios
 
         public Provincia GetProvinciaPorId(int id)
         {
-            throw new System.NotImplementedException();
+            Provincia provincia = null;
+            try
+            {
+                string cadenaComando = "SELECT ProvinciaId, NombreProvincia FROM Provincias WHERE ProvinciaId=@id";
+                SqlCommand comando = new SqlCommand(cadenaComando, conexion);
+                comando.Parameters.AddWithValue("@id", id);
+                SqlDataReader reader = comando.ExecuteReader();
+                if (reader.HasRows)
+                {
+                    reader.Read();
+                    provincia = ConstruirProvincia(reader);
+                }
+                reader.Close();
+                return provincia;
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message);
+            }
         }
 
         public void Guardar(Provincia provincia)

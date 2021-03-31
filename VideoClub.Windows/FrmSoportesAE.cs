@@ -17,8 +17,7 @@ namespace VideoClub.Windows
         {
             InitializeComponent();
         }
-        Soporte soporte;
-
+        private Soporte soporte;
         protected override void OnLoad(EventArgs e)
         {
             base.OnLoad(e);

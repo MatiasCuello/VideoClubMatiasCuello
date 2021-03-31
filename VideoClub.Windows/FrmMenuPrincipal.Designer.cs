@@ -35,6 +35,7 @@ namespace VideoClub.Windows
             this.EstadosButton = new System.Windows.Forms.Button();
             this.CalificacionesButton = new System.Windows.Forms.Button();
             this.GenerosButton = new System.Windows.Forms.Button();
+            this.LocalidadesButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // ProvinciasButton
@@ -97,6 +98,16 @@ namespace VideoClub.Windows
             this.GenerosButton.UseVisualStyleBackColor = true;
             this.GenerosButton.Click += new System.EventHandler(this.GenerosButton_Click_1);
             // 
+            // LocalidadesButton
+            // 
+            this.LocalidadesButton.Location = new System.Drawing.Point(13, 158);
+            this.LocalidadesButton.Name = "LocalidadesButton";
+            this.LocalidadesButton.Size = new System.Drawing.Size(96, 23);
+            this.LocalidadesButton.TabIndex = 4;
+            this.LocalidadesButton.Text = "Localidades";
+            this.LocalidadesButton.UseVisualStyleBackColor = true;
+            this.LocalidadesButton.Click += new System.EventHandler(this.LocalidadesButton_Click);
+            // 
             // FrmMenuPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -104,6 +115,7 @@ namespace VideoClub.Windows
             this.ClientSize = new System.Drawing.Size(684, 361);
             this.ControlBox = false;
             this.Controls.Add(this.GenerosButton);
+            this.Controls.Add(this.LocalidadesButton);
             this.Controls.Add(this.CalificacionesButton);
             this.Controls.Add(this.EstadosButton);
             this.Controls.Add(this.SoportesButton);
@@ -125,6 +137,7 @@ namespace VideoClub.Windows
         private System.Windows.Forms.Button EstadosButton;
         private System.Windows.Forms.Button CalificacionesButton;
         private System.Windows.Forms.Button GenerosButton;
+        private System.Windows.Forms.Button LocalidadesButton;
     }
 }
 

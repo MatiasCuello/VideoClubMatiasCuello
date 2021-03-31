@@ -18,8 +18,7 @@ namespace VideoClub.Windows
             InitializeComponent();
         }
 
-        Genero genero;
-
+        private Genero genero;
         protected override void OnLoad(EventArgs e)
         {
             base.OnLoad(e);

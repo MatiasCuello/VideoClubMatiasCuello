@@ -47,3 +47,5 @@ C:\Users\Matias\Desktop\VideoClubMatiasCuello\VideoClubMatiasCuello\VideoClub.Wi
 C:\Users\Matias\Desktop\VideoClubMatiasCuello\VideoClubMatiasCuello\VideoClub.Windows\obj\Debug\VideoClub.Windows.FrmCalificaciones.resources
 C:\Users\Matias\Desktop\VideoClubMatiasCuello\VideoClubMatiasCuello\VideoClub.Windows\obj\Debug\VideoClub.Windows.FrmCalificacionesAE.resources
 C:\Users\Matias\Desktop\VideoClubMatiasCuello\VideoClubMatiasCuello\VideoClub.Windows\obj\Debug\VideoClub.Windows.FrmSoportesAE.resources
+C:\Users\Matias\Desktop\VideoClubMatiasCuello\VideoClubMatiasCuello\VideoClub.Windows\obj\Debug\VideoClub.Windows.FrmLocalidades.resources
+C:\Users\Matias\Desktop\VideoClubMatiasCuello\VideoClubMatiasCuello\VideoClub.Windows\obj\Debug\VideoClub.Windows.FrmLocalidadesAE.resources

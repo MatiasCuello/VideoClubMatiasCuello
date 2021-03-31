@@ -82,6 +82,18 @@
     <Compile Include="FrmGenerosAE.Designer.cs">
       <DependentUpon>FrmGenerosAE.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmLocalidades.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmLocalidades.Designer.cs">
+      <DependentUpon>FrmLocalidades.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmLocalidadesAE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmLocalidadesAE.Designer.cs">
+      <DependentUpon>FrmLocalidadesAE.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmMenuPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -131,6 +143,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmGenerosAE.resx">
       <DependentUpon>FrmGenerosAE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmLocalidades.resx">
+      <DependentUpon>FrmLocalidades.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmLocalidadesAE.resx">
+      <DependentUpon>FrmLocalidadesAE.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmMenuPrincipal.resx">
       <DependentUpon>FrmMenuPrincipal.cs</DependentUpon>

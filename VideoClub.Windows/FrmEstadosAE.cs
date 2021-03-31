@@ -18,7 +18,7 @@ namespace VideoClub.Windows
             InitializeComponent();
         }
 
-        private  Estado estado;
+        private Estado estado;
         protected override void OnLoad(EventArgs e)
         {
             base.OnLoad(e);

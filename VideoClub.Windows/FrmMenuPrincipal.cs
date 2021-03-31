@@ -52,5 +52,11 @@ namespace VideoClub.Windows
             FrmGeneros frm = new FrmGeneros();
             frm.ShowDialog(this);
         }
+
+        private void LocalidadesButton_Click(object sender, EventArgs e)
+        {
+            FrmLocalidades frm = new FrmLocalidades();
+            frm.ShowDialog(this);
+        }
     }
 }

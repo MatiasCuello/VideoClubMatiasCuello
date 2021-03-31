@@ -17,8 +17,7 @@ namespace VideoClub.Windows
         {
             InitializeComponent();
         }
-        Calificacion calificacion;
-
+        private Calificacion calificacion;
         protected override void OnLoad(EventArgs e)
         {
             base.OnLoad(e);

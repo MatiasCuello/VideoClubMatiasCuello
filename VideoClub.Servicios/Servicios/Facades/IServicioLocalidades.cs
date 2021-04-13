@@ -11,9 +11,9 @@ namespace VideoClub.Servicios.Servicios.Facades
     public interface IServicioLocalidades
     {
         List<LocalidadListDto> GetLista();
-        void Guardar(Localidad localidad);
-        bool Existe(Localidad localidad);
+        void Guardar(LocalidadEditDto localidadEditDto);
+        bool Existe(LocalidadEditDto localidadEditDto);
         void Borrar(int localidadDto);
-        Localidad GetLocalidadPorId(int id);
+        LocalidadEditDto GetLocalidadPorId(int id);
     }
 }

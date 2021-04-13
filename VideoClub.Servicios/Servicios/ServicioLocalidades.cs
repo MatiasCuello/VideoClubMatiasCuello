@@ -24,12 +24,20 @@ namespace VideoClub.Servicios.Servicios
         }
 
 
-        public void Guardar(Localidad localidad)
+        public void Guardar(LocalidadEditDto localidadDto)
         {
             try
             {
                 conexionBD = new ConexionBD();
                 repositorio = new RepositorioLocalidades(conexionBD.AbrirConexion());
+                _repositorioProvincias = new RepositorioProvincias(conexionBD.AbrirConexion());
+                var localidad = new Localidad
+                {
+                    LocalidadId = localidadDto.LocalidadId,
+                    NombreLocalidad = localidadDto.NombreLocalidad,
+                    Provincia = _repositorioProvincias.GetProvinciaPorId(localidadDto.ProvinciaId)
+
+                };
                 repositorio.Guardar(localidad);
                 conexionBD.CerrarConexion();
 
@@ -40,13 +48,20 @@ namespace VideoClub.Servicios.Servicios
                 throw new Exception(e.Message);
             }
         }
-        public bool Existe(Localidad localidad)
+        public bool Existe(LocalidadEditDto localidadDto)
         {
             try
             {
                 conexionBD = new ConexionBD();
-                
                 repositorio = new RepositorioLocalidades(conexionBD.AbrirConexion());
+                _repositorioProvincias=new RepositorioProvincias(conexionBD.AbrirConexion());
+                var localidad = new Localidad
+                {
+                    LocalidadId = localidadDto.LocalidadId,
+                    NombreLocalidad = localidadDto.NombreLocalidad,
+                    Provincia = _repositorioProvincias.GetProvinciaPorId(localidadDto.ProvinciaId)
+
+                };
                 var existe = repositorio.Existe(localidad);
                 conexionBD.CerrarConexion();
                 return existe;
@@ -93,14 +108,14 @@ namespace VideoClub.Servicios.Servicios
             }
         }
 
-        public Localidad GetLocalidadPorId(int id)
+        public LocalidadEditDto GetLocalidadPorId(int id)
         {
             try
             {
                 conexionBD = new ConexionBD();
                 _repositorioProvincias = new RepositorioProvincias(conexionBD.AbrirConexion());
                 repositorio = new RepositorioLocalidades(conexionBD.AbrirConexion(),_repositorioProvincias);
-                Localidad localidad = repositorio.GetLocalidadporId(id);
+                var localidad = repositorio.GetLocalidadporId(id);
                 conexionBD.CerrarConexion();
                 return localidad;
             }

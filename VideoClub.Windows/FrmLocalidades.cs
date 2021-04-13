@@ -25,6 +25,7 @@ namespace VideoClub.Windows
         {
             Close();
         }
+        private IServicioProvincia _servicioProvincia;
         private IServicioLocalidades servicio;
         private List<LocalidadListDto> lista;
         private void FrmLocalidades_Load(object sender, EventArgs e)
@@ -32,6 +33,7 @@ namespace VideoClub.Windows
             try
             {
                 servicio = new ServicioLocalidades();
+                _servicioProvincia = new ServicioProvincia();
                 lista = servicio.GetLista();
                 MostrarDatosEnGrilla();
             }
@@ -82,18 +84,19 @@ namespace VideoClub.Windows
             {
                 try
                 {
-                    Localidad localidad = frm.GetLocalidad();
-                    if (!servicio.Existe(localidad))
+                    LocalidadEditDto localidadEditDto = frm.GetLocalidad();
+                    if (!servicio.Existe(localidadEditDto))
                     {
-                        servicio.Guardar(localidad);
-                        LocalidadListDto localidadDto = new LocalidadListDto
+                        servicio.Guardar(localidadEditDto);
+                        LocalidadListDto localidadListDto = new LocalidadListDto
                         {
-                            LocalidadId = localidad.LocalidadId,
-                            NombreLocalidad = localidad.NombreLocalidad,
-                            NombreProvincia = localidad.Provincia.NombreProvincia
-                        };
+                            LocalidadId = localidadEditDto.LocalidadId,
+                            NombreLocalidad = localidadEditDto.NombreLocalidad,
+                           NombreProvincia =
+                           (_servicioProvincia.GetProvinciaPorId(localidadEditDto.ProvinciaId)).NombreProvincia
+                    };
                         DataGridViewRow r = ConstruirFila();
-                        SetearFila(r, localidadDto);
+                        SetearFila(r, localidadListDto);
                         AgregarFila(r);
                         MessageBox.Show("Registro agregado", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
@@ -142,12 +145,12 @@ namespace VideoClub.Windows
                 return;
             }
             DataGridViewRow r = dgvDatos.SelectedRows[0];
-            LocalidadListDto localidadDto = (LocalidadListDto)r.Tag;
-            LocalidadListDto localidadListDtoAux = (LocalidadListDto)localidadDto.Clone();
+            LocalidadListDto localidadListDto = (LocalidadListDto)r.Tag;
+            LocalidadListDto localidadListDtoAux = (LocalidadListDto)localidadListDto.Clone();
             FrmLocalidadesAE frm = new FrmLocalidadesAE();
-            Localidad localidad = servicio.GetLocalidadPorId(localidadDto.LocalidadId);
+            LocalidadEditDto localidadEditDto = servicio.GetLocalidadPorId(localidadListDto.LocalidadId);
             frm.Text = "Editar Localidad";
-            frm.SetLocalidad(localidad);
+            frm.SetLocalidad(localidadEditDto);
             DialogResult dr = frm.ShowDialog(this);
             if (dr == DialogResult.Cancel)
             {
@@ -155,17 +158,16 @@ namespace VideoClub.Windows
             }
             try
             {
-                localidad = frm.GetLocalidad();
-                if (!servicio.Existe(localidad))
+                localidadEditDto = frm.GetLocalidad();
+                if (!servicio.Existe(localidadEditDto))
                 {
-                    servicio.Guardar(localidad);
-                    localidadDto = new LocalidadListDto
-                    {
-                        LocalidadId = localidad.LocalidadId,
-                        NombreLocalidad = localidad.NombreLocalidad,
-                        NombreProvincia = localidad.Provincia.NombreProvincia
-                    };
-                    SetearFila(r, localidadDto);
+                    servicio.Guardar(localidadEditDto);
+                    localidadListDto.LocalidadId = localidadEditDto.LocalidadId;
+                    localidadListDto.NombreLocalidad = localidadEditDto.NombreLocalidad;
+                    localidadListDto.NombreProvincia = 
+                        (_servicioProvincia.GetProvinciaPorId(localidadEditDto.ProvinciaId)).NombreProvincia;
+                    
+                    SetearFila(r, localidadListDto);
                     MessageBox.Show("Registro editado", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else

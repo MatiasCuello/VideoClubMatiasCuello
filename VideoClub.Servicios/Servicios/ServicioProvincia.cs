@@ -71,7 +71,19 @@ namespace VideoClub.Servicios.Servicios
 
         public Provincia GetProvinciaPorId(int id)
         {
-            throw new NotImplementedException();
+            try
+            {
+                conexion = new ConexionBD();
+                repositorio = new RepositorioProvincias(conexion.AbrirConexion());
+                var provincia = repositorio.GetProvinciaPorId(id);
+                conexion.CerrarConexion();
+                return provincia;
+            }
+            catch (Exception e)
+            {
+
+                throw new Exception(e.Message);
+            }
         }
 
         public void Guardar(Provincia provincia)

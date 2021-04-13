@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using VideoClub.Servicios.Servicios;
 using VideoClub.Servicios.Servicios.Facades;
+using VideoClubEntidades.DTOs.Localidad;
 using VideoClubEntidades.Entidades;
 
 namespace VideoClub.Windows
@@ -26,7 +27,7 @@ namespace VideoClub.Windows
             if (localidad!=null)
             {
                 LocalidadTextBox.Text = localidad.NombreLocalidad;
-                ProvinciasComboBox.SelectedValue = localidad.Provincia.ProvinciaId;
+                ProvinciasComboBox.SelectedValue = localidad.ProvinciaId;
             }
         }
 
@@ -46,7 +47,7 @@ namespace VideoClub.Windows
             ProvinciasComboBox.SelectedIndex = 0;
         }
 
-        private Localidad localidad;
+        private LocalidadEditDto localidad;
 
         private void CancelarButton_Click(object sender, EventArgs e)
         {
@@ -59,11 +60,11 @@ namespace VideoClub.Windows
             {
                 if (localidad == null)
                 {
-                    localidad = new Localidad();
+                    localidad = new LocalidadEditDto();
                 }
 
                 localidad.NombreLocalidad = LocalidadTextBox.Text;
-                localidad.Provincia = (Provincia)ProvinciasComboBox.SelectedItem;
+                localidad.ProvinciaId = ((Provincia)ProvinciasComboBox.SelectedItem).ProvinciaId;
                 DialogResult = DialogResult.OK;
             }
         }
@@ -87,11 +88,11 @@ namespace VideoClub.Windows
             return valido;
         }
 
-        public void SetLocalidad(Localidad localidad)
+        public void SetLocalidad(LocalidadEditDto localidad)
         {
             this.localidad = localidad;
         }
-        internal Localidad GetLocalidad()
+        internal LocalidadEditDto GetLocalidad()
         {
             return localidad;
         }

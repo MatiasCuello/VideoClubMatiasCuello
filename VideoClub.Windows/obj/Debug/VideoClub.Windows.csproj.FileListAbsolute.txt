@@ -53,3 +53,4 @@ C:\Users\Matias\Desktop\VideoClubMatiasCuello\VideoClubMatiasCuello\VideoClub.Wi
 C:\Users\Matias\Desktop\VideoClubMatiasCuello\VideoClubMatiasCuello\VideoClub.Windows\obj\Debug\VideoClub.Windows.FrmEmpleados.resources
 C:\Users\Matias\Desktop\VideoClubMatiasCuello\VideoClubMatiasCuello\VideoClub.Windows\obj\Debug\VideoClub.Windows.FrmProveedores.resources
 C:\Users\Matias\Desktop\VideoClubMatiasCuello\VideoClubMatiasCuello\VideoClub.Windows\obj\Debug\VideoClub.Windows.FrmProveedoresAE.resources
+C:\Users\Matias\Desktop\VideoClubMatiasCuello\VideoClubMatiasCuello\VideoClub.Windows\obj\Debug\VideoClub.Windows.FrmBuscarLocalidades.resources

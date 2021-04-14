@@ -21,7 +21,8 @@ namespace VideoClub.Datos.Repositorios
             List<EmpleadoListDto> lista = new List<EmpleadoListDto>();
             try
             {
-                string cadenaComando = "SELECT EmpleadoId, Nombre, Apellido, NombreProvincia, NombreLocalidad FROM Empleados" +
+                string cadenaComando = 
+                    "SELECT EmpleadoId, Nombre, Apellido, NombreProvincia, NombreLocalidad FROM Empleados" +
                     " INNER JOIN Provincias ON Empleados.ProvinciaId=Provincias.ProvinciaId " +
                     "INNER JOIN Localidades ON Empleados.LocalidadId=Localidades.LocalidadId";
                 SqlCommand comando = new SqlCommand(cadenaComando, _sqlConnection);

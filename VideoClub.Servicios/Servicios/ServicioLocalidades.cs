@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -89,15 +90,13 @@ namespace VideoClub.Servicios.Servicios
             }
         }
 
-       
-
-        public List<LocalidadListDto> GetLista()
+        public List<LocalidadListDto> GetLista(Provincia provincia)
         {
             try
             {
                 conexionBD = new ConexionBD();
                 repositorio = new RepositorioLocalidades(conexionBD.AbrirConexion());
-                var lista = repositorio.GetLista();
+                var lista = repositorio.GetLista(provincia);
                 conexionBD.CerrarConexion();
                 return lista;
 
@@ -125,5 +124,7 @@ namespace VideoClub.Servicios.Servicios
                 throw new Exception(e.Message);
             }
         }
+
+       
     }
 }

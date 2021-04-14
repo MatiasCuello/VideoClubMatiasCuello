@@ -29,20 +29,24 @@ namespace VideoClub.Windows
         private IServicioLocalidades servicio;
         private List<LocalidadListDto> lista;
         private void FrmLocalidades_Load(object sender, EventArgs e)
+        { 
+            servicio = new ServicioLocalidades();
+            ActualizarGrilla();
+
+        }
+        private void ActualizarGrilla()
         {
             try
             {
-                servicio = new ServicioLocalidades();
                 _servicioProvincia = new ServicioProvincia();
-                lista = servicio.GetLista();
+                lista = servicio.GetLista(null);
                 MostrarDatosEnGrilla();
             }
             catch (Exception ex)
             {
                 throw new Exception(ex.Message);
-            }
-
-        }
+    }
+}
 
         private void MostrarDatosEnGrilla()
         {
@@ -181,6 +185,36 @@ namespace VideoClub.Windows
                 SetearFila(r, localidadListDtoAux);
                 MessageBox.Show(exception.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void tsbBuscar_Click(object sender, EventArgs e)
+        {
+            FrmBuscarLocalidades frm = new FrmBuscarLocalidades();
+            frm.Text = "Seleccionar Localidad";
+            DialogResult dr = frm.ShowDialog(this);
+            if (dr==DialogResult.Cancel)
+            {
+                return;
+            }
+            else
+            {
+                try
+                {
+                    Provincia provincia = frm.GetProvincia();
+                    lista = servicio.GetLista(provincia);
+                    MostrarDatosEnGrilla();
+                }
+                catch (Exception ex)
+                {
+                    throw new Exception(ex.Message);
+                }
+            }
+
+
+        }
+        private void tsbActualizar_Click(object sender, EventArgs e)
+        {
+            ActualizarGrilla();
         }
     }
 }

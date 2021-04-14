@@ -8,6 +8,7 @@ using VideoClub.Datos.Repositorios;
 using VideoClub.Datos.Repositorios.Facades;
 using VideoClub.Servicios.Servicios.Facades;
 using VideoClubEntidades.DTOs.Proveedor;
+using VideoClubEntidades.Entidades;
 
 namespace VideoClub.Servicios.Servicios
 {
@@ -35,5 +36,9 @@ namespace VideoClub.Servicios.Servicios
                 throw new Exception(e.Message);
             }
         }
+
+        
+
+      
     }
 }

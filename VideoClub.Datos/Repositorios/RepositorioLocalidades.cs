@@ -20,23 +20,35 @@ namespace VideoClub.Datos.Repositorios
             _repositorioProvincias = repositorioProvincias;
         }
 
-        private SqlConnection sqlConnection1;
-
         public RepositorioLocalidades(SqlConnection conexion)
         {
             sqlConnection = conexion;
-
-
         }
-        public List<LocalidadListDto> GetLista()
+
+        public List<LocalidadListDto> GetLista(Provincia provincia)
         {
             List<LocalidadListDto> lista = new List<LocalidadListDto>();
             try
             {
-                string cadenaComando = "SELECT LocalidadId, NombreLocalidad, NombreProvincia FROM Localidades" +
-                    " INNER JOIN Provincias On Localidades.ProvinciaId=Provincias.ProvinciaId";
-                SqlCommand comando = new SqlCommand(cadenaComando, sqlConnection);
-                SqlDataReader reader = comando.ExecuteReader();
+                string cadenaComando;
+                SqlCommand comando;
+                SqlDataReader reader;
+                if (provincia==null)
+                {
+                    cadenaComando = "SELECT LocalidadId, NombreLocalidad, NombreProvincia FROM Localidades" +
+                                " INNER JOIN Provincias On Localidades.ProvinciaId=Provincias.ProvinciaId";
+                     comando = new SqlCommand(cadenaComando, sqlConnection);
+                     reader = comando.ExecuteReader(); 
+                }
+                else
+                {
+                    cadenaComando = "SELECT LocalidadId, NombreLocalidad, NombreProvincia FROM Localidades" +
+                                " INNER JOIN Provincias On Localidades.ProvinciaId=Provincias.ProvinciaId " +
+                                "WHERE Localidades.ProvinciaId=@provinciaId";
+                    comando = new SqlCommand(cadenaComando, sqlConnection);
+                    comando.Parameters.AddWithValue("@provinciaId", provincia.ProvinciaId);
+                    reader = comando.ExecuteReader();
+                }
                 while (reader.Read())
                 {
                     var localidadDto = ConstruirLocalidadDto(reader);
@@ -190,5 +202,7 @@ namespace VideoClub.Datos.Repositorios
             localidad.ProvinciaId = reader.GetInt32(2);
             return localidad;
         }
+
+        
     }
 }

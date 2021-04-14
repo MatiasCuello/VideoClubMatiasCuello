@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FrmBuscarLocalidades.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmBuscarLocalidades.Designer.cs">
+      <DependentUpon>FrmBuscarLocalidades.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmProveedoresAE.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -148,8 +154,12 @@
     <Compile Include="FrmSoportesAE.Designer.cs">
       <DependentUpon>FrmSoportesAE.cs</DependentUpon>
     </Compile>
+    <Compile Include="Helpers\Helper.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FrmBuscarLocalidades.resx">
+      <DependentUpon>FrmBuscarLocalidades.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmProveedoresAE.resx">
       <DependentUpon>FrmProveedoresAE.cs</DependentUpon>
     </EmbeddedResource>
@@ -250,6 +260,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\OK.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\VideoClub.Servicios\VideoClub.Servicios.csproj">

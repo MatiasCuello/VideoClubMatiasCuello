@@ -19,6 +19,7 @@ namespace VideoClub.Windows
         {
             InitializeComponent();
         }
+
         private IServicioEmpleados _servicio;
         private List<EmpleadoListDto> _lista;
 

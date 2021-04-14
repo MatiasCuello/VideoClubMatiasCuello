@@ -30,21 +30,21 @@ namespace VideoClub.Windows
         private void InitializeComponent()
         {
             this.RazonSocialTextBox = new System.Windows.Forms.TextBox();
-            this.RazonSociallabel = new System.Windows.Forms.Label();
-            this.CUITTextBox = new System.Windows.Forms.TextBox();
-            this.CUITlabel = new System.Windows.Forms.Label();
-            this.CiudadesComboBox = new System.Windows.Forms.ComboBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.PaisesComboBox = new System.Windows.Forms.ComboBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.EmailTextBox = new System.Windows.Forms.TextBox();
-            this.EmailLabel = new System.Windows.Forms.Label();
+            this.lblRazonSocial = new System.Windows.Forms.Label();
+            this.CuitTextBox = new System.Windows.Forms.TextBox();
+            this.lblCuit = new System.Windows.Forms.Label();
+            this.ProvinciasComboBox = new System.Windows.Forms.ComboBox();
+            this.lblLocalidad = new System.Windows.Forms.Label();
+            this.LocalidadesComboBox = new System.Windows.Forms.ComboBox();
+            this.lblProvincia = new System.Windows.Forms.Label();
+            this.CorreoTextBox = new System.Windows.Forms.TextBox();
+            this.lblCorreo = new System.Windows.Forms.Label();
             this.TelefonoTextBox = new System.Windows.Forms.TextBox();
-            this.TelefonoLabel = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.lblTelefono = new System.Windows.Forms.Label();
+            this.lblPersonaContacto = new System.Windows.Forms.Label();
+            this.PersonaContactoTextBox = new System.Windows.Forms.TextBox();
+            this.lblDireccion = new System.Windows.Forms.Label();
+            this.DireccionTextBox = new System.Windows.Forms.TextBox();
             this.CancelButton = new System.Windows.Forms.Button();
             this.OkButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -57,84 +57,84 @@ namespace VideoClub.Windows
             this.RazonSocialTextBox.Size = new System.Drawing.Size(506, 20);
             this.RazonSocialTextBox.TabIndex = 0;
             // 
-            // RazonSociallabel
+            // lblRazonSocial
             // 
-            this.RazonSociallabel.AutoSize = true;
-            this.RazonSociallabel.Location = new System.Drawing.Point(294, 9);
-            this.RazonSociallabel.Name = "RazonSociallabel";
-            this.RazonSociallabel.Size = new System.Drawing.Size(73, 13);
-            this.RazonSociallabel.TabIndex = 143;
-            this.RazonSociallabel.Text = "Razon Social:";
+            this.lblRazonSocial.AutoSize = true;
+            this.lblRazonSocial.Location = new System.Drawing.Point(294, 9);
+            this.lblRazonSocial.Name = "lblRazonSocial";
+            this.lblRazonSocial.Size = new System.Drawing.Size(73, 13);
+            this.lblRazonSocial.TabIndex = 143;
+            this.lblRazonSocial.Text = "Razon Social:";
             // 
-            // CUITTextBox
+            // CuitTextBox
             // 
-            this.CUITTextBox.Location = new System.Drawing.Point(84, 64);
-            this.CUITTextBox.MaxLength = 13;
-            this.CUITTextBox.Name = "CUITTextBox";
-            this.CUITTextBox.Size = new System.Drawing.Size(250, 20);
-            this.CUITTextBox.TabIndex = 1;
+            this.CuitTextBox.Location = new System.Drawing.Point(84, 64);
+            this.CuitTextBox.MaxLength = 13;
+            this.CuitTextBox.Name = "CuitTextBox";
+            this.CuitTextBox.Size = new System.Drawing.Size(250, 20);
+            this.CuitTextBox.TabIndex = 1;
             // 
-            // CUITlabel
+            // lblCuit
             // 
-            this.CUITlabel.AutoSize = true;
-            this.CUITlabel.Location = new System.Drawing.Point(181, 48);
-            this.CUITlabel.Name = "CUITlabel";
-            this.CUITlabel.Size = new System.Drawing.Size(35, 13);
-            this.CUITlabel.TabIndex = 143;
-            this.CUITlabel.Text = "CUIT:";
+            this.lblCuit.AutoSize = true;
+            this.lblCuit.Location = new System.Drawing.Point(181, 48);
+            this.lblCuit.Name = "lblCuit";
+            this.lblCuit.Size = new System.Drawing.Size(35, 13);
+            this.lblCuit.TabIndex = 143;
+            this.lblCuit.Text = "CUIT:";
             // 
-            // CiudadesComboBox
+            // ProvinciasComboBox
             // 
-            this.CiudadesComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.CiudadesComboBox.FormattingEnabled = true;
-            this.CiudadesComboBox.Location = new System.Drawing.Point(343, 142);
-            this.CiudadesComboBox.Name = "CiudadesComboBox";
-            this.CiudadesComboBox.Size = new System.Drawing.Size(250, 21);
-            this.CiudadesComboBox.TabIndex = 5;
+            this.ProvinciasComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ProvinciasComboBox.FormattingEnabled = true;
+            this.ProvinciasComboBox.Location = new System.Drawing.Point(343, 142);
+            this.ProvinciasComboBox.Name = "ProvinciasComboBox";
+            this.ProvinciasComboBox.Size = new System.Drawing.Size(250, 21);
+            this.ProvinciasComboBox.TabIndex = 5;
             // 
-            // label7
+            // lblLocalidad
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(455, 126);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(43, 13);
-            this.label7.TabIndex = 148;
-            this.label7.Text = "Ciudad:";
+            this.lblLocalidad.AutoSize = true;
+            this.lblLocalidad.Location = new System.Drawing.Point(173, 126);
+            this.lblLocalidad.Name = "lblLocalidad";
+            this.lblLocalidad.Size = new System.Drawing.Size(56, 13);
+            this.lblLocalidad.TabIndex = 148;
+            this.lblLocalidad.Text = "Localidad:";
             // 
-            // PaisesComboBox
+            // LocalidadesComboBox
             // 
-            this.PaisesComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.PaisesComboBox.FormattingEnabled = true;
-            this.PaisesComboBox.Location = new System.Drawing.Point(84, 142);
-            this.PaisesComboBox.Name = "PaisesComboBox";
-            this.PaisesComboBox.Size = new System.Drawing.Size(250, 21);
-            this.PaisesComboBox.TabIndex = 4;
+            this.LocalidadesComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.LocalidadesComboBox.FormattingEnabled = true;
+            this.LocalidadesComboBox.Location = new System.Drawing.Point(84, 142);
+            this.LocalidadesComboBox.Name = "LocalidadesComboBox";
+            this.LocalidadesComboBox.Size = new System.Drawing.Size(250, 21);
+            this.LocalidadesComboBox.TabIndex = 4;
             // 
-            // label6
+            // lblProvincia
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(181, 126);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(32, 13);
-            this.label6.TabIndex = 146;
-            this.label6.Text = "País:";
+            this.lblProvincia.AutoSize = true;
+            this.lblProvincia.Location = new System.Drawing.Point(434, 126);
+            this.lblProvincia.Name = "lblProvincia";
+            this.lblProvincia.Size = new System.Drawing.Size(60, 13);
+            this.lblProvincia.TabIndex = 146;
+            this.lblProvincia.Text = "Pronvincia:";
             // 
-            // EmailTextBox
+            // CorreoTextBox
             // 
-            this.EmailTextBox.Location = new System.Drawing.Point(84, 221);
-            this.EmailTextBox.MaxLength = 150;
-            this.EmailTextBox.Name = "EmailTextBox";
-            this.EmailTextBox.Size = new System.Drawing.Size(509, 20);
-            this.EmailTextBox.TabIndex = 7;
+            this.CorreoTextBox.Location = new System.Drawing.Point(84, 221);
+            this.CorreoTextBox.MaxLength = 150;
+            this.CorreoTextBox.Name = "CorreoTextBox";
+            this.CorreoTextBox.Size = new System.Drawing.Size(509, 20);
+            this.CorreoTextBox.TabIndex = 7;
             // 
-            // EmailLabel
+            // lblCorreo
             // 
-            this.EmailLabel.AutoSize = true;
-            this.EmailLabel.Location = new System.Drawing.Point(294, 205);
-            this.EmailLabel.Name = "EmailLabel";
-            this.EmailLabel.Size = new System.Drawing.Size(97, 13);
-            this.EmailLabel.TabIndex = 150;
-            this.EmailLabel.Text = "Correo Electronico:";
+            this.lblCorreo.AutoSize = true;
+            this.lblCorreo.Location = new System.Drawing.Point(294, 205);
+            this.lblCorreo.Name = "lblCorreo";
+            this.lblCorreo.Size = new System.Drawing.Size(97, 13);
+            this.lblCorreo.TabIndex = 150;
+            this.lblCorreo.Text = "Correo Electronico:";
             // 
             // TelefonoTextBox
             // 
@@ -144,48 +144,48 @@ namespace VideoClub.Windows
             this.TelefonoTextBox.Size = new System.Drawing.Size(250, 20);
             this.TelefonoTextBox.TabIndex = 6;
             // 
-            // TelefonoLabel
+            // lblTelefono
             // 
-            this.TelefonoLabel.AutoSize = true;
-            this.TelefonoLabel.Location = new System.Drawing.Point(181, 166);
-            this.TelefonoLabel.Name = "TelefonoLabel";
-            this.TelefonoLabel.Size = new System.Drawing.Size(52, 13);
-            this.TelefonoLabel.TabIndex = 152;
-            this.TelefonoLabel.Text = "Teléfono:";
+            this.lblTelefono.AutoSize = true;
+            this.lblTelefono.Location = new System.Drawing.Point(181, 166);
+            this.lblTelefono.Name = "lblTelefono";
+            this.lblTelefono.Size = new System.Drawing.Size(52, 13);
+            this.lblTelefono.TabIndex = 152;
+            this.lblTelefono.Text = "Teléfono:";
             // 
-            // label1
+            // lblPersonaContacto
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(413, 48);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(112, 13);
-            this.label1.TabIndex = 143;
-            this.label1.Text = "Persona De Contacto:";
+            this.lblPersonaContacto.AutoSize = true;
+            this.lblPersonaContacto.Location = new System.Drawing.Point(413, 48);
+            this.lblPersonaContacto.Name = "lblPersonaContacto";
+            this.lblPersonaContacto.Size = new System.Drawing.Size(112, 13);
+            this.lblPersonaContacto.TabIndex = 143;
+            this.lblPersonaContacto.Text = "Persona De Contacto:";
             // 
-            // textBox1
+            // PersonaContactoTextBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(340, 64);
-            this.textBox1.MaxLength = 100;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(250, 20);
-            this.textBox1.TabIndex = 2;
+            this.PersonaContactoTextBox.Location = new System.Drawing.Point(340, 64);
+            this.PersonaContactoTextBox.MaxLength = 100;
+            this.PersonaContactoTextBox.Name = "PersonaContactoTextBox";
+            this.PersonaContactoTextBox.Size = new System.Drawing.Size(250, 20);
+            this.PersonaContactoTextBox.TabIndex = 2;
             // 
-            // label2
+            // lblDireccion
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(294, 87);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(55, 13);
-            this.label2.TabIndex = 143;
-            this.label2.Text = "Direccion:";
+            this.lblDireccion.AutoSize = true;
+            this.lblDireccion.Location = new System.Drawing.Point(294, 87);
+            this.lblDireccion.Name = "lblDireccion";
+            this.lblDireccion.Size = new System.Drawing.Size(55, 13);
+            this.lblDireccion.TabIndex = 143;
+            this.lblDireccion.Text = "Direccion:";
             // 
-            // textBox2
+            // DireccionTextBox
             // 
-            this.textBox2.Location = new System.Drawing.Point(84, 103);
-            this.textBox2.MaxLength = 100;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(506, 20);
-            this.textBox2.TabIndex = 3;
+            this.DireccionTextBox.Location = new System.Drawing.Point(84, 103);
+            this.DireccionTextBox.MaxLength = 100;
+            this.DireccionTextBox.Name = "DireccionTextBox";
+            this.DireccionTextBox.Size = new System.Drawing.Size(506, 20);
+            this.DireccionTextBox.TabIndex = 3;
             // 
             // CancelButton
             // 
@@ -218,26 +218,27 @@ namespace VideoClub.Windows
             this.ControlBox = false;
             this.Controls.Add(this.CancelButton);
             this.Controls.Add(this.OkButton);
-            this.Controls.Add(this.EmailTextBox);
-            this.Controls.Add(this.EmailLabel);
+            this.Controls.Add(this.CorreoTextBox);
+            this.Controls.Add(this.lblCorreo);
             this.Controls.Add(this.TelefonoTextBox);
-            this.Controls.Add(this.TelefonoLabel);
-            this.Controls.Add(this.CiudadesComboBox);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.PaisesComboBox);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.CUITTextBox);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.lblTelefono);
+            this.Controls.Add(this.ProvinciasComboBox);
+            this.Controls.Add(this.lblLocalidad);
+            this.Controls.Add(this.LocalidadesComboBox);
+            this.Controls.Add(this.lblProvincia);
+            this.Controls.Add(this.PersonaContactoTextBox);
+            this.Controls.Add(this.CuitTextBox);
+            this.Controls.Add(this.lblPersonaContacto);
+            this.Controls.Add(this.DireccionTextBox);
             this.Controls.Add(this.RazonSocialTextBox);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.CUITlabel);
-            this.Controls.Add(this.RazonSociallabel);
+            this.Controls.Add(this.lblDireccion);
+            this.Controls.Add(this.lblCuit);
+            this.Controls.Add(this.lblRazonSocial);
             this.MaximumSize = new System.Drawing.Size(700, 400);
             this.MinimumSize = new System.Drawing.Size(700, 400);
             this.Name = "FrmProveedoresAE";
             this.Text = "FmProveedoresAE";
+            this.Load += new System.EventHandler(this.FrmProveedoresAE_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -245,21 +246,21 @@ namespace VideoClub.Windows
 
         #endregion
         private System.Windows.Forms.TextBox RazonSocialTextBox;
-        private System.Windows.Forms.Label RazonSociallabel;
-        private System.Windows.Forms.TextBox CUITTextBox;
-        private System.Windows.Forms.Label CUITlabel;
-        private System.Windows.Forms.ComboBox CiudadesComboBox;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.ComboBox PaisesComboBox;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox EmailTextBox;
-        private System.Windows.Forms.Label EmailLabel;
+        private System.Windows.Forms.Label lblRazonSocial;
+        private System.Windows.Forms.TextBox CuitTextBox;
+        private System.Windows.Forms.Label lblCuit;
+        private System.Windows.Forms.ComboBox ProvinciasComboBox;
+        private System.Windows.Forms.Label lblLocalidad;
+        private System.Windows.Forms.ComboBox LocalidadesComboBox;
+        private System.Windows.Forms.Label lblProvincia;
+        private System.Windows.Forms.TextBox CorreoTextBox;
+        private System.Windows.Forms.Label lblCorreo;
         private System.Windows.Forms.TextBox TelefonoTextBox;
-        private System.Windows.Forms.Label TelefonoLabel;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Label lblTelefono;
+        private System.Windows.Forms.Label lblPersonaContacto;
+        private System.Windows.Forms.TextBox PersonaContactoTextBox;
+        private System.Windows.Forms.Label lblDireccion;
+        private System.Windows.Forms.TextBox DireccionTextBox;
         private System.Windows.Forms.Button CancelButton;
         private System.Windows.Forms.Button OkButton;
     }

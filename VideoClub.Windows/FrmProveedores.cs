@@ -20,13 +20,14 @@ namespace VideoClub.Windows
             InitializeComponent();
         }
 
+        private IServicioProveedor _servicio;
+        private List<ProveedorListDto> _lista;
         private void tsbCerrar_Click(object sender, EventArgs e)
         {
             Close();
         }
 
-        private IServicioProveedor _servicio;
-        private List<ProveedorListDto> _lista;
+
         private void FrmProveedores_Load(object sender, EventArgs e)
         {
             try
@@ -74,9 +75,5 @@ namespace VideoClub.Windows
             return r;
         }
 
-        private void tsbNuevo_Click(object sender, EventArgs e)
-        {
-            
-        }
     }
 }

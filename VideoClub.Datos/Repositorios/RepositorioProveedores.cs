@@ -6,23 +6,26 @@ using System.Text;
 using System.Threading.Tasks;
 using VideoClub.Datos.Repositorios.Facades;
 using VideoClubEntidades.DTOs.Proveedor;
+using VideoClubEntidades.Entidades;
 
 namespace VideoClub.Datos.Repositorios
 {
     public class RepositorioProveedores : IRepositorioProveedores
     {
         private readonly SqlConnection _sqlConnection;
-        public RepositorioProveedores(SqlConnection sqlConnection)
+        public RepositorioProveedores(SqlConnection sqlConnection )
         {
             _sqlConnection = sqlConnection;
         }
+     
         public List<ProveedorListDto> GetLista()
         {
             List<ProveedorListDto> lista = new List<ProveedorListDto>();
             try
             {
-                string cadenaComando = "SELECT ProveedorId, CUIT, RazonSocial, NombreProvincia, NombreLocalidad FROM Proveedores" +
-                    " INNER JOIN Provincias ON Proveedores.ProvinciaId=Provincias.ProvinciaId " +
+                string cadenaComando =
+                    "SELECT ProveedorId, CUIT, RazonSocial, NombreProvincia, NombreLocalidad FROM Proveedores " +
+                    "INNER JOIN Provincias ON Proveedores.ProvinciaId=Provincias.ProvinciaId " +
                     "INNER JOIN Localidades ON Proveedores.LocalidadId=Localidades.LocalidadId";
                 SqlCommand comando = new SqlCommand(cadenaComando, _sqlConnection);
                 SqlDataReader reader = comando.ExecuteReader();
@@ -34,9 +37,8 @@ namespace VideoClub.Datos.Repositorios
                 reader.Close();
                 return lista;
             }
-            catch (Exception)
+            catch (Exception e)
             {
-
                 throw new Exception("Error al intentar leer los proveedores");
             }
         }

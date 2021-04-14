@@ -23,28 +23,12 @@ namespace VideoClub.Windows
         protected override void OnLoad(EventArgs e)
         {
             base.OnLoad(e);
-            CargarComboProvincias();
+            Helper.Helper.CargarDatosComboProvincias(ref ProvinciasComboBox);
             if (localidad!=null)
             {
                 LocalidadTextBox.Text = localidad.NombreLocalidad;
                 ProvinciasComboBox.SelectedValue = localidad.ProvinciaId;
             }
-        }
-
-        private void CargarComboProvincias()
-        {
-            IServicioProvincia servicioProvincia = new ServicioProvincia();
-            var lista = servicioProvincia.GetProvincia();
-            var defaultProvincia = new Provincia
-            {
-                ProvinciaId = 0,
-                NombreProvincia = "<Seleccione Provincia>"
-            };
-            lista.Insert(0, defaultProvincia);
-            ProvinciasComboBox.DataSource = lista;
-            ProvinciasComboBox.ValueMember = "ProvinciaId";
-            ProvinciasComboBox.DisplayMember = "NombreProvincia";
-            ProvinciasComboBox.SelectedIndex = 0;
         }
 
         private LocalidadEditDto localidad;

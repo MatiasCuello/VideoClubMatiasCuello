@@ -139,7 +139,6 @@ namespace VideoClub.Windows
             this.tsbNuevo.Size = new System.Drawing.Size(46, 51);
             this.tsbNuevo.Text = "Nuevo";
             this.tsbNuevo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.tsbNuevo.Click += new System.EventHandler(this.tsbNuevo_Click);
             // 
             // tsbEditar
             // 

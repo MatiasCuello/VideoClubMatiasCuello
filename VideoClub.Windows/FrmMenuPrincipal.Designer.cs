@@ -38,6 +38,7 @@ namespace VideoClub.Windows
             this.LocalidadesButton = new System.Windows.Forms.Button();
             this.SociosButton = new System.Windows.Forms.Button();
             this.EmpleadosButton = new System.Windows.Forms.Button();
+            this.ProveedoresButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // ProvinciasButton
@@ -130,6 +131,16 @@ namespace VideoClub.Windows
             this.EmpleadosButton.UseVisualStyleBackColor = true;
             this.EmpleadosButton.Click += new System.EventHandler(this.EmpleadosButton_Click);
             // 
+            // ProveedoresButton
+            // 
+            this.ProveedoresButton.Location = new System.Drawing.Point(13, 245);
+            this.ProveedoresButton.Name = "ProveedoresButton";
+            this.ProveedoresButton.Size = new System.Drawing.Size(96, 23);
+            this.ProveedoresButton.TabIndex = 4;
+            this.ProveedoresButton.Text = "Proveedores";
+            this.ProveedoresButton.UseVisualStyleBackColor = true;
+            this.ProveedoresButton.Click += new System.EventHandler(this.ProveedoresButton_Click);
+            // 
             // FrmMenuPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -137,6 +148,7 @@ namespace VideoClub.Windows
             this.ClientSize = new System.Drawing.Size(684, 361);
             this.ControlBox = false;
             this.Controls.Add(this.GenerosButton);
+            this.Controls.Add(this.ProveedoresButton);
             this.Controls.Add(this.EmpleadosButton);
             this.Controls.Add(this.SociosButton);
             this.Controls.Add(this.LocalidadesButton);
@@ -164,6 +176,7 @@ namespace VideoClub.Windows
         private System.Windows.Forms.Button LocalidadesButton;
         private System.Windows.Forms.Button SociosButton;
         private System.Windows.Forms.Button EmpleadosButton;
+        private System.Windows.Forms.Button ProveedoresButton;
     }
 }
 

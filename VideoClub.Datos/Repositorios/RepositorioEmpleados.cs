@@ -37,7 +37,7 @@ namespace VideoClub.Datos.Repositorios
             catch (Exception)
             {
 
-                throw new Exception("Error al intentar leer los socios");
+                throw new Exception("Error al intentar leer los empleados");
             }
         }
 

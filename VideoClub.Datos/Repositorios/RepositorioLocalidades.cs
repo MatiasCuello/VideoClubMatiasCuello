@@ -28,9 +28,6 @@ namespace VideoClub.Datos.Repositorios
 
 
         }
-
-
-
         public List<LocalidadListDto> GetLista()
         {
             List<LocalidadListDto> lista = new List<LocalidadListDto>();

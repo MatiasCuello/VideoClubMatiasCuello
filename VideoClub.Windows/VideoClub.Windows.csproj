@@ -112,6 +112,12 @@
     <Compile Include="FrmProvinciasAE.Designer.cs">
       <DependentUpon>FrmProvinciasAE.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmSocios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmSocios.Designer.cs">
+      <DependentUpon>FrmSocios.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmSoportes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -158,6 +164,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmProvinciasAE.resx">
       <DependentUpon>FrmProvinciasAE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmSocios.resx">
+      <DependentUpon>FrmSocios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmSoportes.resx">
       <DependentUpon>FrmSoportes.cs</DependentUpon>

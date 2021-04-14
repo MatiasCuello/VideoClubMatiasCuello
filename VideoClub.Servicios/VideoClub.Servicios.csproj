@@ -47,12 +47,14 @@
     <Compile Include="Servicios\Facades\IServicioGenero.cs" />
     <Compile Include="Servicios\Facades\IServicioLocalidades.cs" />
     <Compile Include="Servicios\Facades\IServicioProvincia.cs" />
+    <Compile Include="Servicios\Facades\IServicioSocios.cs" />
     <Compile Include="Servicios\Facades\IServicioSoporte.cs" />
     <Compile Include="Servicios\ServicioCalificacion.cs" />
     <Compile Include="Servicios\ServicioEstado.cs" />
     <Compile Include="Servicios\ServicioGenero.cs" />
     <Compile Include="Servicios\ServicioLocalidades.cs" />
     <Compile Include="Servicios\ServicioProvincia.cs" />
+    <Compile Include="Servicios\ServicioSocios.cs" />
     <Compile Include="Servicios\ServicioSoporte.cs" />
   </ItemGroup>
   <ItemGroup />

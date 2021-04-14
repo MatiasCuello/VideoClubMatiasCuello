@@ -49,12 +49,14 @@
     <Compile Include="Repositorios\Facades\IRepositorioGeneros.cs" />
     <Compile Include="Repositorios\Facades\IRepositorioLocalidades.cs" />
     <Compile Include="Repositorios\Facades\IRepositorioProvincias.cs" />
+    <Compile Include="Repositorios\Facades\IRepositorioSocios.cs" />
     <Compile Include="Repositorios\Facades\IRepositorioSoportes.cs" />
     <Compile Include="Repositorios\RepositorioCalificaciones.cs" />
     <Compile Include="Repositorios\RepositorioEstados.cs" />
     <Compile Include="Repositorios\RepositorioGeneros.cs" />
     <Compile Include="Repositorios\RepositorioLocalidades.cs" />
     <Compile Include="Repositorios\RepositorioProvincias.cs" />
+    <Compile Include="Repositorios\RepositorioSocios.cs" />
     <Compile Include="Repositorios\RepositorioSoportes.cs" />
   </ItemGroup>
   <ItemGroup>

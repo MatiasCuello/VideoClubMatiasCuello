@@ -43,10 +43,12 @@
   <ItemGroup>
     <Compile Include="DTOs\Localidad\LocalidadEditDto.cs" />
     <Compile Include="DTOs\Localidad\LocalidadListDto.cs" />
+    <Compile Include="DTOs\Socio\SocioListDto.cs" />
     <Compile Include="Entidades\Calificacion.cs" />
     <Compile Include="Entidades\Estado.cs" />
     <Compile Include="Entidades\Genero.cs" />
     <Compile Include="Entidades\Localidad.cs" />
+    <Compile Include="Entidades\Socios.cs" />
     <Compile Include="Entidades\Soporte.cs" />
     <Compile Include="Entidades\Provincia.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

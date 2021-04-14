@@ -64,5 +64,11 @@ namespace VideoClub.Windows
             FrmSocios frm = new FrmSocios();
             frm.ShowDialog(this);
         }
+
+        private void EmpleadosButton_Click(object sender, EventArgs e)
+        {
+            FrmEmpleados frm = new FrmEmpleados();
+            frm.ShowDialog(this);
+        }
     }
 }

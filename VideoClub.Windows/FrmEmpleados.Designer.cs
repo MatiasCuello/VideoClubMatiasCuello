@@ -1,7 +1,7 @@
 ﻿
 namespace VideoClub.Windows
 {
-    partial class FrmSocios
+    partial class FrmEmpleados
     {
         /// <summary>
         /// Required designer variable.
@@ -29,14 +29,14 @@ namespace VideoClub.Windows
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dgvDatos = new System.Windows.Forms.DataGridView();
             this.cmnNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cmnApellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cmnLocalidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cmnProvincia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tspSocios = new System.Windows.Forms.ToolStrip();
+            this.tspEmpleados = new System.Windows.Forms.ToolStrip();
             this.tsbNuevo = new System.Windows.Forms.ToolStripButton();
             this.tsbEditar = new System.Windows.Forms.ToolStripButton();
             this.tsbBorrar = new System.Windows.Forms.ToolStripButton();
@@ -48,7 +48,7 @@ namespace VideoClub.Windows
             this.tsbCerrar = new System.Windows.Forms.ToolStripButton();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDatos)).BeginInit();
-            this.tspSocios.SuspendLayout();
+            this.tspEmpleados.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -58,7 +58,7 @@ namespace VideoClub.Windows
             this.panel1.Location = new System.Drawing.Point(0, 54);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(800, 396);
-            this.panel1.TabIndex = 7;
+            this.panel1.TabIndex = 9;
             // 
             // dgvDatos
             // 
@@ -66,8 +66,8 @@ namespace VideoClub.Windows
             this.dgvDatos.AllowUserToDeleteRows = false;
             this.dgvDatos.AllowUserToResizeColumns = false;
             this.dgvDatos.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Silver;
-            this.dgvDatos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Silver;
+            this.dgvDatos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDatos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.cmnNombre,
@@ -112,9 +112,9 @@ namespace VideoClub.Windows
             this.cmnProvincia.Name = "cmnProvincia";
             this.cmnProvincia.ReadOnly = true;
             // 
-            // tspSocios
+            // tspEmpleados
             // 
-            this.tspSocios.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tspEmpleados.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsbNuevo,
             this.tsbEditar,
             this.tsbBorrar,
@@ -124,11 +124,11 @@ namespace VideoClub.Windows
             this.tsbImprimir,
             this.toolStripSeparator2,
             this.tsbCerrar});
-            this.tspSocios.Location = new System.Drawing.Point(0, 0);
-            this.tspSocios.Name = "tspSocios";
-            this.tspSocios.Size = new System.Drawing.Size(800, 54);
-            this.tspSocios.TabIndex = 6;
-            this.tspSocios.Text = "toolStrip1";
+            this.tspEmpleados.Location = new System.Drawing.Point(0, 0);
+            this.tspEmpleados.Name = "tspEmpleados";
+            this.tspEmpleados.Size = new System.Drawing.Size(800, 54);
+            this.tspEmpleados.TabIndex = 8;
+            this.tspEmpleados.Text = "toolStrip1";
             // 
             // tsbNuevo
             // 
@@ -211,23 +211,21 @@ namespace VideoClub.Windows
             this.tsbCerrar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.tsbCerrar.Click += new System.EventHandler(this.tsbCerrar_Click);
             // 
-            // FrmSocios
+            // FrmEmpleados
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.ControlBox = false;
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.tspSocios);
-            this.MaximumSize = new System.Drawing.Size(816, 489);
-            this.MinimumSize = new System.Drawing.Size(816, 489);
-            this.Name = "FrmSocios";
-            this.Text = "FrmSocios";
-            this.Load += new System.EventHandler(this.FrmSocios_Load);
+            this.Controls.Add(this.tspEmpleados);
+            this.Name = "FrmEmpleados";
+            this.Text = "FrmEmpleados";
+            this.Load += new System.EventHandler(this.FrmEmpleados_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDatos)).EndInit();
-            this.tspSocios.ResumeLayout(false);
-            this.tspSocios.PerformLayout();
+            this.tspEmpleados.ResumeLayout(false);
+            this.tspEmpleados.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -237,7 +235,11 @@ namespace VideoClub.Windows
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DataGridView dgvDatos;
-        private System.Windows.Forms.ToolStrip tspSocios;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cmnNombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cmnApellido;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cmnLocalidad;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cmnProvincia;
+        private System.Windows.Forms.ToolStrip tspEmpleados;
         private System.Windows.Forms.ToolStripButton tsbNuevo;
         private System.Windows.Forms.ToolStripButton tsbEditar;
         private System.Windows.Forms.ToolStripButton tsbBorrar;
@@ -247,9 +249,5 @@ namespace VideoClub.Windows
         private System.Windows.Forms.ToolStripButton tsbImprimir;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolStripButton tsbCerrar;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cmnNombre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cmnApellido;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cmnLocalidad;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cmnProvincia;
     }
 }

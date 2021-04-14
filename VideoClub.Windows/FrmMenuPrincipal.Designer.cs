@@ -37,6 +37,7 @@ namespace VideoClub.Windows
             this.GenerosButton = new System.Windows.Forms.Button();
             this.LocalidadesButton = new System.Windows.Forms.Button();
             this.SociosButton = new System.Windows.Forms.Button();
+            this.EmpleadosButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // ProvinciasButton
@@ -119,6 +120,16 @@ namespace VideoClub.Windows
             this.SociosButton.UseVisualStyleBackColor = true;
             this.SociosButton.Click += new System.EventHandler(this.SociosButton_Click);
             // 
+            // EmpleadosButton
+            // 
+            this.EmpleadosButton.Location = new System.Drawing.Point(13, 216);
+            this.EmpleadosButton.Name = "EmpleadosButton";
+            this.EmpleadosButton.Size = new System.Drawing.Size(96, 23);
+            this.EmpleadosButton.TabIndex = 4;
+            this.EmpleadosButton.Text = "Empleados";
+            this.EmpleadosButton.UseVisualStyleBackColor = true;
+            this.EmpleadosButton.Click += new System.EventHandler(this.EmpleadosButton_Click);
+            // 
             // FrmMenuPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -126,6 +137,7 @@ namespace VideoClub.Windows
             this.ClientSize = new System.Drawing.Size(684, 361);
             this.ControlBox = false;
             this.Controls.Add(this.GenerosButton);
+            this.Controls.Add(this.EmpleadosButton);
             this.Controls.Add(this.SociosButton);
             this.Controls.Add(this.LocalidadesButton);
             this.Controls.Add(this.CalificacionesButton);
@@ -151,6 +163,7 @@ namespace VideoClub.Windows
         private System.Windows.Forms.Button GenerosButton;
         private System.Windows.Forms.Button LocalidadesButton;
         private System.Windows.Forms.Button SociosButton;
+        private System.Windows.Forms.Button EmpleadosButton;
     }
 }
 

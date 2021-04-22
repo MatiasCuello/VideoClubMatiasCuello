@@ -10,5 +10,7 @@ namespace VideoClub.Servicios.Servicios.Facades
     public interface IServicioProveedor
     {
         List<ProveedorListDto> GetLista();
+        void Guardar(ProveedorEditDto proveedorEditDto);
+        bool Existe(ProveedorEditDto proveedorEditDto);
     }
 }

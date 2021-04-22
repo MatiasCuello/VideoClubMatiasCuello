@@ -39,6 +39,7 @@ namespace VideoClub.Windows
             this.SociosButton = new System.Windows.Forms.Button();
             this.EmpleadosButton = new System.Windows.Forms.Button();
             this.ProveedoresButton = new System.Windows.Forms.Button();
+            this.TiposDocumentosButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // ProvinciasButton
@@ -83,7 +84,7 @@ namespace VideoClub.Windows
             // 
             // CalificacionesButton
             // 
-            this.CalificacionesButton.Location = new System.Drawing.Point(13, 129);
+            this.CalificacionesButton.Location = new System.Drawing.Point(13, 128);
             this.CalificacionesButton.Name = "CalificacionesButton";
             this.CalificacionesButton.Size = new System.Drawing.Size(96, 23);
             this.CalificacionesButton.TabIndex = 4;
@@ -93,7 +94,7 @@ namespace VideoClub.Windows
             // 
             // GenerosButton
             // 
-            this.GenerosButton.Location = new System.Drawing.Point(12, 100);
+            this.GenerosButton.Location = new System.Drawing.Point(12, 99);
             this.GenerosButton.Name = "GenerosButton";
             this.GenerosButton.Size = new System.Drawing.Size(97, 23);
             this.GenerosButton.TabIndex = 5;
@@ -103,7 +104,7 @@ namespace VideoClub.Windows
             // 
             // LocalidadesButton
             // 
-            this.LocalidadesButton.Location = new System.Drawing.Point(13, 158);
+            this.LocalidadesButton.Location = new System.Drawing.Point(13, 186);
             this.LocalidadesButton.Name = "LocalidadesButton";
             this.LocalidadesButton.Size = new System.Drawing.Size(96, 23);
             this.LocalidadesButton.TabIndex = 4;
@@ -113,7 +114,7 @@ namespace VideoClub.Windows
             // 
             // SociosButton
             // 
-            this.SociosButton.Location = new System.Drawing.Point(13, 187);
+            this.SociosButton.Location = new System.Drawing.Point(13, 215);
             this.SociosButton.Name = "SociosButton";
             this.SociosButton.Size = new System.Drawing.Size(96, 23);
             this.SociosButton.TabIndex = 4;
@@ -123,7 +124,7 @@ namespace VideoClub.Windows
             // 
             // EmpleadosButton
             // 
-            this.EmpleadosButton.Location = new System.Drawing.Point(13, 216);
+            this.EmpleadosButton.Location = new System.Drawing.Point(13, 244);
             this.EmpleadosButton.Name = "EmpleadosButton";
             this.EmpleadosButton.Size = new System.Drawing.Size(96, 23);
             this.EmpleadosButton.TabIndex = 4;
@@ -133,13 +134,23 @@ namespace VideoClub.Windows
             // 
             // ProveedoresButton
             // 
-            this.ProveedoresButton.Location = new System.Drawing.Point(13, 245);
+            this.ProveedoresButton.Location = new System.Drawing.Point(13, 273);
             this.ProveedoresButton.Name = "ProveedoresButton";
             this.ProveedoresButton.Size = new System.Drawing.Size(96, 23);
             this.ProveedoresButton.TabIndex = 4;
             this.ProveedoresButton.Text = "Proveedores";
             this.ProveedoresButton.UseVisualStyleBackColor = true;
             this.ProveedoresButton.Click += new System.EventHandler(this.ProveedoresButton_Click);
+            // 
+            // TiposDocumentosButton
+            // 
+            this.TiposDocumentosButton.Location = new System.Drawing.Point(12, 157);
+            this.TiposDocumentosButton.Name = "TiposDocumentosButton";
+            this.TiposDocumentosButton.Size = new System.Drawing.Size(96, 23);
+            this.TiposDocumentosButton.TabIndex = 4;
+            this.TiposDocumentosButton.Text = "Documentos";
+            this.TiposDocumentosButton.UseVisualStyleBackColor = true;
+            this.TiposDocumentosButton.Click += new System.EventHandler(this.TiposDocumentosButton_Click);
             // 
             // FrmMenuPrincipal
             // 
@@ -152,6 +163,7 @@ namespace VideoClub.Windows
             this.Controls.Add(this.EmpleadosButton);
             this.Controls.Add(this.SociosButton);
             this.Controls.Add(this.LocalidadesButton);
+            this.Controls.Add(this.TiposDocumentosButton);
             this.Controls.Add(this.CalificacionesButton);
             this.Controls.Add(this.EstadosButton);
             this.Controls.Add(this.SoportesButton);
@@ -177,6 +189,7 @@ namespace VideoClub.Windows
         private System.Windows.Forms.Button SociosButton;
         private System.Windows.Forms.Button EmpleadosButton;
         private System.Windows.Forms.Button ProveedoresButton;
+        private System.Windows.Forms.Button TiposDocumentosButton;
     }
 }
 

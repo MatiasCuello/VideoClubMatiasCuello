@@ -76,5 +76,11 @@ namespace VideoClub.Windows
             FrmProveedores frm = new FrmProveedores();
             frm.ShowDialog(this);
         }
+
+        private void TiposDocumentosButton_Click(object sender, EventArgs e)
+        {
+            FrmTiposDocumentos frm = new FrmTiposDocumentos();
+            frm.ShowDialog(this);
+        }
     }
 }

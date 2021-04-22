@@ -168,15 +168,15 @@ namespace VideoClub.Windows
                     servicio.Guardar(localidadEditDto);
                     localidadListDto.LocalidadId = localidadEditDto.LocalidadId;
                     localidadListDto.NombreLocalidad = localidadEditDto.NombreLocalidad;
-                    localidadListDto.NombreProvincia = 
+                    localidadListDto.NombreProvincia =
                         (_servicioProvincia.GetProvinciaPorId(localidadEditDto.ProvinciaId)).NombreProvincia;
-                    
+
                     SetearFila(r, localidadListDto);
                     MessageBox.Show("Registro editado", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
                 {
-                    SetearFila(r, localidadListDtoAux);
+                   SetearFila(r, localidadListDtoAux);
                     MessageBox.Show("Registro duplicado... Alta denegada", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }

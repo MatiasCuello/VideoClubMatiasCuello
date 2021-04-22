@@ -32,8 +32,9 @@ namespace VideoClub.Windows
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dgvDatos = new System.Windows.Forms.DataGridView();
-            this.cmnRazonSocial = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cmnCUIT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cmnRazonSocial = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cmnDireccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cmnLocalidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cmnProvincia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tspProveedores = new System.Windows.Forms.ToolStrip();
@@ -70,8 +71,9 @@ namespace VideoClub.Windows
             this.dgvDatos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDatos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.cmnRazonSocial,
             this.cmnCUIT,
+            this.cmnRazonSocial,
+            this.cmnDireccion,
             this.cmnLocalidad,
             this.cmnProvincia});
             this.dgvDatos.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -84,6 +86,13 @@ namespace VideoClub.Windows
             this.dgvDatos.Size = new System.Drawing.Size(800, 396);
             this.dgvDatos.TabIndex = 0;
             // 
+            // cmnCUIT
+            // 
+            this.cmnCUIT.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.cmnCUIT.HeaderText = "CUIT";
+            this.cmnCUIT.Name = "cmnCUIT";
+            this.cmnCUIT.ReadOnly = true;
+            // 
             // cmnRazonSocial
             // 
             this.cmnRazonSocial.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
@@ -91,12 +100,12 @@ namespace VideoClub.Windows
             this.cmnRazonSocial.Name = "cmnRazonSocial";
             this.cmnRazonSocial.ReadOnly = true;
             // 
-            // cmnCUIT
+            // cmnDireccion
             // 
-            this.cmnCUIT.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.cmnCUIT.HeaderText = "CUIT";
-            this.cmnCUIT.Name = "cmnCUIT";
-            this.cmnCUIT.ReadOnly = true;
+            this.cmnDireccion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.cmnDireccion.HeaderText = "Direccion";
+            this.cmnDireccion.Name = "cmnDireccion";
+            this.cmnDireccion.ReadOnly = true;
             // 
             // cmnLocalidad
             // 
@@ -139,6 +148,7 @@ namespace VideoClub.Windows
             this.tsbNuevo.Size = new System.Drawing.Size(46, 51);
             this.tsbNuevo.Text = "Nuevo";
             this.tsbNuevo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.tsbNuevo.Click += new System.EventHandler(this.tsbNuevo_Click);
             // 
             // tsbEditar
             // 
@@ -247,8 +257,9 @@ namespace VideoClub.Windows
         private System.Windows.Forms.ToolStripButton tsbImprimir;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolStripButton tsbCerrar;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cmnRazonSocial;
         private System.Windows.Forms.DataGridViewTextBoxColumn cmnCUIT;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cmnRazonSocial;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cmnDireccion;
         private System.Windows.Forms.DataGridViewTextBoxColumn cmnLocalidad;
         private System.Windows.Forms.DataGridViewTextBoxColumn cmnProvincia;
     }

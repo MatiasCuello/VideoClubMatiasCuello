@@ -29,7 +29,7 @@ namespace VideoClub.Windows
 
             try
             {
-                _servicio = new ServicioEmpleados();
+                _servicio = new ServicioEmpleado();
                 _lista = _servicio.GetLista();
                 MostrarDatosEnGrilla();
             }
@@ -56,6 +56,7 @@ namespace VideoClub.Windows
             r.Cells[cmnApellido.Index].Value = empleadoListDto.Apellido;
             r.Cells[cmnLocalidad.Index].Value = empleadoListDto.Localidad;
             r.Cells[cmnProvincia.Index].Value = empleadoListDto.Provincia;
+
             r.Tag = empleadoListDto;
         }
 
@@ -74,5 +75,6 @@ namespace VideoClub.Windows
         {
             Close();
         }
+
     }
 }

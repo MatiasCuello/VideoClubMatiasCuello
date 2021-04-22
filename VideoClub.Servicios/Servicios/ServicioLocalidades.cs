@@ -55,7 +55,7 @@ namespace VideoClub.Servicios.Servicios
             {
                 conexionBD = new ConexionBD();
                 repositorio = new RepositorioLocalidades(conexionBD.AbrirConexion());
-                _repositorioProvincias=new RepositorioProvincias(conexionBD.AbrirConexion());
+                _repositorioProvincias = new RepositorioProvincias(conexionBD.AbrirConexion());
                 var localidad = new Localidad
                 {
                     LocalidadId = localidadDto.LocalidadId,

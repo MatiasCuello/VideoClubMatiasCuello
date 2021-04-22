@@ -10,5 +10,6 @@ namespace VideoClub.Datos.Repositorios.Facades
     public interface IRepositorioEmpleados
     {
         List<EmpleadoListDto> GetLista();
+
     }
 }

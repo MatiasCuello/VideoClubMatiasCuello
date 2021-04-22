@@ -52,6 +52,12 @@
     <Compile Include="FrmBuscarLocalidades.Designer.cs">
       <DependentUpon>FrmBuscarLocalidades.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmEmpleadosAE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmEmpleadosAE.Designer.cs">
+      <DependentUpon>FrmEmpleadosAE.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmProveedoresAE.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -154,11 +160,20 @@
     <Compile Include="FrmSoportesAE.Designer.cs">
       <DependentUpon>FrmSoportesAE.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmTiposDocumentos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmTiposDocumentos.Designer.cs">
+      <DependentUpon>FrmTiposDocumentos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Helpers\Helper.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FrmBuscarLocalidades.resx">
       <DependentUpon>FrmBuscarLocalidades.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmEmpleadosAE.resx">
+      <DependentUpon>FrmEmpleadosAE.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmProveedoresAE.resx">
       <DependentUpon>FrmProveedoresAE.cs</DependentUpon>
@@ -210,6 +225,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmSoportesAE.resx">
       <DependentUpon>FrmSoportesAE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmTiposDocumentos.resx">
+      <DependentUpon>FrmTiposDocumentos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

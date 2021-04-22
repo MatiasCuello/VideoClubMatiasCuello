@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace VideoClubEntidades.Entidades
 {
-    public class Socios
+    public class Socio
     {
         public int SocioId { get; set; }
         public string Nombre { get; set; }

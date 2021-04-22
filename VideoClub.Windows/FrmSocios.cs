@@ -25,7 +25,7 @@ namespace VideoClub.Windows
         {
             try
             {
-                _servicio = new ServicioSocios();
+                _servicio = new ServicioSocio();
                 _lista = _servicio.GetLista();
                 MostrarDatosEnGrilla();
             }

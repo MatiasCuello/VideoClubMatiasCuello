@@ -17,7 +17,9 @@ namespace VideoClubEntidades.DTOs.Proveedor
         public string Direccion { get; set; }
         public Provincia Provincia { get; set; }
         public LocalidadListDto Localidad { get; set; }
-        public string Telefono { get; set; }
-        public string Email { get; set; }
+        public string TelefonoFijo { get; set; }
+        public string TelefonoMovil { get; set; }
+        public string CorreoElectronico { get; set; }
+
     }
 }

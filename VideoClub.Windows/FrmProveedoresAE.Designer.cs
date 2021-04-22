@@ -29,6 +29,7 @@ namespace VideoClub.Windows
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.RazonSocialTextBox = new System.Windows.Forms.TextBox();
             this.lblRazonSocial = new System.Windows.Forms.Label();
             this.CuitTextBox = new System.Windows.Forms.TextBox();
@@ -47,11 +48,13 @@ namespace VideoClub.Windows
             this.DireccionTextBox = new System.Windows.Forms.TextBox();
             this.CancelButton = new System.Windows.Forms.Button();
             this.OkButton = new System.Windows.Forms.Button();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // RazonSocialTextBox
             // 
-            this.RazonSocialTextBox.Location = new System.Drawing.Point(84, 25);
+            this.RazonSocialTextBox.Location = new System.Drawing.Point(83, 36);
             this.RazonSocialTextBox.MaxLength = 100;
             this.RazonSocialTextBox.Name = "RazonSocialTextBox";
             this.RazonSocialTextBox.Size = new System.Drawing.Size(506, 20);
@@ -60,7 +63,7 @@ namespace VideoClub.Windows
             // lblRazonSocial
             // 
             this.lblRazonSocial.AutoSize = true;
-            this.lblRazonSocial.Location = new System.Drawing.Point(294, 9);
+            this.lblRazonSocial.Location = new System.Drawing.Point(293, 20);
             this.lblRazonSocial.Name = "lblRazonSocial";
             this.lblRazonSocial.Size = new System.Drawing.Size(73, 13);
             this.lblRazonSocial.TabIndex = 143;
@@ -68,7 +71,7 @@ namespace VideoClub.Windows
             // 
             // CuitTextBox
             // 
-            this.CuitTextBox.Location = new System.Drawing.Point(84, 64);
+            this.CuitTextBox.Location = new System.Drawing.Point(83, 75);
             this.CuitTextBox.MaxLength = 13;
             this.CuitTextBox.Name = "CuitTextBox";
             this.CuitTextBox.Size = new System.Drawing.Size(250, 20);
@@ -77,7 +80,7 @@ namespace VideoClub.Windows
             // lblCuit
             // 
             this.lblCuit.AutoSize = true;
-            this.lblCuit.Location = new System.Drawing.Point(181, 48);
+            this.lblCuit.Location = new System.Drawing.Point(180, 59);
             this.lblCuit.Name = "lblCuit";
             this.lblCuit.Size = new System.Drawing.Size(35, 13);
             this.lblCuit.TabIndex = 143;
@@ -87,15 +90,16 @@ namespace VideoClub.Windows
             // 
             this.ProvinciasComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.ProvinciasComboBox.FormattingEnabled = true;
-            this.ProvinciasComboBox.Location = new System.Drawing.Point(343, 142);
+            this.ProvinciasComboBox.Location = new System.Drawing.Point(83, 153);
             this.ProvinciasComboBox.Name = "ProvinciasComboBox";
             this.ProvinciasComboBox.Size = new System.Drawing.Size(250, 21);
-            this.ProvinciasComboBox.TabIndex = 5;
+            this.ProvinciasComboBox.TabIndex = 4;
+            this.ProvinciasComboBox.SelectedIndexChanged += new System.EventHandler(this.ProvinciasComboBox_SelectedIndexChanged);
             // 
             // lblLocalidad
             // 
             this.lblLocalidad.AutoSize = true;
-            this.lblLocalidad.Location = new System.Drawing.Point(173, 126);
+            this.lblLocalidad.Location = new System.Drawing.Point(428, 139);
             this.lblLocalidad.Name = "lblLocalidad";
             this.lblLocalidad.Size = new System.Drawing.Size(56, 13);
             this.lblLocalidad.TabIndex = 148;
@@ -105,23 +109,23 @@ namespace VideoClub.Windows
             // 
             this.LocalidadesComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.LocalidadesComboBox.FormattingEnabled = true;
-            this.LocalidadesComboBox.Location = new System.Drawing.Point(84, 142);
+            this.LocalidadesComboBox.Location = new System.Drawing.Point(339, 155);
             this.LocalidadesComboBox.Name = "LocalidadesComboBox";
             this.LocalidadesComboBox.Size = new System.Drawing.Size(250, 21);
-            this.LocalidadesComboBox.TabIndex = 4;
+            this.LocalidadesComboBox.TabIndex = 5;
             // 
             // lblProvincia
             // 
             this.lblProvincia.AutoSize = true;
-            this.lblProvincia.Location = new System.Drawing.Point(434, 126);
+            this.lblProvincia.Location = new System.Drawing.Point(174, 137);
             this.lblProvincia.Name = "lblProvincia";
-            this.lblProvincia.Size = new System.Drawing.Size(60, 13);
+            this.lblProvincia.Size = new System.Drawing.Size(54, 13);
             this.lblProvincia.TabIndex = 146;
-            this.lblProvincia.Text = "Pronvincia:";
+            this.lblProvincia.Text = "Provincia:";
             // 
             // CorreoTextBox
             // 
-            this.CorreoTextBox.Location = new System.Drawing.Point(84, 221);
+            this.CorreoTextBox.Location = new System.Drawing.Point(83, 232);
             this.CorreoTextBox.MaxLength = 150;
             this.CorreoTextBox.Name = "CorreoTextBox";
             this.CorreoTextBox.Size = new System.Drawing.Size(509, 20);
@@ -130,7 +134,7 @@ namespace VideoClub.Windows
             // lblCorreo
             // 
             this.lblCorreo.AutoSize = true;
-            this.lblCorreo.Location = new System.Drawing.Point(294, 205);
+            this.lblCorreo.Location = new System.Drawing.Point(293, 216);
             this.lblCorreo.Name = "lblCorreo";
             this.lblCorreo.Size = new System.Drawing.Size(97, 13);
             this.lblCorreo.TabIndex = 150;
@@ -138,7 +142,7 @@ namespace VideoClub.Windows
             // 
             // TelefonoTextBox
             // 
-            this.TelefonoTextBox.Location = new System.Drawing.Point(84, 182);
+            this.TelefonoTextBox.Location = new System.Drawing.Point(83, 193);
             this.TelefonoTextBox.MaxLength = 20;
             this.TelefonoTextBox.Name = "TelefonoTextBox";
             this.TelefonoTextBox.Size = new System.Drawing.Size(250, 20);
@@ -147,7 +151,7 @@ namespace VideoClub.Windows
             // lblTelefono
             // 
             this.lblTelefono.AutoSize = true;
-            this.lblTelefono.Location = new System.Drawing.Point(181, 166);
+            this.lblTelefono.Location = new System.Drawing.Point(180, 177);
             this.lblTelefono.Name = "lblTelefono";
             this.lblTelefono.Size = new System.Drawing.Size(52, 13);
             this.lblTelefono.TabIndex = 152;
@@ -156,7 +160,7 @@ namespace VideoClub.Windows
             // lblPersonaContacto
             // 
             this.lblPersonaContacto.AutoSize = true;
-            this.lblPersonaContacto.Location = new System.Drawing.Point(413, 48);
+            this.lblPersonaContacto.Location = new System.Drawing.Point(412, 59);
             this.lblPersonaContacto.Name = "lblPersonaContacto";
             this.lblPersonaContacto.Size = new System.Drawing.Size(112, 13);
             this.lblPersonaContacto.TabIndex = 143;
@@ -164,7 +168,7 @@ namespace VideoClub.Windows
             // 
             // PersonaContactoTextBox
             // 
-            this.PersonaContactoTextBox.Location = new System.Drawing.Point(340, 64);
+            this.PersonaContactoTextBox.Location = new System.Drawing.Point(339, 75);
             this.PersonaContactoTextBox.MaxLength = 100;
             this.PersonaContactoTextBox.Name = "PersonaContactoTextBox";
             this.PersonaContactoTextBox.Size = new System.Drawing.Size(250, 20);
@@ -173,7 +177,7 @@ namespace VideoClub.Windows
             // lblDireccion
             // 
             this.lblDireccion.AutoSize = true;
-            this.lblDireccion.Location = new System.Drawing.Point(294, 87);
+            this.lblDireccion.Location = new System.Drawing.Point(293, 98);
             this.lblDireccion.Name = "lblDireccion";
             this.lblDireccion.Size = new System.Drawing.Size(55, 13);
             this.lblDireccion.TabIndex = 143;
@@ -181,7 +185,7 @@ namespace VideoClub.Windows
             // 
             // DireccionTextBox
             // 
-            this.DireccionTextBox.Location = new System.Drawing.Point(84, 103);
+            this.DireccionTextBox.Location = new System.Drawing.Point(83, 114);
             this.DireccionTextBox.MaxLength = 100;
             this.DireccionTextBox.Name = "DireccionTextBox";
             this.DireccionTextBox.Size = new System.Drawing.Size(506, 20);
@@ -190,7 +194,7 @@ namespace VideoClub.Windows
             // CancelButton
             // 
             this.CancelButton.Image = global::VideoClub.Windows.Properties.Resources.Cancelar;
-            this.CancelButton.Location = new System.Drawing.Point(416, 270);
+            this.CancelButton.Location = new System.Drawing.Point(415, 281);
             this.CancelButton.Name = "CancelButton";
             this.CancelButton.Size = new System.Drawing.Size(94, 64);
             this.CancelButton.TabIndex = 9;
@@ -202,13 +206,18 @@ namespace VideoClub.Windows
             // OkButton
             // 
             this.OkButton.Image = global::VideoClub.Windows.Properties.Resources.OK;
-            this.OkButton.Location = new System.Drawing.Point(163, 270);
+            this.OkButton.Location = new System.Drawing.Point(162, 281);
             this.OkButton.Name = "OkButton";
             this.OkButton.Size = new System.Drawing.Size(94, 64);
             this.OkButton.TabIndex = 8;
             this.OkButton.Text = "OK";
             this.OkButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.OkButton.UseVisualStyleBackColor = true;
+            this.OkButton.Click += new System.EventHandler(this.OkButton_Click);
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
             // 
             // FrmProveedoresAE
             // 
@@ -238,7 +247,7 @@ namespace VideoClub.Windows
             this.MinimumSize = new System.Drawing.Size(700, 400);
             this.Name = "FrmProveedoresAE";
             this.Text = "FmProveedoresAE";
-            this.Load += new System.EventHandler(this.FrmProveedoresAE_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -263,5 +272,6 @@ namespace VideoClub.Windows
         private System.Windows.Forms.TextBox DireccionTextBox;
         private System.Windows.Forms.Button CancelButton;
         private System.Windows.Forms.Button OkButton;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

@@ -1,14 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using VideoClub.Servicios.Servicios;
-using VideoClub.Servicios.Servicios.Facades;
 using VideoClubEntidades.DTOs.Localidad;
 using VideoClubEntidades.Entidades;
 
@@ -76,7 +67,7 @@ namespace VideoClub.Windows
         {
             this.localidad = localidad;
         }
-        internal LocalidadEditDto GetLocalidad()
+        public LocalidadEditDto GetLocalidad()
         {
             return localidad;
         }

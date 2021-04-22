@@ -7,32 +7,31 @@ using VideoClub.Datos;
 using VideoClub.Datos.Repositorios;
 using VideoClub.Datos.Repositorios.Facades;
 using VideoClub.Servicios.Servicios.Facades;
-using VideoClubEntidades.DTOs;
+using VideoClubEntidades.Entidades;
 
 namespace VideoClub.Servicios.Servicios
 {
-    public class ServicioSocios : IServicioSocios
+    public class ServicioTipoDocumento : IServicioTipoDocumento
     {
-        private ConexionBD _conexionBD;
-        private IRepositorioSocios _repositorio;
-        public ServicioSocios()
+        private IRepositorioTiposDocumentos repositorio;
+        private ConexionBD conexion;
+        public ServicioTipoDocumento()
         {
-                
+
         }
-        
-        public List<SocioListDto> GetLista()
+        public List<TipoDocumento> GetTipoDocumento()
         {
             try
             {
-                _conexionBD = new ConexionBD();
-                _repositorio = new RepositorioSocios(_conexionBD.AbrirConexion());
-                var lista = _repositorio.GetLista();
-                _conexionBD.CerrarConexion();
+                conexion = new ConexionBD();
+                repositorio = new RepositorioTiposDocumentos(conexion.AbrirConexion());
+                var lista = repositorio.GetTipoDocumento();
+                conexion.CerrarConexion();
                 return lista;
-
             }
             catch (Exception e)
             {
+
                 throw new Exception(e.Message);
             }
         }

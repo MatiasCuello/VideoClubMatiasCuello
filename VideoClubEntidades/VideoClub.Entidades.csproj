@@ -41,9 +41,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DTOs\Empleado\EmpleadoEditDto.cs" />
     <Compile Include="DTOs\Empleado\EmpleadoListDto.cs" />
     <Compile Include="DTOs\Localidad\LocalidadEditDto.cs" />
     <Compile Include="DTOs\Localidad\LocalidadListDto.cs" />
+    <Compile Include="DTOs\Pelicula\PeliculaListDto.cs" />
     <Compile Include="DTOs\Proveedor\ProveedorEditDto.cs" />
     <Compile Include="DTOs\Proveedor\ProveedorListDto.cs" />
     <Compile Include="DTOs\Socio\SocioListDto.cs" />
@@ -52,11 +54,14 @@
     <Compile Include="Entidades\Estado.cs" />
     <Compile Include="Entidades\Genero.cs" />
     <Compile Include="Entidades\Localidad.cs" />
+    <Compile Include="Entidades\Pelicula.cs" />
     <Compile Include="Entidades\Proveedor.cs" />
-    <Compile Include="Entidades\Socios.cs" />
+    <Compile Include="Entidades\Socio.cs" />
     <Compile Include="Entidades\Soporte.cs" />
     <Compile Include="Entidades\Provincia.cs" />
+    <Compile Include="Entidades\TipoDocumento.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

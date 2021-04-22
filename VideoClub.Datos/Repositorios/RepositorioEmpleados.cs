@@ -16,12 +16,14 @@ namespace VideoClub.Datos.Repositorios
         {
             _sqlConnection = sqlConnection;
         }
+
+
         public List<EmpleadoListDto> GetLista()
         {
             List<EmpleadoListDto> lista = new List<EmpleadoListDto>();
             try
             {
-                string cadenaComando = 
+                string cadenaComando =
                     "SELECT EmpleadoId, Nombre, Apellido, NombreProvincia, NombreLocalidad FROM Empleados" +
                     " INNER JOIN Provincias ON Empleados.ProvinciaId=Provincias.ProvinciaId " +
                     "INNER JOIN Localidades ON Empleados.LocalidadId=Localidades.LocalidadId";
@@ -29,16 +31,16 @@ namespace VideoClub.Datos.Repositorios
                 SqlDataReader reader = comando.ExecuteReader();
                 while (reader.Read())
                 {
-                    var empleadoListDto = ConstruirEmpleadoListDto(reader);
+                    EmpleadoListDto empleadoListDto = ConstruirEmpleadoListDto(reader);
                     lista.Add(empleadoListDto);
                 }
                 reader.Close();
                 return lista;
             }
-            catch (Exception)
+            catch (Exception e)
             {
-
-                throw new Exception("Error al intentar leer los empleados");
+                throw new Exception(e.Message);
+                //throw new Exception("Error al intentar leer los empleados");
             }
         }
 

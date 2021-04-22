@@ -51,15 +51,17 @@
     <Compile Include="Servicios\Facades\IServicioProvincia.cs" />
     <Compile Include="Servicios\Facades\IServicioSocios.cs" />
     <Compile Include="Servicios\Facades\IServicioSoporte.cs" />
+    <Compile Include="Servicios\Facades\IServicioTipoDocumento.cs" />
     <Compile Include="Servicios\ServicioCalificacion.cs" />
-    <Compile Include="Servicios\ServicioEmpleados.cs" />
+    <Compile Include="Servicios\ServicioEmpleado.cs" />
     <Compile Include="Servicios\ServicioEstado.cs" />
     <Compile Include="Servicios\ServicioGenero.cs" />
     <Compile Include="Servicios\ServicioLocalidades.cs" />
     <Compile Include="Servicios\ServicioProveedor.cs" />
     <Compile Include="Servicios\ServicioProvincia.cs" />
-    <Compile Include="Servicios\ServicioSocios.cs" />
+    <Compile Include="Servicios\ServicioSocio.cs" />
     <Compile Include="Servicios\ServicioSoporte.cs" />
+    <Compile Include="Servicios\ServicioTipoDocumento.cs" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

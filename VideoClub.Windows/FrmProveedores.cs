@@ -55,8 +55,9 @@ namespace VideoClub.Windows
 
         private void SetearFila(DataGridViewRow r, ProveedorListDto proveedorListDto)
         {
-            r.Cells[cmnRazonSocial.Index].Value = proveedorListDto.RazonSocial;
             r.Cells[cmnCUIT.Index].Value = proveedorListDto.CUIT;
+            r.Cells[cmnRazonSocial.Index].Value = proveedorListDto.RazonSocial;
+            r.Cells[cmnDireccion.Index].Value = proveedorListDto.Direccion;
             r.Cells[cmnLocalidad.Index].Value = proveedorListDto.Localidad;
             r.Cells[cmnProvincia.Index].Value = proveedorListDto.Provincia;
 
@@ -74,6 +75,53 @@ namespace VideoClub.Windows
             r.CreateCells(dgvDatos);
             return r;
         }
+
+        private void tsbNuevo_Click(object sender, EventArgs e)
+        {
+            FrmProveedoresAE frm = new FrmProveedoresAE();
+            frm.Text = "Agregar Proveedor";
+            DialogResult dr = frm.ShowDialog(this);
+            if (dr == DialogResult.Cancel)
+            {
+                return;
+            }
+            else
+            {
+                try
+                {
+                    ProveedorEditDto proveedorEditDto = frm.GetProveedor();
+                    if (_servicio.Existe(proveedorEditDto))
+                    {
+                        MessageBox.Show("Registro Repetido", "Mensaje", MessageBoxButtons.OK,
+                            MessageBoxIcon.Error);
+                        return;
+                    }
+
+                    _servicio.Guardar(proveedorEditDto);
+                    DataGridViewRow r = ConstruirFila();
+                    ProveedorListDto proveedorListDto = new ProveedorListDto
+                    {
+                        ProveedorId = proveedorEditDto.ProveedorId,
+                        RazonSocial = proveedorEditDto.RazonSocial,
+                        CUIT=proveedorEditDto.CUIT,
+                        Direccion=proveedorEditDto.Direccion,
+                        Provincia = proveedorEditDto.Provincia.NombreProvincia,
+                        Localidad = proveedorEditDto.Localidad.NombreLocalidad,
+                    };
+                    SetearFila(r, proveedorListDto);
+                    AgregarFila(r);
+                    MessageBox.Show("Registro Agregado", "Mensaje", MessageBoxButtons.OK,
+                        MessageBoxIcon.Information);
+
+                }
+                catch (Exception E)
+                {
+                    MessageBox.Show(E.Message, "Error", MessageBoxButtons.OK,
+                        MessageBoxIcon.Error);
+                }
+            }
+        }
+
 
     }
 }

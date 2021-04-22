@@ -7,26 +7,25 @@ using VideoClub.Datos;
 using VideoClub.Datos.Repositorios;
 using VideoClub.Datos.Repositorios.Facades;
 using VideoClub.Servicios.Servicios.Facades;
-using VideoClubEntidades.DTOs.Empleado;
+using VideoClubEntidades.DTOs;
 
 namespace VideoClub.Servicios.Servicios
 {
-    public class ServicioEmpleados:IServicioEmpleados
+    public class ServicioSocio : IServicioSocios
     {
         private ConexionBD _conexionBD;
-        private IRepositorioEmpleados _repositorio;
-
-        public ServicioEmpleados()
+        private IRepositorioSocios _repositorio;
+        public ServicioSocio()
         {
-
+                
         }
-
-        public List<EmpleadoListDto> GetLista()
+        
+        public List<SocioListDto> GetLista()
         {
             try
             {
                 _conexionBD = new ConexionBD();
-                _repositorio = new RepositorioEmpleados(_conexionBD.AbrirConexion());
+                _repositorio = new RepositorioSocios(_conexionBD.AbrirConexion());
                 var lista = _repositorio.GetLista();
                 _conexionBD.CerrarConexion();
                 return lista;

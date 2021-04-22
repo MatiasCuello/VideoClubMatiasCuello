@@ -13,6 +13,22 @@ namespace VideoClub.Windows.Helper
 {
     public class Helper
     {
+        public static void CargarDatosComboTipoDocumento(ref ComboBox comboBox)
+        {
+            IServicioTipoDocumento servicioTipoDocumento = new ServicioTipoDocumento();
+            var lista = servicioTipoDocumento.GetTipoDocumento();
+            var defaultTipoDocumento = new TipoDocumento
+            {
+                TipoDocumentoId = 0,
+                Descripcion = "Seleccionar Tipo"
+            };
+            lista.Insert(0, defaultTipoDocumento);
+            comboBox.DataSource = lista;
+            comboBox.ValueMember = "TipoDocumentoId";
+            comboBox.DisplayMember = "Descripcion";
+            comboBox.SelectedIndex = 0;
+
+        }
         public static void CargarDatosComboProvincias(ref ComboBox comboBox)
         {
             IServicioProvincia servicioProvincia = new ServicioProvincia();
@@ -30,15 +46,6 @@ namespace VideoClub.Windows.Helper
 
         }
 
-        internal static void CargarDatosComboLocalidades(ref object localidadesComboBox)
-        {
-            throw new NotImplementedException();
-        }
-
-        internal static void CargarDatosComboProvincias(ref object provinciasComboBox)
-        {
-            throw new NotImplementedException();
-        }
 
         internal static void CargarDatosComboLocalidades(ref ComboBox comboBox, Provincia provincia)
         {
@@ -56,5 +63,6 @@ namespace VideoClub.Windows.Helper
             comboBox.SelectedIndex = 0;
 
         }
+
     }
 }

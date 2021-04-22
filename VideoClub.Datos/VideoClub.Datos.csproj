@@ -53,6 +53,7 @@
     <Compile Include="Repositorios\Facades\IRepositorioProvincias.cs" />
     <Compile Include="Repositorios\Facades\IRepositorioSocios.cs" />
     <Compile Include="Repositorios\Facades\IRepositorioSoportes.cs" />
+    <Compile Include="Repositorios\Facades\IRepositorioTiposDocumentos.cs" />
     <Compile Include="Repositorios\RepositorioCalificaciones.cs" />
     <Compile Include="Repositorios\RepositorioEmpleados.cs" />
     <Compile Include="Repositorios\RepositorioEstados.cs" />
@@ -62,6 +63,7 @@
     <Compile Include="Repositorios\RepositorioProvincias.cs" />
     <Compile Include="Repositorios\RepositorioSocios.cs" />
     <Compile Include="Repositorios\RepositorioSoportes.cs" />
+    <Compile Include="Repositorios\RepositorioTiposDocumentos.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\VideoClubEntidades\VideoClub.Entidades.csproj">

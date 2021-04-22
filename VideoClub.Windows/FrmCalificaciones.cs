@@ -28,8 +28,6 @@ namespace VideoClub.Windows
         private List<Calificacion> lista;
         private void FrmCalificacion_Load(object sender, EventArgs e)
         {
-
-
             try
             {
                 servicio = new ServicioCalificacion();

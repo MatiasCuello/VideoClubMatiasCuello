@@ -10,5 +10,6 @@ namespace VideoClub.Servicios.Servicios.Facades
     public interface IServicioEmpleados
     {
         List<EmpleadoListDto> GetLista();
+
     }
 }

@@ -92,8 +92,7 @@ namespace VideoClub.Windows
                     ProveedorEditDto proveedorEditDto = frm.GetProveedor();
                     if (_servicio.Existe(proveedorEditDto))
                     {
-                        MessageBox.Show("Registro Repetido", "Mensaje", MessageBoxButtons.OK,
-                            MessageBoxIcon.Error);
+                        MessageBox.Show("Registro Repetido", "Mensaje", MessageBoxButtons.OK,MessageBoxIcon.Error);
                         return;
                     }
 
@@ -102,9 +101,9 @@ namespace VideoClub.Windows
                     ProveedorListDto proveedorListDto = new ProveedorListDto
                     {
                         ProveedorId = proveedorEditDto.ProveedorId,
+                        CUIT = proveedorEditDto.CUIT,
                         RazonSocial = proveedorEditDto.RazonSocial,
-                        CUIT=proveedorEditDto.CUIT,
-                        Direccion=proveedorEditDto.Direccion,
+                        Direccion = proveedorEditDto.Direccion,
                         Provincia = proveedorEditDto.Provincia.NombreProvincia,
                         Localidad = proveedorEditDto.Localidad.NombreLocalidad,
                     };
@@ -114,9 +113,9 @@ namespace VideoClub.Windows
                         MessageBoxIcon.Information);
 
                 }
-                catch (Exception E)
+                catch (Exception ex)
                 {
-                    MessageBox.Show(E.Message, "Error", MessageBoxButtons.OK,
+                    MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK,
                         MessageBoxIcon.Error);
                 }
             }

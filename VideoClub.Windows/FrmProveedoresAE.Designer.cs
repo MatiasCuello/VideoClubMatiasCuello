@@ -40,8 +40,8 @@ namespace VideoClub.Windows
             this.lblProvincia = new System.Windows.Forms.Label();
             this.CorreoTextBox = new System.Windows.Forms.TextBox();
             this.lblCorreo = new System.Windows.Forms.Label();
-            this.TelefonoTextBox = new System.Windows.Forms.TextBox();
-            this.lblTelefono = new System.Windows.Forms.Label();
+            this.TelefonoFijoTextBox = new System.Windows.Forms.TextBox();
+            this.lblTelefonoFijo = new System.Windows.Forms.Label();
             this.lblPersonaContacto = new System.Windows.Forms.Label();
             this.PersonaContactoTextBox = new System.Windows.Forms.TextBox();
             this.lblDireccion = new System.Windows.Forms.Label();
@@ -49,6 +49,8 @@ namespace VideoClub.Windows
             this.CancelButton = new System.Windows.Forms.Button();
             this.OkButton = new System.Windows.Forms.Button();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.TelefonoMovilTextBox = new System.Windows.Forms.TextBox();
+            this.lblTelefonoMovil = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -99,7 +101,7 @@ namespace VideoClub.Windows
             // lblLocalidad
             // 
             this.lblLocalidad.AutoSize = true;
-            this.lblLocalidad.Location = new System.Drawing.Point(428, 139);
+            this.lblLocalidad.Location = new System.Drawing.Point(428, 137);
             this.lblLocalidad.Name = "lblLocalidad";
             this.lblLocalidad.Size = new System.Drawing.Size(56, 13);
             this.lblLocalidad.TabIndex = 148;
@@ -109,7 +111,7 @@ namespace VideoClub.Windows
             // 
             this.LocalidadesComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.LocalidadesComboBox.FormattingEnabled = true;
-            this.LocalidadesComboBox.Location = new System.Drawing.Point(339, 155);
+            this.LocalidadesComboBox.Location = new System.Drawing.Point(339, 153);
             this.LocalidadesComboBox.Name = "LocalidadesComboBox";
             this.LocalidadesComboBox.Size = new System.Drawing.Size(250, 21);
             this.LocalidadesComboBox.TabIndex = 5;
@@ -140,22 +142,22 @@ namespace VideoClub.Windows
             this.lblCorreo.TabIndex = 150;
             this.lblCorreo.Text = "Correo Electronico:";
             // 
-            // TelefonoTextBox
+            // TelefonoFijoTextBox
             // 
-            this.TelefonoTextBox.Location = new System.Drawing.Point(83, 193);
-            this.TelefonoTextBox.MaxLength = 20;
-            this.TelefonoTextBox.Name = "TelefonoTextBox";
-            this.TelefonoTextBox.Size = new System.Drawing.Size(250, 20);
-            this.TelefonoTextBox.TabIndex = 6;
+            this.TelefonoFijoTextBox.Location = new System.Drawing.Point(83, 193);
+            this.TelefonoFijoTextBox.MaxLength = 20;
+            this.TelefonoFijoTextBox.Name = "TelefonoFijoTextBox";
+            this.TelefonoFijoTextBox.Size = new System.Drawing.Size(250, 20);
+            this.TelefonoFijoTextBox.TabIndex = 6;
             // 
-            // lblTelefono
+            // lblTelefonoFijo
             // 
-            this.lblTelefono.AutoSize = true;
-            this.lblTelefono.Location = new System.Drawing.Point(180, 177);
-            this.lblTelefono.Name = "lblTelefono";
-            this.lblTelefono.Size = new System.Drawing.Size(52, 13);
-            this.lblTelefono.TabIndex = 152;
-            this.lblTelefono.Text = "Teléfono:";
+            this.lblTelefonoFijo.AutoSize = true;
+            this.lblTelefonoFijo.Location = new System.Drawing.Point(180, 177);
+            this.lblTelefonoFijo.Name = "lblTelefonoFijo";
+            this.lblTelefonoFijo.Size = new System.Drawing.Size(71, 13);
+            this.lblTelefonoFijo.TabIndex = 152;
+            this.lblTelefonoFijo.Text = "Teléfono Fijo:";
             // 
             // lblPersonaContacto
             // 
@@ -219,6 +221,23 @@ namespace VideoClub.Windows
             // 
             this.errorProvider1.ContainerControl = this;
             // 
+            // TelefonoMovilTextBox
+            // 
+            this.TelefonoMovilTextBox.Location = new System.Drawing.Point(339, 193);
+            this.TelefonoMovilTextBox.MaxLength = 20;
+            this.TelefonoMovilTextBox.Name = "TelefonoMovilTextBox";
+            this.TelefonoMovilTextBox.Size = new System.Drawing.Size(250, 20);
+            this.TelefonoMovilTextBox.TabIndex = 6;
+            // 
+            // lblTelefonoMovil
+            // 
+            this.lblTelefonoMovil.AutoSize = true;
+            this.lblTelefonoMovil.Location = new System.Drawing.Point(428, 177);
+            this.lblTelefonoMovil.Name = "lblTelefonoMovil";
+            this.lblTelefonoMovil.Size = new System.Drawing.Size(80, 13);
+            this.lblTelefonoMovil.TabIndex = 152;
+            this.lblTelefonoMovil.Text = "Teléfono Movil:";
+            // 
             // FrmProveedoresAE
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -229,8 +248,10 @@ namespace VideoClub.Windows
             this.Controls.Add(this.OkButton);
             this.Controls.Add(this.CorreoTextBox);
             this.Controls.Add(this.lblCorreo);
-            this.Controls.Add(this.TelefonoTextBox);
-            this.Controls.Add(this.lblTelefono);
+            this.Controls.Add(this.TelefonoMovilTextBox);
+            this.Controls.Add(this.TelefonoFijoTextBox);
+            this.Controls.Add(this.lblTelefonoMovil);
+            this.Controls.Add(this.lblTelefonoFijo);
             this.Controls.Add(this.ProvinciasComboBox);
             this.Controls.Add(this.lblLocalidad);
             this.Controls.Add(this.LocalidadesComboBox);
@@ -264,8 +285,8 @@ namespace VideoClub.Windows
         private System.Windows.Forms.Label lblProvincia;
         private System.Windows.Forms.TextBox CorreoTextBox;
         private System.Windows.Forms.Label lblCorreo;
-        private System.Windows.Forms.TextBox TelefonoTextBox;
-        private System.Windows.Forms.Label lblTelefono;
+        private System.Windows.Forms.TextBox TelefonoFijoTextBox;
+        private System.Windows.Forms.Label lblTelefonoFijo;
         private System.Windows.Forms.Label lblPersonaContacto;
         private System.Windows.Forms.TextBox PersonaContactoTextBox;
         private System.Windows.Forms.Label lblDireccion;
@@ -273,5 +294,7 @@ namespace VideoClub.Windows
         private System.Windows.Forms.Button CancelButton;
         private System.Windows.Forms.Button OkButton;
         private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.TextBox TelefonoMovilTextBox;
+        private System.Windows.Forms.Label lblTelefonoMovil;
     }
 }

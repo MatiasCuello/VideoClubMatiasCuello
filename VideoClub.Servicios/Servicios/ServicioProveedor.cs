@@ -16,16 +16,16 @@ namespace VideoClub.Servicios.Servicios
     {
         private ConexionBD _conexionBD;
         private IRepositorioProveedores _repositorio;
-        private IRepositorioProvincias _repositorioProvincias;
-        private IRepositorioLocalidades _repositorioLocalidades;
+        //private IRepositorioProvincias _repositorioProvincias;
+        //private IRepositorioLocalidades _repositorioLocalidades;
 
-        public ServicioProveedor(ConexionBD conexionBD, IRepositorioProveedores repositorio, IRepositorioProvincias repositorioProvincias, IRepositorioLocalidades repositorioLocalidades)
-        {
-            _conexionBD = conexionBD;
-            _repositorio = repositorio;
-            _repositorioProvincias = repositorioProvincias;
-            _repositorioLocalidades = repositorioLocalidades;
-        }
+        //public ServicioProveedor(ConexionBD conexionBD, IRepositorioProveedores repositorio, IRepositorioProvincias repositorioProvincias, IRepositorioLocalidades repositorioLocalidades)
+        //{
+        //    _conexionBD = conexionBD;
+        //    _repositorio = repositorio;
+        //    _repositorioProvincias = repositorioProvincias;
+        //    _repositorioLocalidades = repositorioLocalidades;
+        //}
         public ServicioProveedor()
         {
 
@@ -56,8 +56,9 @@ namespace VideoClub.Servicios.Servicios
                 _repositorio = new RepositorioProveedores(_conexionBD.AbrirConexion());
                 Proveedor proveedor = new Proveedor
                 {
-                    RazonSocial = proveedorEditDto.RazonSocial,
+                    ProveedorId= proveedorEditDto.ProveedorId,
                     CUIT = proveedorEditDto.CUIT,
+                    RazonSocial = proveedorEditDto.RazonSocial,
                     PersonaDeContacto = proveedorEditDto.PersonaDeContacto,
                     Direccion = proveedorEditDto.Direccion,
                     Provincia = new Provincia()
@@ -97,9 +98,9 @@ namespace VideoClub.Servicios.Servicios
                 _repositorio = new RepositorioProveedores(_conexionBD.AbrirConexion());
                 Proveedor proveedor = new Proveedor
                 {
-                    ProveedorId=proveedorEditDto.ProveedorId,
-                    RazonSocial = proveedorEditDto.RazonSocial,
+                    ProveedorId = proveedorEditDto.ProveedorId,
                     CUIT = proveedorEditDto.CUIT,
+                    RazonSocial = proveedorEditDto.RazonSocial,
                     PersonaDeContacto = proveedorEditDto.PersonaDeContacto,
                     Direccion = proveedorEditDto.Direccion,
                     Provincia = new Provincia()

@@ -84,8 +84,8 @@ namespace VideoClub.Datos.Repositorios
         {
             if (proveedor.ProveedorId == 0)
             {
-                //try
-                //{
+                try
+                {
                 string cadenaComando =
                 "INSERT INTO Proveedores VALUES( @cuit, @razonSocial, @pcontacto, @direccion, @localidadId, @provinciaId, " +
                 "@telFijo, @telMovil, @correo)";
@@ -132,61 +132,61 @@ namespace VideoClub.Datos.Repositorios
                 comando = new SqlCommand(cadenaComando, _sqlConnection);
                 proveedor.ProveedorId = (int)(decimal)comando.ExecuteScalar();
 
-                //}
-                //catch (Exception)
-                //{
-                //    throw new Exception("Error al intentar guardar proveedor");
-                //}
-
             }
-            else
+                catch (Exception)
             {
-                try
-                {
-                    string cadenaComando = "UPDATE Proveedores SET RazonSocial=@razonSocial, Direccion=@direccion," +
-                                           " ProvinciaId=@provinciaId, LocalidadId=@localidadId, WHERE ProveedorId=@id";
-                    SqlCommand comando = new SqlCommand(cadenaComando, _sqlConnection);
-                    comando.Parameters.AddWithValue("@razonSocial", proveedor.RazonSocial);
-                    if (proveedor.CUIT != string.Empty)
-                    {
-                        comando.Parameters.AddWithValue("@cuit", proveedor.CUIT);
-
-                    }
-                    else
-                    {
-                        comando.Parameters.AddWithValue("@cuit", DBNull.Value);
-                    }
-                    if (proveedor.PersonaDeContacto != string.Empty)
-                    {
-                        comando.Parameters.AddWithValue("@personacontacto", proveedor.PersonaDeContacto);
-
-                    }
-                    else
-                    {
-                        comando.Parameters.AddWithValue("@personacontacto", DBNull.Value);
-                    }
-                    if (proveedor.Direccion != string.Empty)
-                    {
-                        comando.Parameters.AddWithValue("@direccion", proveedor.Direccion);
-
-                    }
-                    else
-                    {
-                        comando.Parameters.AddWithValue("@direccion", DBNull.Value);
-                    }
-                    comando.Parameters.AddWithValue("@provinciaId", proveedor.Provincia.ProvinciaId);
-                    comando.Parameters.AddWithValue("@localidadId", proveedor.Localidad.LocalidadId);
-
-                    comando.Parameters.AddWithValue("@id", proveedor.ProveedorId);
-                    comando.ExecuteNonQuery();
-
-                }
-                catch (Exception e)
-                {
-                    throw new Exception("Error al intentar editar proveedor");
-                }
-
+                throw new Exception("Error al intentar guardar proveedor");
             }
+
+        }
+            //else
+            //{
+            //    try
+            //    {
+            //        string cadenaComando = "UPDATE Proveedores SET RazonSocial=@razonSocial, Direccion=@direccion," +
+            //                               " ProvinciaId=@provinciaId, LocalidadId=@localidadId, WHERE ProveedorId=@id";
+            //        SqlCommand comando = new SqlCommand(cadenaComando, _sqlConnection);
+            //        comando.Parameters.AddWithValue("@razonSocial", proveedor.RazonSocial);
+            //        if (proveedor.CUIT != string.Empty)
+            //        {
+            //            comando.Parameters.AddWithValue("@cuit", proveedor.CUIT);
+
+            //        }
+            //        else
+            //        {
+            //            comando.Parameters.AddWithValue("@cuit", DBNull.Value);
+            //        }
+            //        if (proveedor.PersonaDeContacto != string.Empty)
+            //        {
+            //            comando.Parameters.AddWithValue("@personacontacto", proveedor.PersonaDeContacto);
+
+            //        }
+            //        else
+            //        {
+            //            comando.Parameters.AddWithValue("@personacontacto", DBNull.Value);
+            //        }
+            //        if (proveedor.Direccion != string.Empty)
+            //        {
+            //            comando.Parameters.AddWithValue("@direccion", proveedor.Direccion);
+
+            //        }
+            //        else
+            //        {
+            //            comando.Parameters.AddWithValue("@direccion", DBNull.Value);
+            //        }
+            //        comando.Parameters.AddWithValue("@provinciaId", proveedor.Provincia.ProvinciaId);
+            //        comando.Parameters.AddWithValue("@localidadId", proveedor.Localidad.LocalidadId);
+
+            //        comando.Parameters.AddWithValue("@id", proveedor.ProveedorId);
+            //        comando.ExecuteNonQuery();
+
+            //    }
+            //    catch (Exception e)
+            //    {
+            //        throw new Exception("Error al intentar editar proveedor");
+            //    }
+
+            //}
         }
 
         private ProveedorListDto ConstruirProveedorListDto(SqlDataReader reader)

@@ -19,22 +19,22 @@ namespace VideoClub.Windows
         {
             InitializeComponent();
         }
-        private ProveedorEditDto proveedorDto;
+        private ProveedorEditDto proveedorEditDto;
 
         protected override void OnLoad(EventArgs e)
         {
             base.OnLoad(e);
             Helper.Helper.CargarDatosComboProvincias(ref ProvinciasComboBox);
-            if (proveedorDto == null) return;
-            RazonSocialTextBox.Text = proveedorDto.RazonSocial;
-            CuitTextBox.Text = proveedorDto.CUIT;
-            PersonaContactoTextBox.Text = proveedorDto.PersonaDeContacto;
-            DireccionTextBox.Text = proveedorDto.Direccion;
+            if (proveedorEditDto == null) return;
+            RazonSocialTextBox.Text = proveedorEditDto.RazonSocial;
+            CuitTextBox.Text = proveedorEditDto.CUIT;
+            PersonaContactoTextBox.Text = proveedorEditDto.PersonaDeContacto;
+            DireccionTextBox.Text = proveedorEditDto.Direccion;
             //TelefonoTextBox.Text = proveedorDto.Telefono;
             //CorreoTextBox.Text = proveedorDto.Correo;
-            LocalidadesComboBox.SelectedValue = proveedorDto.Provincia.ProvinciaId;
-            Helper.Helper.CargarDatosComboLocalidades(ref ProvinciasComboBox, proveedorDto.Provincia);
-            ProvinciasComboBox.SelectedValue = proveedorDto.Localidad.LocalidadId;
+            LocalidadesComboBox.SelectedValue = proveedorEditDto.Provincia.ProvinciaId;
+            Helper.Helper.CargarDatosComboLocalidades(ref ProvinciasComboBox, proveedorEditDto.Provincia);
+            ProvinciasComboBox.SelectedValue = proveedorEditDto.Localidad.LocalidadId;
         }
         private void CancelButton_Click(object sender, EventArgs e)
         {
@@ -58,17 +58,19 @@ namespace VideoClub.Windows
         {
             if (ValidarDatos())
             {
-                if (proveedorDto == null)
+                if (proveedorEditDto == null)
                 {
-                    proveedorDto = new ProveedorEditDto();
+                    proveedorEditDto = new ProveedorEditDto();
                 }
-
-                proveedorDto.RazonSocial = RazonSocialTextBox.Text;
-                proveedorDto.CUIT = CuitTextBox.Text;
-                proveedorDto.PersonaDeContacto = PersonaContactoTextBox.Text;
-                proveedorDto.Direccion = DireccionTextBox.Text;
-                proveedorDto.Provincia = (Provincia)ProvinciasComboBox.SelectedItem;
-                proveedorDto.Localidad = (LocalidadListDto)LocalidadesComboBox.SelectedItem;
+                proveedorEditDto.CUIT = CuitTextBox.Text;
+                proveedorEditDto.RazonSocial = RazonSocialTextBox.Text;
+                proveedorEditDto.PersonaDeContacto = PersonaContactoTextBox.Text;
+                proveedorEditDto.Direccion = DireccionTextBox.Text;
+                proveedorEditDto.Provincia = (Provincia)ProvinciasComboBox.SelectedItem;
+                proveedorEditDto.Localidad = (LocalidadListDto)LocalidadesComboBox.SelectedItem;
+                proveedorEditDto.TelefonoFijo = TelefonoFijoTextBox.Text;
+                proveedorEditDto.TelefonoMovil = TelefonoMovilTextBox.Text;
+                proveedorEditDto.CorreoElectronico = CorreoTextBox.Text;
                 DialogResult = DialogResult.OK;
             }
         }
@@ -119,7 +121,7 @@ namespace VideoClub.Windows
         }
         public ProveedorEditDto GetProveedor()
         {
-            return proveedorDto;
+            return proveedorEditDto;
         }
 
   

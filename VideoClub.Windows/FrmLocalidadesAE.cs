@@ -11,24 +11,23 @@ namespace VideoClub.Windows
         {
             InitializeComponent();
         }
+        private LocalidadEditDto localidad;
         protected override void OnLoad(EventArgs e)
         {
             base.OnLoad(e);
             Helper.Helper.CargarDatosComboProvincias(ref ProvinciasComboBox);
-            if (localidad!=null)
+            if (localidad != null)
             {
                 LocalidadTextBox.Text = localidad.NombreLocalidad;
-                ProvinciasComboBox.SelectedValue = localidad.ProvinciaId;
+                ProvinciasComboBox.SelectedValue = localidad.Provincia.ProvinciaId;
             }
-        }
 
-        private LocalidadEditDto localidad;
+        }
 
         private void CancelarButton_Click(object sender, EventArgs e)
         {
             DialogResult = DialogResult.Cancel;
         }
-
         private void OKButton_Click(object sender, EventArgs e)
         {
             if (ValidadDatos())
@@ -39,7 +38,7 @@ namespace VideoClub.Windows
                 }
 
                 localidad.NombreLocalidad = LocalidadTextBox.Text;
-                localidad.ProvinciaId = ((Provincia)ProvinciasComboBox.SelectedItem).ProvinciaId;
+                localidad.Provincia = (Provincia)ProvinciasComboBox.SelectedItem;
                 DialogResult = DialogResult.OK;
             }
         }
@@ -70,6 +69,11 @@ namespace VideoClub.Windows
         public LocalidadEditDto GetLocalidad()
         {
             return localidad;
+        }
+
+        private void FrmLocalidadesAE_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

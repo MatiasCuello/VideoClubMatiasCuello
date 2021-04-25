@@ -150,13 +150,13 @@ namespace VideoClub.Datos.Repositorios
 
         }
 
-        public void Borrar(int localidadId)
+        public void Borrar(int Id)
         {
             try
             {
                 string cadenaComando = "DELETE FROM Localidades WHERE LocalidadId=@id";
                 SqlCommand comando = new SqlCommand(cadenaComando, sqlConnection);
-                comando.Parameters.AddWithValue("@id", localidadId);
+                comando.Parameters.AddWithValue("@id", Id);
                 comando.ExecuteNonQuery();
 
             }
@@ -170,7 +170,7 @@ namespace VideoClub.Datos.Repositorios
             }
         }
 
-        public LocalidadEditDto GetLocalidadporId(int id)
+        public LocalidadEditDto GetLocalidadPorId(int id)
         {
             LocalidadEditDto localidad = null;
             try
@@ -199,7 +199,13 @@ namespace VideoClub.Datos.Repositorios
             var localidad = new LocalidadEditDto();
             localidad.LocalidadId = reader.GetInt32(0);
             localidad.NombreLocalidad = reader.GetString(1);
-            localidad.ProvinciaId = reader.GetInt32(2);
+            var provincia = _repositorioProvincias.GetProvinciaPorId(reader.GetInt32(2));
+            localidad.Provincia = new Provincia
+            {
+                ProvinciaId = provincia.ProvinciaId,
+                NombreProvincia = provincia.NombreProvincia
+            };
+            //localidad.ProvinciaId = reader.GetInt32(2);
             return localidad;
         }
 

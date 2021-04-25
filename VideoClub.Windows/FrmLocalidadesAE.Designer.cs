@@ -118,6 +118,7 @@ namespace VideoClub.Windows
             this.MinimumSize = new System.Drawing.Size(500, 300);
             this.Name = "FrmLocalidadesAE";
             this.Text = "FrmLocalidadesAE";
+            this.Load += new System.EventHandler(this.FrmLocalidadesAE_Load);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

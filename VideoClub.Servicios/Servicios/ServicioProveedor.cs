@@ -16,16 +16,16 @@ namespace VideoClub.Servicios.Servicios
     {
         private ConexionBD _conexionBD;
         private IRepositorioProveedores _repositorio;
-        //private IRepositorioProvincias _repositorioProvincias;
-        //private IRepositorioLocalidades _repositorioLocalidades;
+        private IRepositorioProvincias _repositorioProvincias;
+        private IRepositorioLocalidades _repositorioLocalidades;
 
-        //public ServicioProveedor(ConexionBD conexionBD, IRepositorioProveedores repositorio, IRepositorioProvincias repositorioProvincias, IRepositorioLocalidades repositorioLocalidades)
-        //{
-        //    _conexionBD = conexionBD;
-        //    _repositorio = repositorio;
-        //    _repositorioProvincias = repositorioProvincias;
-        //    _repositorioLocalidades = repositorioLocalidades;
-        //}
+        public ServicioProveedor(ConexionBD conexionBD, IRepositorioProveedores repositorio, IRepositorioProvincias repositorioProvincias, IRepositorioLocalidades repositorioLocalidades)
+        {
+            _conexionBD = conexionBD;
+            _repositorio = repositorio;
+            _repositorioProvincias = repositorioProvincias;
+            _repositorioLocalidades = repositorioLocalidades;
+        }
         public ServicioProveedor()
         {
 
@@ -130,6 +130,24 @@ namespace VideoClub.Servicios.Servicios
             catch (Exception e)
             {
 
+                throw new Exception(e.Message);
+            }
+        }
+
+        public ProveedorEditDto GetProveedorPorId(int proveedorId)
+        {
+            try
+            {
+                _conexionBD = new ConexionBD();
+                _repositorioProvincias = new RepositorioProvincias(_conexionBD.AbrirConexion());
+                _repositorioLocalidades = new RepositorioLocalidades(_conexionBD.AbrirConexion(), _repositorioProvincias);
+                _repositorio = new RepositorioProveedores(_conexionBD.AbrirConexion(), _repositorioProvincias, _repositorioLocalidades);
+                var proveedor = _repositorio.GetProveedorPorId(proveedorId);
+                _conexionBD.CerrarConexion();
+                return proveedor;
+            }
+            catch (Exception e)
+            {
                 throw new Exception(e.Message);
             }
         }

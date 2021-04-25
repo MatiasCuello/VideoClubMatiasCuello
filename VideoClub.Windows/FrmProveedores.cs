@@ -92,7 +92,7 @@ namespace VideoClub.Windows
                     ProveedorEditDto proveedorEditDto = frm.GetProveedor();
                     if (_servicio.Existe(proveedorEditDto))
                     {
-                        MessageBox.Show("Registro Repetido", "Mensaje", MessageBoxButtons.OK,MessageBoxIcon.Error);
+                        MessageBox.Show("Registro Repetido", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         return;
                     }
 
@@ -121,6 +121,59 @@ namespace VideoClub.Windows
             }
         }
 
+        private void tsbEditar_Click(object sender, EventArgs e)
+        {
+            if (dgvDatos.SelectedRows.Count == 0)
+            {
+                return;
+            }
 
+                DataGridViewRow r = dgvDatos.SelectedRows[0];
+                ProveedorListDto proveedorListDto = (ProveedorListDto)r.Tag;
+                ProveedorListDto proveedorListDtoAuxiliar = (ProveedorListDto)proveedorListDto.Clone();
+                FrmProveedoresAE frm = new FrmProveedoresAE();
+                ProveedorEditDto proveedorEditDto = _servicio.GetProveedorPorId(proveedorListDto.ProveedorId);
+                frm.Text = "Editar Proveedor";
+                frm.SetProveedor(proveedorEditDto);
+                DialogResult dr = frm.ShowDialog(this);
+                if (dr == DialogResult.Cancel)
+                {
+                    return;
+                }
+
+                try
+                {
+                    proveedorEditDto = frm.GetProveedor();
+                    if (!_servicio.Existe(proveedorEditDto))
+                    {
+                        _servicio.Guardar(proveedorEditDto);
+                        proveedorListDto.ProveedorId = proveedorEditDto.ProveedorId;
+                        proveedorListDto.CUIT = proveedorEditDto.CUIT;
+                        proveedorListDto.RazonSocial = proveedorEditDto.RazonSocial;
+                        proveedorListDto.Direccion = proveedorEditDto.Direccion;
+                        proveedorListDto.Provincia = proveedorEditDto.Provincia.NombreProvincia;
+                        proveedorListDto.Localidad = proveedorEditDto.Localidad.NombreLocalidad;
+
+                        SetearFila(r, proveedorListDto);
+                        MessageBox.Show("Registro Agregado", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    }
+                    else
+                    {
+                        SetearFila(r, proveedorListDtoAuxiliar);
+                        MessageBox.Show("Registro ya existente", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                    }
+                }
+                catch (Exception exception)
+                {
+                    SetearFila(r, proveedorListDtoAuxiliar);
+
+                    MessageBox.Show(exception.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                } 
+            
+
+        }
     }
 }
+

@@ -12,5 +12,6 @@ namespace VideoClub.Servicios.Servicios.Facades
         List<ProveedorListDto> GetLista();
         void Guardar(ProveedorEditDto proveedorEditDto);
         bool Existe(ProveedorEditDto proveedorEditDto);
+        ProveedorEditDto GetProveedorPorId(int proveedorId);
     }
 }

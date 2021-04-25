@@ -32,14 +32,6 @@ namespace VideoClub.Windows
             this.panel1 = new System.Windows.Forms.Panel();
             this.dgvDatos = new System.Windows.Forms.DataGridView();
             this.cmnTiposDocumentos = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tsbNuevo = new System.Windows.Forms.ToolStripButton();
-            this.tsbEditar = new System.Windows.Forms.ToolStripButton();
-            this.tsbBorrar = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.tsbBuscar = new System.Windows.Forms.ToolStripButton();
-            this.tsbActualizar = new System.Windows.Forms.ToolStripButton();
-            this.tsbImprimir = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.tsbCerrar = new System.Windows.Forms.ToolStripButton();
             this.tspTipoDocumentos = new System.Windows.Forms.ToolStrip();
             this.panel1.SuspendLayout();
@@ -80,76 +72,6 @@ namespace VideoClub.Windows
             this.cmnTiposDocumentos.Name = "cmnTiposDocumentos";
             this.cmnTiposDocumentos.ReadOnly = true;
             // 
-            // tsbNuevo
-            // 
-            this.tsbNuevo.Image = global::VideoClub.Windows.Properties.Resources.Nuevo;
-            this.tsbNuevo.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.tsbNuevo.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsbNuevo.Name = "tsbNuevo";
-            this.tsbNuevo.Size = new System.Drawing.Size(46, 51);
-            this.tsbNuevo.Text = "Nuevo";
-            this.tsbNuevo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            // 
-            // tsbEditar
-            // 
-            this.tsbEditar.Image = global::VideoClub.Windows.Properties.Resources.Editar;
-            this.tsbEditar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.tsbEditar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsbEditar.Name = "tsbEditar";
-            this.tsbEditar.Size = new System.Drawing.Size(41, 51);
-            this.tsbEditar.Text = "Editar";
-            this.tsbEditar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            // 
-            // tsbBorrar
-            // 
-            this.tsbBorrar.Image = global::VideoClub.Windows.Properties.Resources.Borrar;
-            this.tsbBorrar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.tsbBorrar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsbBorrar.Name = "tsbBorrar";
-            this.tsbBorrar.Size = new System.Drawing.Size(43, 51);
-            this.tsbBorrar.Text = "Borrar";
-            this.tsbBorrar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 54);
-            // 
-            // tsbBuscar
-            // 
-            this.tsbBuscar.Image = global::VideoClub.Windows.Properties.Resources.Buscar;
-            this.tsbBuscar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.tsbBuscar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsbBuscar.Name = "tsbBuscar";
-            this.tsbBuscar.Size = new System.Drawing.Size(46, 51);
-            this.tsbBuscar.Text = "Buscar";
-            this.tsbBuscar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            // 
-            // tsbActualizar
-            // 
-            this.tsbActualizar.Image = global::VideoClub.Windows.Properties.Resources.Actualizar;
-            this.tsbActualizar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.tsbActualizar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsbActualizar.Name = "tsbActualizar";
-            this.tsbActualizar.Size = new System.Drawing.Size(63, 51);
-            this.tsbActualizar.Text = "Actualizar";
-            this.tsbActualizar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            // 
-            // tsbImprimir
-            // 
-            this.tsbImprimir.Image = global::VideoClub.Windows.Properties.Resources.imprimir;
-            this.tsbImprimir.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.tsbImprimir.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsbImprimir.Name = "tsbImprimir";
-            this.tsbImprimir.Size = new System.Drawing.Size(57, 51);
-            this.tsbImprimir.Text = "Imprimir";
-            this.tsbImprimir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            // 
-            // toolStripSeparator2
-            // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 54);
-            // 
             // tsbCerrar
             // 
             this.tsbCerrar.Image = global::VideoClub.Windows.Properties.Resources.Salir;
@@ -158,20 +80,13 @@ namespace VideoClub.Windows
             this.tsbCerrar.Name = "tsbCerrar";
             this.tsbCerrar.Size = new System.Drawing.Size(43, 51);
             this.tsbCerrar.Text = "Cerrar";
+            this.tsbCerrar.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.tsbCerrar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.tsbCerrar.Click += new System.EventHandler(this.tsbCerrar_Click);
             // 
             // tspTipoDocumentos
             // 
             this.tspTipoDocumentos.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tsbNuevo,
-            this.tsbEditar,
-            this.tsbBorrar,
-            this.toolStripSeparator1,
-            this.tsbBuscar,
-            this.tsbActualizar,
-            this.tsbImprimir,
-            this.toolStripSeparator2,
             this.tsbCerrar});
             this.tspTipoDocumentos.Location = new System.Drawing.Point(0, 0);
             this.tspTipoDocumentos.Name = "tspTipoDocumentos";
@@ -206,14 +121,6 @@ namespace VideoClub.Windows
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DataGridView dgvDatos;
         private System.Windows.Forms.DataGridViewTextBoxColumn cmnTiposDocumentos;
-        private System.Windows.Forms.ToolStripButton tsbNuevo;
-        private System.Windows.Forms.ToolStripButton tsbEditar;
-        private System.Windows.Forms.ToolStripButton tsbBorrar;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
-        private System.Windows.Forms.ToolStripButton tsbBuscar;
-        private System.Windows.Forms.ToolStripButton tsbActualizar;
-        private System.Windows.Forms.ToolStripButton tsbImprimir;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolStripButton tsbCerrar;
         private System.Windows.Forms.ToolStrip tspTipoDocumentos;
     }

@@ -58,6 +58,12 @@
     <Compile Include="FrmEmpleadosAE.Designer.cs">
       <DependentUpon>FrmEmpleadosAE.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmPeliculas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPeliculas.Designer.cs">
+      <DependentUpon>FrmPeliculas.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmProveedoresAE.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -175,6 +181,9 @@
     <EmbeddedResource Include="FrmEmpleadosAE.resx">
       <DependentUpon>FrmEmpleadosAE.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmPeliculas.resx">
+      <DependentUpon>FrmPeliculas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmProveedoresAE.resx">
       <DependentUpon>FrmProveedoresAE.cs</DependentUpon>
     </EmbeddedResource>
@@ -291,6 +300,117 @@
       <Project>{4d760d56-c2ae-431b-8a2e-03d86716186b}</Project>
       <Name>VideoClub.Entidades</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\argentina_map_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\argentina_map_30px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\location_30px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cd_30px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rating_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rating_30px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\argentina_map_50px1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Borrar1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\burn_cd_30px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Buscar1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cancelar1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cd_30px1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cd_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cinema_30px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clapperboard_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dvd_logo_30px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dvd_logo_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Editar1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\identification_documents_30px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imprimir1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\location_30px1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\location_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\meeting_room_30px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\movie_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Nuevo1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\OK1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rating_30px1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rating_50px1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Salir1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\supplier_30px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\supplier_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\timecode_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\workers_30px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cinema_30px1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\18_plus_30px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\theatre_mask_30px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\movie_30px.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

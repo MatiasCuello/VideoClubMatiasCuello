@@ -50,7 +50,7 @@ namespace VideoClub.Windows
             // lblProvincia
             // 
             this.lblProvincia.AutoSize = true;
-            this.lblProvincia.Location = new System.Drawing.Point(76, 72);
+            this.lblProvincia.Location = new System.Drawing.Point(65, 72);
             this.lblProvincia.Name = "lblProvincia";
             this.lblProvincia.Size = new System.Drawing.Size(54, 13);
             this.lblProvincia.TabIndex = 47;

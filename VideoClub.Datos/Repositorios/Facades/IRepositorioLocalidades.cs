@@ -13,7 +13,7 @@ namespace VideoClub.Datos.Repositorios.Facades
         List<LocalidadListDto> GetLista(Provincia provincia);
         void Guardar(Localidad localidad);
         bool Existe(Localidad localidad);
-        void Borrar(int localidadId);
-        LocalidadEditDto GetLocalidadporId(int id);
+        void Borrar(int Id);
+        LocalidadEditDto GetLocalidadPorId(int id);
     }
 }

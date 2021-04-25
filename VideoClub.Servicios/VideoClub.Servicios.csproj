@@ -47,6 +47,7 @@
     <Compile Include="Servicios\Facades\IServicioEstado.cs" />
     <Compile Include="Servicios\Facades\IServicioGenero.cs" />
     <Compile Include="Servicios\Facades\IServicioLocalidades.cs" />
+    <Compile Include="Servicios\Facades\IServicioPelicula.cs" />
     <Compile Include="Servicios\Facades\IServicioProveedor.cs" />
     <Compile Include="Servicios\Facades\IServicioProvincia.cs" />
     <Compile Include="Servicios\Facades\IServicioSocios.cs" />
@@ -57,6 +58,7 @@
     <Compile Include="Servicios\ServicioEstado.cs" />
     <Compile Include="Servicios\ServicioGenero.cs" />
     <Compile Include="Servicios\ServicioLocalidades.cs" />
+    <Compile Include="Servicios\ServicioPelicula.cs" />
     <Compile Include="Servicios\ServicioProveedor.cs" />
     <Compile Include="Servicios\ServicioProvincia.cs" />
     <Compile Include="Servicios\ServicioSocio.cs" />

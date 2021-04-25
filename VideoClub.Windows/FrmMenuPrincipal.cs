@@ -39,7 +39,7 @@ namespace VideoClub.Windows
             FrmEstados frm = new FrmEstados();
             frm.ShowDialog(this);
         }
-       
+
 
         private void CalificacionesButton_Click(object sender, EventArgs e)
         {
@@ -80,6 +80,12 @@ namespace VideoClub.Windows
         private void TiposDocumentosButton_Click(object sender, EventArgs e)
         {
             FrmTiposDocumentos frm = new FrmTiposDocumentos();
+            frm.ShowDialog(this);
+        }
+
+        private void PeliculasButton_Click(object sender, EventArgs e)
+        {
+            FrmPeliculas frm = new FrmPeliculas();
             frm.ShowDialog(this);
         }
     }

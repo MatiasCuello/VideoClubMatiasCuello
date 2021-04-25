@@ -16,7 +16,7 @@ namespace VideoClubEntidades.Entidades
         public double DuracionEnMinutos { get; set; }
         public Calificacion Calificacion { get; set; }
         public bool Alquilado { get; set; } = false;
-        public bool Activo { get; set; } = true;
+        public bool Activa { get; set; } = true;
         public string Observaciones { get; set; }
         public Soporte Soporte { get; set; }
 

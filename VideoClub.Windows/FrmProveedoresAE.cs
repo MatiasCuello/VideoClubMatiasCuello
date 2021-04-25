@@ -19,22 +19,23 @@ namespace VideoClub.Windows
         {
             InitializeComponent();
         }
-        private ProveedorEditDto proveedorEditDto;
+        private ProveedorEditDto proveedorDto;
 
         protected override void OnLoad(EventArgs e)
         {
             base.OnLoad(e);
             Helper.Helper.CargarDatosComboProvincias(ref ProvinciasComboBox);
-            if (proveedorEditDto == null) return;
-            RazonSocialTextBox.Text = proveedorEditDto.RazonSocial;
-            CuitTextBox.Text = proveedorEditDto.CUIT;
-            PersonaContactoTextBox.Text = proveedorEditDto.PersonaDeContacto;
-            DireccionTextBox.Text = proveedorEditDto.Direccion;
-            //TelefonoTextBox.Text = proveedorDto.Telefono;
-            //CorreoTextBox.Text = proveedorDto.Correo;
-            LocalidadesComboBox.SelectedValue = proveedorEditDto.Provincia.ProvinciaId;
-            Helper.Helper.CargarDatosComboLocalidades(ref ProvinciasComboBox, proveedorEditDto.Provincia);
-            ProvinciasComboBox.SelectedValue = proveedorEditDto.Localidad.LocalidadId;
+            if (proveedorDto == null) return;
+            CuitTextBox.Text = proveedorDto.CUIT;
+            RazonSocialTextBox.Text = proveedorDto.RazonSocial;
+            PersonaContactoTextBox.Text = proveedorDto.PersonaDeContacto;
+            DireccionTextBox.Text = proveedorDto.Direccion;
+            TelefonoFijoTextBox.Text = proveedorDto.TelefonoFijo;
+            TelefonoMovilTextBox.Text = proveedorDto.TelefonoMovil;
+            CorreoTextBox.Text = proveedorDto.CorreoElectronico;
+            LocalidadesComboBox.SelectedValue = proveedorDto.Provincia.ProvinciaId;
+            Helper.Helper.CargarDatosComboLocalidades(ref ProvinciasComboBox, proveedorDto.Provincia);
+            ProvinciasComboBox.SelectedValue = proveedorDto.Localidad.LocalidadId;
         }
         private void CancelButton_Click(object sender, EventArgs e)
         {
@@ -58,19 +59,19 @@ namespace VideoClub.Windows
         {
             if (ValidarDatos())
             {
-                if (proveedorEditDto == null)
+                if (proveedorDto == null)
                 {
-                    proveedorEditDto = new ProveedorEditDto();
+                    proveedorDto = new ProveedorEditDto();
                 }
-                proveedorEditDto.CUIT = CuitTextBox.Text;
-                proveedorEditDto.RazonSocial = RazonSocialTextBox.Text;
-                proveedorEditDto.PersonaDeContacto = PersonaContactoTextBox.Text;
-                proveedorEditDto.Direccion = DireccionTextBox.Text;
-                proveedorEditDto.Provincia = (Provincia)ProvinciasComboBox.SelectedItem;
-                proveedorEditDto.Localidad = (LocalidadListDto)LocalidadesComboBox.SelectedItem;
-                proveedorEditDto.TelefonoFijo = TelefonoFijoTextBox.Text;
-                proveedorEditDto.TelefonoMovil = TelefonoMovilTextBox.Text;
-                proveedorEditDto.CorreoElectronico = CorreoTextBox.Text;
+                proveedorDto.CUIT = CuitTextBox.Text;
+                proveedorDto.RazonSocial = RazonSocialTextBox.Text;
+                proveedorDto.PersonaDeContacto = PersonaContactoTextBox.Text;
+                proveedorDto.Direccion = DireccionTextBox.Text;
+                proveedorDto.Provincia = (Provincia)ProvinciasComboBox.SelectedItem;
+                proveedorDto.Localidad = (LocalidadListDto)LocalidadesComboBox.SelectedItem;
+                proveedorDto.TelefonoFijo = TelefonoFijoTextBox.Text;
+                proveedorDto.TelefonoMovil = TelefonoMovilTextBox.Text;
+                proveedorDto.CorreoElectronico = CorreoTextBox.Text;
                 DialogResult = DialogResult.OK;
             }
         }
@@ -119,9 +120,15 @@ namespace VideoClub.Windows
 
             return valido;
         }
+
+        internal void SetProveedor(ProveedorEditDto proveedorEditDto)
+        {
+            proveedorDto = proveedorEditDto;
+        }
+
         public ProveedorEditDto GetProveedor()
         {
-            return proveedorEditDto;
+            return proveedorDto;
         }
 
   
